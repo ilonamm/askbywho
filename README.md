@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/ilonamm/askbywho.svg?style=svg)](https://circleci.com/gh/ilonamm/askbywho)
+
 # askbywho.com
 
 Weclome to the askbywho.com service.  This is the source code that runs at askbywho.com, and changes here (to master) will be pushed to the prod service
