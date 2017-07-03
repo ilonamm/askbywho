@@ -1,4 +1,8 @@
-# Askbywho
+# askbywho.com
+
+Weclome to the askbywho.com service.  This is the source code that runs at askbywho.com, and changes here (to master) will be pushed to the prod service
+
+## Local Setup
 
 To start your Phoenix app:
 
