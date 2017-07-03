@@ -33,7 +33,7 @@ defmodule Askbywho.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_askbywho_key",
-    signing_salt: "Q9GzblHR"
+    signing_salt: "dKclxvMb"
 
   plug Askbywho.Router
 end
