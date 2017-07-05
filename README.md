@@ -13,8 +13,6 @@ You’ll be happy to know the project is open source!
  
 We like to follow per issue branching, with master being the pristine copy. Feel free to add issues on GitHub for each feature / Trello task. We don't really have too many rules but minimum, we want that, PRs into master and unit tests.
  
-Each Trello task should be doable in one full working day. I
-
 ### Coordinating the work
 
 #### Kanban & Trello
