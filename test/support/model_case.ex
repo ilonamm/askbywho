@@ -26,10 +26,11 @@ defmodule Askbywho.ModelCase do
   end
 
   setup tags do
-    unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(Askbywho.Repo, [])
-    end
+   :ok = Ecto.Adapters.SQL.Sandbox.checkout(Askbywho.Repo)
 
+    unless tags[:async] do
+      Ecto.Adapters.SQL.Sandbox.mode(Askbywho.Repo, {:shared, self()})
+    end
     :ok
   end
 

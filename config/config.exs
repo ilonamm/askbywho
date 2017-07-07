@@ -27,3 +27,6 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+# Configure db 
+config :askbywho, ecto_repos: [Askbywho.Repo]
