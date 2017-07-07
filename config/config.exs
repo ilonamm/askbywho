@@ -29,4 +29,4 @@ config :phoenix, :generators,
   binary_id: false
 
 # Configure db 
-config :askbywho, ecto_repos: []
+config :askbywho, ecto_repos: [Askbywho.Repo]
