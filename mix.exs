@@ -32,13 +32,17 @@ defmodule Askbywho.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.1.4"},
      {:postgrex, ">= 0.0.0"},
-     {:phoenix_ecto, "~> 2.0.1"},
+     {:phoenix_ecto, "~> 3.0"},
      {:phoenix_html, "~> 2.6.0"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:poison, "~> 2.0"},
+     {:dogma, "~> 0.1.15", only: :dev},]
   end
 
+
+ 
   # Aliases are shortcut or tasks specific to the current project.
   # For example, to create, migrate and run the seeds file at once:
   #
