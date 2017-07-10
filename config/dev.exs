@@ -36,7 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 config :askbywho, Askbywho.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "123",
+  password: "postgres",
   database: "askbywho_dev",
   hostname: "localhost",
   pool_size: 10
