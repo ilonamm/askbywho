@@ -1,0 +1,6 @@
+<h2>New brand</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: brand_path(@conn, :create) %>
+
+<%= link "Back", to: brand_path(@conn, :index) %>

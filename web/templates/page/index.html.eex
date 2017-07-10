@@ -30,41 +30,56 @@
     </div>
 
     <div class="container">
-      <%= form_tag "/", method: :get %>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="field">
-            <%= text_input :consumer, :brands_name, placeholder: "Write brand's name" %>
+      <%= form_for @changeset, @action, fn f -> %>
+        <%= if @changeset.action do %>
+          <div class="alert alert-danger">
+            <p>Oops, something went wrong! Please check the errors below.</p>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="tip">
-            separate brands by comma
-          </div>
-        </div>
-      </div>
+        <% end %>
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="field">
-            <%= text_input :consumer, :name, placeholder: "Name" %>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="field">
+              <input id="email_brands" name="email[brands]" type="text" placeholder="Write brand's name">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="tip">
+              separate brands by comma
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="field">
-            <%= text_input :consumer, :email, placeholder: "Email" %>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="field">
+              <%= text_input f, :name, placeholder: "Name" %>
+              <%= error_tag f, :name %>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-4">
-          <%= submit "Send", class: :submit %>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="field">
+              <%= text_input f, :email, placeholder: "Email" %>
+              <%= error_tag f, :email %>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <%= submit "Send", class: :submit %>
+          </div>
+        </div>
+      <% end %>
     </div>
+
+
+
+
+
+
   </div>
 </div>

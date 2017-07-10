@@ -17,6 +17,9 @@ defmodule Askbywho.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/pages", PageController, only: [:create]
+    resources "/emails", EmailController
+    resources "/brands", BrandController
   end
 
   # Other scopes may use custom stacks.
