@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :askbywho, Askbywho.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "123",
   database: "askbywho_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
