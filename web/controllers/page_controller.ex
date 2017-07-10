@@ -19,10 +19,8 @@ defmodule Askbywho.PageController do
       |> Email.changeset(email_params)
       |> Repo.insert_or_update
     case result do
-      {:ok, _email}        -> # Inserted or updated with success
-        conn
-        |> put_flash(:info, "Email created successfully.")
-        |> redirect(to: page_path(conn, :index))
+      {:ok, email_atualizado}        -> # Inserted or updated with success
+        render(conn, "show.html", email: email_atualizado)
       {:error, changeset} -> # Something went wrong
         render(conn, "index.html", changeset: changeset, action: page_path(conn, :create))
     end

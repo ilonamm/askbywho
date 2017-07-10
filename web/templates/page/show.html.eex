@@ -1,0 +1,17 @@
+<h2>Show email</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @email.name %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @email.email %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: page_path(@conn, :index) %>
