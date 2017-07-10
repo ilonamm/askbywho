@@ -10,8 +10,8 @@ h1 {
 
 #home-wrapper {
   background: url(/images/home-bg.jpg) top center no-repeat;
-  font-family: 'Poppins', sans-serif;
   background-size: 100%;
+  font-family: 'Poppins', sans-serif;
 }
 #beta-message {
   background: rgba(255, 244, 183, 0.7);
@@ -84,5 +84,34 @@ h1 {
 @media (min-width: 1200px) {
   .container {
     max-width: 970px;
+  }
+}
+
+
+/* Media query for mobile devices. */
+@media only screen and (max-width: 800px) {
+  #home-wrapper {
+    background-image: none;
+  }
+  #beta-message p {
+    font-size: 15px;
+  }
+  #home-wrapper h1 {
+    font-size: 30px;
+  }
+  #wanna-know { 
+    padding: 60px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+                url(/images/home-bg.jpg) -520px -287px no-repeat;
+  }
+  #wanna-know .field {
+    margin: 15px 0 10px;
+  }
+  #wanna-know .tip {
+    width: 100%;
+    color: #fff;
+  }
+  #wanna-know .submit {
+    margin-top: 20px;
   }
 }
