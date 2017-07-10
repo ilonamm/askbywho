@@ -42,7 +42,8 @@ defmodule Askbywho.Mixfile do
      {:cowboy, "~> 1.0"},
      {:poison, "~> 2.0"},
      {:dogma, "~> 0.1.15", only: :dev},
-     {:excoveralls, "~> 0.7", only: :test},]
+     {:excoveralls, "~> 0.7", only: :test}
+    ]
   end
 
 
