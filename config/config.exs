@@ -30,3 +30,20 @@ config :phoenix, :generators,
 
 # Configure db 
 config :askbywho, ecto_repos: [Askbywho.Repo]
+
+# %% Coherence Configuration %%   Don't remove this line
+config :coherence,
+  user_schema: Askbywho.User,
+  repo: Askbywho.Repo,
+  module: Askbywho,
+  router: Askbywho.Router,
+  messages_backend: Askbywho.Coherence.Messages,
+  logged_out_url: "/",
+  email_from_name: "Your Name",
+  email_from_email: "yourname@example.com",
+  opts: [:authenticatable, :recoverable, :lockable, :trackable, :unlockable_with_token]
+
+config :coherence, Askbywho.Coherence.Mailer,
+  adapter: Swoosh.Adapters.Sendgrid,
+  api_key: "your api key here"
+# %% End Coherence Configuration %%
