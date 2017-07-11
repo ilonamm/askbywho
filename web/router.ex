@@ -1,4 +1,8 @@
 defmodule Askbywho.Router do
+  @moduledoc """
+   Add documentation
+  """
+
   use Askbywho.Web, :router
 
   pipeline :browser do

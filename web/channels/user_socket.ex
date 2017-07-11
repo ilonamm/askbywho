@@ -1,10 +1,14 @@
 defmodule Askbywho.UserSocket do
+  @moduledoc """
+   Add documentation
+  """
+
   use Phoenix.Socket
 
-  ## Channels
+  # Channels
   # channel "rooms:*", Askbywho.RoomChannel
 
-  ## Transports
+  # Transports
   transport :websocket, Phoenix.Transports.WebSocket,
     timeout: 45_000
   # transport :longpoll, Phoenix.Transports.LongPoll

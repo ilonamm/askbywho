@@ -44,8 +44,6 @@ defmodule Askbywho.Mixfile do
      {:dogma, "~> 0.1.15", only: :dev},
      {:excoveralls, "~> 0.7", only: :test},]
   end
-
-
  
   # Aliases are shortcut or tasks specific to the current project.
   # For example, to create, migrate and run the seeds file at once:
