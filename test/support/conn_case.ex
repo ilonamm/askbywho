@@ -38,6 +38,6 @@ defmodule Askbywho.ConnCase do
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(Askbywho.Repo, {:shared, self()})
     end
-    {:ok, conn: Phoenix.ConnTest.conn()}
+    {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end
