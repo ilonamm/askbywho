@@ -9,3 +9,10 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+Askbywho.Repo.delete_all Askbywho.User
+
+Askbywho.User.changeset(%Askbywho.User{}, %{name: "Test User", email: "abw-user@email.com", password: "secret", password_confirmation: "secret"})
+|> Askbywho.Repo.insert!
+
+

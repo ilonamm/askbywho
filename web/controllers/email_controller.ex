@@ -2,6 +2,7 @@ defmodule Askbywho.EmailController do
   use Askbywho.Web, :controller
 
   alias Askbywho.Email
+  
 
   #plug :scrub_params, "email" when action in [:create, :update]
 
