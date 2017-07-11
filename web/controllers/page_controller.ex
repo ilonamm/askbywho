@@ -18,11 +18,18 @@ defmodule Askbywho.PageController do
       |> Repo.preload([:brands])
       |> Email.changeset(email_params)
       |> Repo.insert_or_update
+
     case result do
-      {:ok, email_atualizado} -> # Inserted or updated with success
-        render(conn, "show.html", email: email_atualizado)
-      {:error, changeset}     -> # Something went wrong
+      {:ok, email} -> # Inserted or updated with success
+        redirect(conn, to: page_path(conn, :share, email.id))
+      {:error, changeset} -> # Something went wrong
         render(conn, "index.html", changeset: changeset, action: page_path(conn, :create))
     end
+  end
+
+  def share(conn, %{"id" => id}) do
+    email = Repo.get!(Email, id)
+    brands = Repo.preload(email, :brands).brands
+    render(conn, "share.html", email: email, brands: brands)
   end
 end

@@ -1,0 +1,93 @@
+<div id="share-wrapper">
+  <div class="head">
+    <div class="container">
+      <h1>
+        You've nominated 3 brands!
+      </h1>
+
+      <p>
+        We have this much to go:
+      </p>
+
+      <div class="brands">
+        <%= for brand <- @brands do %>
+          <div class="brand">
+            <div class="name"><%= brand.name %></div>
+            <div class="progress">
+              <div class="progress-bar" 
+                   role="progressbar" 
+                   aria-valuenow="<%= percent_nominations(brand.id) %>" 
+                   style="width: <%= percent_nominations(brand.id) %>%"
+                   aria-valuemin="0" aria-valuemax="100">
+                 <span><%= count_nominations(brand.id) %></span>
+              </div>
+            </div>
+            <div class="to-go">
+              <%= to_go(brand.id) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="container">
+      <p>
+        <%= count_emails %> people have nominated 
+        <%= count_brands %> brands 
+        <%= count_nominations %> times.
+      </p>
+
+      <p>
+        Every voice counts - share ask by who:
+      </p>
+
+      <div class="sharing">
+        <div class="social-network">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=www.askbywho.com">
+            <img src="/images/facebook.png">
+            <div class="cta">
+              share 
+              askbywho.com
+            </div>
+          </a>
+        </div>
+
+        <div class="social-network">
+          <a href="https://twitter.com/home?status=www.askbywho.com">
+            <img src="/images/twitter.png">
+            <div class="cta one-line">
+              tweet
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="container">
+      <p>
+        Follow us
+      </p>
+      
+      <div class="social">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=www.askbywho.com">
+          <img src="/images/facebook.png">
+        </a>
+
+        <a href="https://twitter.com/home?status=www.askbywho.com">
+          <img src="/images/twitter.png">
+        </a>
+      </div>
+      <div class="signature">
+         <img src="/images/logo.png" />
+         <div class="">
+           <span class="askbywho">ask by who</span>
+           <a class="email" href="askbywho@workahead.co">askbywho@workahead.co</a>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
