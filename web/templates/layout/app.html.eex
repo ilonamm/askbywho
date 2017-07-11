@@ -36,7 +36,6 @@
             <%= if @conn.assigns[:remembered] do %>
               <li style="color: red;">!!</li>
             <% end %>
-            <li><%#= CoherenceDemo.Coherence.ViewHelpers.invitation_link(@conn) %></li>
           <% end %>
           <%= Askbywho.Coherence.ViewHelpers.coherence_links(@conn, :layout) %>
         </ol>

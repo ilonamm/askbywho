@@ -42,6 +42,7 @@ defmodule Askbywho.Router do
     pipe_through :protected
     resources "/emails", EmailController
     resources "/brands", BrandController
+    resources "/users", UserController
   end
 end
 
