@@ -1,4 +1,8 @@
 defmodule Askbywho.Endpoint do
+  @moduledoc """
+   TODO add documentation
+  """
+
   use Phoenix.Endpoint, otp_app: :askbywho
 
   socket "/socket", Askbywho.UserSocket

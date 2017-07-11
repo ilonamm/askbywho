@@ -19,7 +19,7 @@ config :askbywho, Askbywho.Endpoint,
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 
-#ILONA ADDED THIS
+# ILONA ADDED THIS
 # Configure your database
 config :askbywho, Askbywho.Repo,
   adapter: Ecto.Adapters.Postgres,

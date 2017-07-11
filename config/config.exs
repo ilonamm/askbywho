@@ -9,7 +9,8 @@ use Mix.Config
 config :askbywho, Askbywho.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "xPaUhGOWX+tsUeHVnFqIQxdRF3hMjVCQeVQuEJPLHRXLSRqaDZiqkeV++qmTbpKM",
+  secret_key_base: | 
+    "xPaUhGOWX+tsUeHVnFqIQxdRF3hMjVCQeVQuEJPLHRXLSRqaDZiqkeV++qmTbpKM",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Askbywho.PubSub,
            adapter: Phoenix.PubSub.PG2]

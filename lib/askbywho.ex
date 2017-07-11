@@ -1,4 +1,8 @@
 defmodule Askbywho do
+  @moduledoc """
+  TODO add documentation
+  """
+
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
