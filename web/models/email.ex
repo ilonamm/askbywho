@@ -6,7 +6,7 @@ defmodule Askbywho.Email do
   schema "emails" do
     field :name, :string
     field :email, :string
-    many_to_many :brands, Brand, join_through: "brands_emails"
+    many_to_many :brands, Brand, join_through: "brands_emails", on_replace: :delete
     timestamps
   end
 
@@ -23,6 +23,7 @@ defmodule Askbywho.Email do
     model
     |> cast(params, [:name, :email])
     |> validate_required([:name, :email])
+    |> validate_format(:email, ~r/@/, message: "doesn't contain '@'")
     |> put_assoc(:brands, parse_brands(params))
   end
 

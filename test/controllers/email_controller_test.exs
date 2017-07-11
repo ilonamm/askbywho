@@ -2,7 +2,7 @@ defmodule Askbywho.EmailControllerTest do
   use Askbywho.ConnCase
 
   alias Askbywho.Email
-  @valid_attrs %{email: "some content", name: "some content"}
+  @valid_attrs %{email: "some@email.com", name: "some content"}
   @invalid_attrs %{}
 
   test "lists all entries on index", %{conn: conn} do
@@ -23,7 +23,7 @@ defmodule Askbywho.EmailControllerTest do
 
   test "does not create resource and renders errors when data is invalid", %{conn: conn} do
     conn = post conn, email_path(conn, :create), email: @invalid_attrs
-    assert html_response(conn, 200) =~ "New email"
+    assert html_response(conn, 200) =~ "New email" # || html_response(conn, 200) =~ "Ssh! Welcome to our secret beta!"
   end
 
   test "shows chosen resource", %{conn: conn} do

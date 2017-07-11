@@ -17,15 +17,15 @@ defmodule Askbywho.EmailController do
 
   def create(conn, %{"email" => email_params}) do
     result =
-      case Repo.get_by(Email, email: email_params["email"]) do
-        nil  -> %Email{}  # Email not found, we build one
-        email -> email    # Email exists, let's use it
+      case Repo.get_by(Email, email: (email_params["email"] || "")) do
+        nil   -> %Email{} # Email not found, so build one
+        email -> email    # Email already exists, let's use it
       end
       |> Repo.preload([:brands])
       |> Email.changeset(email_params)
       |> Repo.insert_or_update
     case result do
-      {:ok, _email}        -> # Inserted or updated with success
+      {:ok, _email}       -> # Inserted or updated with success
         conn
         |> put_flash(:info, "Email created successfully.")
         |> redirect(to: email_path(conn, :index))
@@ -54,12 +54,14 @@ defmodule Askbywho.EmailController do
 
   def edit(conn, %{"id" => id}) do
     email = Repo.get!(Email, id)
+      |> Repo.preload(:brands)
     changeset = Email.changeset(email)
     render(conn, "edit.html", email: email, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "email" => email_params}) do
     email = Repo.get!(Email, id)
+      |> Repo.preload(:brands)
     changeset = Email.changeset(email, email_params)
 
     case Repo.update(changeset) do

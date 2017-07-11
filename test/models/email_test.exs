@@ -3,7 +3,7 @@ defmodule Askbywho.EmailTest do
 
   alias Askbywho.Email
 
-  @valid_attrs %{email: "some content", name: "some content"}
+  @valid_attrs %{email: "some@email.com", name: "Some Content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
