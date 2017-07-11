@@ -2,6 +2,14 @@ defmodule Askbywho.BrandControllerTest do
   use Askbywho.ConnCase
 
   alias Askbywho.Brand
+  alias Askbywho.User
+
+  setup %{conn: conn} do
+    user = User.changeset(%User{}, %{name: "Some", email: "some@email.com", password: "test", password_confirmation: "test"})
+    |> Repo.insert!
+    {:ok, conn: assign(conn, :current_user, user), user: user}
+  end
+
   @valid_attrs %{name: "some content"}
   @invalid_attrs %{}
 

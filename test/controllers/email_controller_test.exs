@@ -2,6 +2,14 @@ defmodule Askbywho.EmailControllerTest do
   use Askbywho.ConnCase
 
   alias Askbywho.Email
+  alias Askbywho.User
+
+  setup %{conn: conn} do
+    user = User.changeset(%User{}, %{name: "Some", email: "some@email.com", password: "test", password_confirmation: "test"})
+    |> Repo.insert!
+    {:ok, conn: assign(conn, :current_user, user), user: user}
+  end
+
   @valid_attrs %{email: "some@email.com", name: "some content"}
   @invalid_attrs %{}
 
@@ -23,7 +31,7 @@ defmodule Askbywho.EmailControllerTest do
 
   test "does not create resource and renders errors when data is invalid", %{conn: conn} do
     conn = post conn, email_path(conn, :create), email: @invalid_attrs
-    assert html_response(conn, 200) =~ "New email" # || html_response(conn, 200) =~ "Ssh! Welcome to our secret beta!"
+    assert html_response(conn, 200) =~ "New email"
   end
 
   test "shows chosen resource", %{conn: conn} do
