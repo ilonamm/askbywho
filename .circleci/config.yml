@@ -17,8 +17,8 @@ jobs:
           mix deps.get
       - run: mix ecto.create
       - run:
-	 name: Setup testing and dogma 
-	 command: | 
-	  mix test
-	  mix coveralls.post -t $COVERALLS_REPO_TOKEN
-	  mix dogma
+         name: Setup testing and dogma 
+         command: | 
+          mix test
+          mix coveralls.post -t $COVERALLS_REPO_TOKEN
+          mix dogma
