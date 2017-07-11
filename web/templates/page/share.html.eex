@@ -2,7 +2,7 @@
   <div class="head">
     <div class="container">
       <h1>
-        You've nominated 3 brands!
+        You've nominated <%= count_brands_message @brands %>!
       </h1>
 
       <p>

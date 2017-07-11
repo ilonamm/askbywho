@@ -9,6 +9,15 @@ defmodule Askbywho.PageView do
     Repo.aggregate Email, :count, :id
   end
 
+  def count_brands_message([a]) do
+    "1 brand"
+  end
+
+  def count_brands_message(list) do
+    count = length list
+    "#{count} brands"
+  end
+
   def count_brands do
     Repo.aggregate Brand, :count, :id
   end
@@ -34,7 +43,7 @@ defmodule Askbywho.PageView do
   def to_go(brand_id) do
     result = 1000 - count_nominations(brand_id)
     case result do
-      x when (x < 1000) -> "#{x} to go!"
+      x when (x > 0) -> "#{x} to go!"
       _ -> ""
     end
   end
