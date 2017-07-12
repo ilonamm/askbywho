@@ -1,4 +1,8 @@
 defmodule Askbywho.PageView do
+  @moduledoc """
+   Add documentation
+  """
+
   use Askbywho.Web, :view
 
   alias Askbywho.Repo

@@ -28,7 +28,7 @@ config :phoenix, :generators,
   migration: true,
   binary_id: false
 
-# Configure db 
+# Configure db
 config :askbywho, ecto_repos: [Askbywho.Repo]
 
 # %% Coherence Configuration %%   Don't remove this line

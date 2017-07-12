@@ -1,4 +1,8 @@
 defmodule Askbywho.PageController do
+  @moduledoc """
+   Add documentation
+  """
+
   use Askbywho.Web, :controller
   alias Askbywho.Email
 
