@@ -73,13 +73,10 @@ defmodule Askbywho.UserController do
         |> redirect(to: user_path(conn, :index))
       user ->
         case Helpers.confirm! user do
-          {:error, changeset}  ->
-            conn
-            |> put_flash(:error, format_errors(changeset))
-          _ ->
-            put_flash(conn, :info, "User confirmed!")
+          {:error, changeset} -> put_flash(conn, :error, format_errors(changeset))
+          _                   -> put_flash(conn, :info, "User confirmed!")
         end
-        |> redirect(to: user_path(conn, :show, user.id))
+        redirect(conn, to: user_path(conn, :show, user.id))
     end
   end
 
@@ -94,13 +91,10 @@ defmodule Askbywho.UserController do
         |> redirect(to: user_path(conn, :index))
       user ->
         case Helpers.lock! user, locked_at do
-          {:error, changeset}  ->
-            conn
-            |> put_flash(:error, format_errors(changeset))
-          _ ->
-            put_flash(conn, :info, "User locked!")
+          {:error, changeset}  -> put_flash(conn, :error, format_errors(changeset))
+          _ ->                    put_flash(conn, :info, "User locked!")
         end
-        |> redirect(to: user_path(conn, :show, user.id))
+        redirect(conn, to: user_path(conn, :show, user.id))
     end
   end
 
@@ -112,24 +106,22 @@ defmodule Askbywho.UserController do
         |> redirect(to: user_path(conn, :index))
       user ->
         case Helpers.unlock! user do
-          {:error, changeset}  ->
-            conn
-            |> put_flash(:error, format_errors(changeset))
-          _ ->
-            put_flash(conn, :info, "User locked!")
+          {:error, changeset}  -> put_flash(conn, :error, format_errors(changeset))
+          _                    -> put_flash(conn, :info, "User locked!")
         end
-        |> redirect(to: user_path(conn, :show, user.id))
+        redirect(conn, to: user_path(conn, :show, user.id))
     end
   end
   defp format_errors(changeset) do
-    for error <- changeset.errors do
-      case error do
-        {:locked_at, {err, _}} -> err
-        {_field, {err, _}} when is_binary(err) or is_atom(err) ->
-          "#{err}"
-        other -> inspect other
+    errors =
+      for error <- changeset.errors do
+        case error do
+          {:locked_at, {err, _}} -> err
+          {_field, {err, _}} when is_binary(err) or is_atom(err) -> to_string(err)
+          other -> inspect other
+        end
       end
-    end
-    |> Enum.join("<br \>\n")
+
+    Enum.join(errors, "<br \>\n")
   end
 end

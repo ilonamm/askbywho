@@ -72,7 +72,7 @@ defmodule Askbywho.PageViewTest do
   end
 
   test "#to_go should not show any message of the already got 1k+ of nominations" do
-    for n <- 1..1000 do 
+    for n <- 1..1000 do
       %Email{}
         |> Email.changeset(%{"email" => "test-#{n}@email.com", "name" => "Test #{n}", "brands" => "Adidas"})
         |> Repo.insert

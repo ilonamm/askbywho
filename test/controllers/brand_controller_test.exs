@@ -5,8 +5,7 @@ defmodule Askbywho.BrandControllerTest do
   alias Askbywho.User
 
   setup %{conn: conn} do
-    user = User.changeset(%User{}, %{name: "Some", email: "some@email.com", password: "test", password_confirmation: "test"})
-    |> Repo.insert!
+    user = Repo.insert!(%User{name: "Some", email: "some@email.com", password: "test", password_confirmation: "test"})
     {:ok, conn: assign(conn, :current_user, user), user: user}
   end
 

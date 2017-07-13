@@ -51,5 +51,3 @@ defmodule Askbywho.Router do
     resources "/users", UserController
   end
 end
-
-

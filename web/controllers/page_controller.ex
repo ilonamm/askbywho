@@ -19,9 +19,11 @@ defmodule Askbywho.PageController do
         nil   -> %Email{} # Email not found, so build one
         email -> email    # Email already exists, let's use it
       end
-      |> Repo.preload([:brands])
-      |> Email.changeset(email_params)
-      |> Repo.insert_or_update
+
+    result
+    |> Repo.preload([:brands])
+    |> Email.changeset(email_params)
+    |> Repo.insert_or_update
 
     case result do
       {:ok, email} -> # Inserted or updated with success

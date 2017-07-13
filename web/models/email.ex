@@ -10,9 +10,6 @@ defmodule Askbywho.Email do
     timestamps
   end
 
-  #@required_fields ~w(name email)
-  #@optional_fields ~w()
-
   @doc """
   Creates a changeset based on the `model` and `params`.
 
@@ -27,8 +24,9 @@ defmodule Askbywho.Email do
     |> put_assoc(:brands, parse_brands(params))
   end
 
-  defp parse_brands(params)  do
-    (params["brands"] || "")
+  defp parse_brands(params) do
+    brands = (params["brands"] || "")
+    brands
     |> String.split(",")
     |> Enum.map(&String.trim/1)
     |> Enum.reject(& &1 == "")

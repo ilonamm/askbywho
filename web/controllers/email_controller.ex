@@ -2,9 +2,7 @@ defmodule Askbywho.EmailController do
   use Askbywho.Web, :controller
 
   alias Askbywho.Email
-  
 
-  #plug :scrub_params, "email" when action in [:create, :update]
 
   def index(conn, _params) do
     emails = Repo.all(Email)
@@ -17,14 +15,15 @@ defmodule Askbywho.EmailController do
   end
 
   def create(conn, %{"email" => email_params}) do
-    result =
-      case Repo.get_by(Email, email: (email_params["email"] || "")) do
-        nil   -> %Email{} # Email not found, so build one
-        email -> email    # Email already exists, let's use it
-      end
+    address = (email_params["email"] || "")
+    email   = Repo.get_by(Email, email: address) || %Email{}
+
+    result  =
+      email
       |> Repo.preload([:brands])
       |> Email.changeset(email_params)
       |> Repo.insert_or_update
+
     case result do
       {:ok, _email}       -> # Inserted or updated with success
         conn
@@ -55,15 +54,15 @@ defmodule Askbywho.EmailController do
 
   def edit(conn, %{"id" => id}) do
     email = Repo.get!(Email, id)
-      |> Repo.preload(:brands)
-    changeset = Email.changeset(email)
+    email_with_brands = Repo.preload(email, :brands)
+    changeset = Email.changeset(email_with_brands)
     render(conn, "edit.html", email: email, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "email" => email_params}) do
     email = Repo.get!(Email, id)
-      |> Repo.preload(:brands)
-    changeset = Email.changeset(email, email_params)
+    email_with_brands = Repo.preload(email, :brands)
+    changeset = Email.changeset(email_with_brands, email_params)
 
     case Repo.update(changeset) do
       {:ok, email} ->

@@ -5,8 +5,10 @@ defmodule Askbywho.EmailControllerTest do
   alias Askbywho.User
 
   setup %{conn: conn} do
-    user = User.changeset(%User{}, %{name: "Some", email: "some@email.com", password: "test", password_confirmation: "test"})
-    |> Repo.insert!
+    attrs     = %{name: "Some", email: "some@email.com", password: "test", password_confirmation: "test"}
+    changeset = User.changeset(%User{}, attrs)
+    user      = Repo.insert!(changeset)
+
     {:ok, conn: assign(conn, :current_user, user), user: user}
   end
 

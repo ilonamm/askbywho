@@ -18,8 +18,6 @@ defmodule Askbywho.Coherence.Messages do
   # the coherence message to be part of your projects domain change it to "default"
   @domain "coherence"
 
-  ##################
-  # Messages
 
   def account_already_confirmed, do: dgettext(@domain, "Account already confirmed.")
   def account_is_not_locked, do: dgettext(@domain, "Account is not locked.")
@@ -46,12 +44,16 @@ defmodule Askbywho.Coherence.Messages do
   def invitation_already_sent, do: dgettext(@domain, "Invitation already sent.")
   def invitation_sent, do: dgettext(@domain, "Invitation sent.")
   def invite_someone, do: dgettext(@domain, "Invite Someone")
-  def maximum_login_attempts_exceeded, do: dgettext(@domain, "Maximum Login attempts exceeded. Your account has been locked.")
+  def maximum_login_attempts_exceeded do
+    dgettext(@domain, "Maximum Login attempts exceeded. Your account has been locked.")
+  end
   def need_an_account, do: dgettext(@domain, "Need An Account?")
   def not_locked, do: dgettext(@domain, "not locked")
   def password_reset_token_expired, do: dgettext(@domain, "Password reset token expired.")
   def password_updated_successfully, do: dgettext(@domain, "Password updated successfully.")
-  def problem_confirming_user_account, do: dgettext(@domain, "Problem confirming user account. Please contact the system administrator.")
+  def problem_confirming_user_account do
+    dgettext(@domain, "Problem confirming user account. Please contact the system administrator.")
+  end
   def registration_created_successfully, do: dgettext(@domain, "Registration created successfully.")
   def required, do: dgettext(@domain, "required")
   def resend_confirmation_email, do: dgettext(@domain, "Resend confirmation email")
@@ -69,10 +71,9 @@ defmodule Askbywho.Coherence.Messages do
   def you_must_confirm_your_account, do: dgettext(@domain, "You must confirm your account before you can login.")
   def your_account_has_been_unlocked, do: dgettext(@domain, "Your account has been unlocked")
   def your_account_is_not_locked, do: dgettext(@domain, "Your account is not locked.")
-  def verify_user_token(opts),
-    do: dgettext(@domain, "Invalid %{user_token} error: %{error}", opts)
-  def you_are_using_an_invalid_security_token,
-    do: dgettext(@domain, "You are using an invalid security token for this site! This security\n" <>
-      "violation has been logged.\n")
+  def verify_user_token(opts), do: dgettext(@domain, "Invalid %{user_token} error: %{error}", opts)
+  def you_are_using_an_invalid_security_token do
+    dgettext(@domain, "You are using an invalid security token for this site! This security violation has been logged.")
+  end
   def mailer_required, do: dgettext(@domain, "Mailer configuration required!")
 end

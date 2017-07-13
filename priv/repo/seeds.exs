@@ -12,7 +12,10 @@
 
 Askbywho.Repo.delete_all Askbywho.User
 
-Askbywho.User.changeset(%Askbywho.User{}, %{name: "Test User", email: "abw-user@email.com", password: "secret", password_confirmation: "secret"})
-|> Askbywho.Repo.insert!
-
-
+changeset = Askbywho.User.changeset(%Askbywho.User{}, %{
+  name: "Test User",
+  email: "abw-user@email.com",
+  password: "secret",
+  password_confirmation: "secret"
+})
+Askbywho.Repo.insert! changeset

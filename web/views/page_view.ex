@@ -13,7 +13,7 @@ defmodule Askbywho.PageView do
     Repo.aggregate Email, :count, :id
   end
 
-  def count_brands_message([a]) do
+  def count_brands_message([_]) do
     "1 brand"
   end
 
@@ -30,14 +30,16 @@ defmodule Askbywho.PageView do
     {_status, result} = Ecto.Adapters.SQL.query(
       Repo, "select count(1) from brands_emails"
     )
-    List.flatten(result.rows) |> Enum.at(0)
+    flattened = List.flatten(result.rows)
+    Enum.at(flattened, 0)
   end
 
   def count_nominations(brand_id) do
     {_status, result} = Ecto.Adapters.SQL.query(
       Repo, "select count(1) from brands_emails where brand_id = $1", [brand_id]
     )
-    List.flatten(result.rows) |> Enum.at(0)
+    flattened = List.flatten(result.rows)
+    Enum.at(flattened, 0)
   end
 
   def percent_nominations(brand_id) do
