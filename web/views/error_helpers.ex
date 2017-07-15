@@ -27,10 +27,15 @@ defmodule Askbywho.ErrorHelpers do
     #
     #     dngettext "errors", "1 file", "%{count} files", count
     #
-    Gettext.dngettext(Askbywho.Gettext, "errors", msg, msg, opts[:count], opts)
+    if count = opts[:count] do
+      Gettext.dngettext(Askbywho.Gettext, "errors", msg, msg, count, opts)
+    else
+      Gettext.dgettext(Askbywho.Gettext, "errors", msg, opts)
+    end
+
   end
 
-  def translate_error(msg) do
-    Gettext.dgettext(Askbywho.Gettext, "errors", msg)
-  end
+  # def translate_error(msg) do
+  #   Gettext.dgettext(Askbywho.Gettext, "errors", msg)
+  # end
 end

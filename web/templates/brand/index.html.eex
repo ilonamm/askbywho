@@ -1,0 +1,26 @@
+<h2>Listing brands</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for brand <- @brands do %>
+    <tr>
+      <td><%= brand.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: brand_path(@conn, :show, brand), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: brand_path(@conn, :edit, brand), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: brand_path(@conn, :delete, brand), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New brand", to: brand_path(@conn, :new) %>

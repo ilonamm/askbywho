@@ -1,0 +1,13 @@
+<h2>Show brand</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @brand.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: brand_path(@conn, :edit, @brand) %>
+<%= link "Back", to: brand_path(@conn, :index) %>

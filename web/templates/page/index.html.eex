@@ -1,36 +1,85 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
+<div id="home-wrapper">
+  <div id="beta-message">
+    <div class="container">
+      <h1>
+        Ssh! Welcome to our secret beta!
+      </h1>
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="http://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+      <p>
+        Thanks to you we can launch a site that doesn’t look deserted. Please
+        nominate at least five clothing brands, and leave your name & email so
+        that we can tell you when we launch!
+      </p>
+
+      <p>
+        Click
+        <a href="http://demo.askbywho.com">here</a>
+        to see the plan for the full site.
+
+        Want to help? Join our
+        <a href="http://facebook.com/groups/askbywho">facebook group</a>!
+      </p>
+    </div>
   </div>
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+  <div id="wanna-know">
+    <div class="container">
+      <h1>
+        I want to know the clothes I buy are made in decent working conditions.
+      </h1>
+    </div>
+
+    <div class="container">
+      <%= form_for @changeset, @action, fn f -> %>
+        <%= if @changeset.action do %>
+          <div class="alert alert-danger">
+            <p>Oops, something went wrong! Please check the errors below.</p>
+          </div>
+        <% end %>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="field">
+              <input id="email_brands" name="email[brands]" type="text" placeholder="Write brand's name">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="tip">
+              separate brands by comma
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="field">
+              <%= text_input f, :name, placeholder: "Name" %>
+              <%= error_tag f, :name %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="field">
+              <%= text_input f, :email, placeholder: "Email" %>
+              <%= error_tag f, :email %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <%= submit "Send", class: :submit %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+
+
+
+
   </div>
 </div>

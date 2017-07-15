@@ -1,0 +1,195 @@
+#share-wrapper .head {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  background: url(/images/share-bg.jpg) center -80px no-repeat;
+  padding-bottom: 50px;
+}
+
+#share-wrapper h1 {
+  font-size: 54px;
+  font-weight: normal;
+  margin: 120px 0 40px;
+}
+
+#share-wrapper p {
+  font-size: 28px;
+  margin: 20px 0;
+}
+#share-wrapper .brand {
+  width: 100%;
+  clear: both;
+}
+#share-wrapper .brand .name {
+  width: 200px;
+  text-align: right;
+  float: left;
+  margin-right: 10px;
+  font-size: 22px;
+  line-height: 40px;
+}
+#share-wrapper .brand .progress {
+  width: 400px;
+  float: left;
+  height: 40px;
+  border: 2px solid white;
+  background: none;
+}
+#share-wrapper .brand .progress-bar {
+  background: white;
+  box-shadow: none;
+  border:none;
+  margin-right: 20px;
+}
+#share-wrapper .brand .progress-bar span {
+  color: black;
+  font-size: 20px;
+  line-height: 40px;
+  padding-left: 10px;
+}
+#share-wrapper .brand .to-go {
+  float: left;
+  font-size: 20px;
+  line-height: 40px;
+  padding-left: 10px;
+}
+
+#share-wrapper .body {
+  color: black;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+#share-wrapper .sharing {
+  float: left;
+  width: 100%;
+}
+
+#share-wrapper .sharing .social-network {
+  float: left;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+#share-wrapper .sharing .social-network img {
+  width: 120px;
+  float: left;
+}
+#share-wrapper .sharing .social-network .cta {
+  float: left;
+  width: 100px;
+  font-weight: bold;
+
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#share-wrapper .sharing .social-network .cta.one-line {
+  line-height: 100px;
+  margin-top: 10px;
+}
+
+#share-wrapper .foot {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#share-wrapper .foot p {
+  font-size: 20px;
+  margin: 0 0 5px;;
+}
+#share-wrapper .foot .social img {
+  height: 52px;
+  margin-right: 10px;
+}
+#share-wrapper .signature {
+  float: right;
+  margin-top: -85px;
+  margin-bottom: 20px;
+  width: 320px;
+  text-align: right;
+}
+#share-wrapper .signature .askbywho {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: black;
+  margin-top: 10px;
+}
+#share-wrapper .signature a {
+  height: 135px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+#share-wrapper .signature img {
+  height: 90px;
+  float: right;
+  margin-left: 10px;
+}
+
+
+/* Media query for mobile devices. */
+@media only screen and (max-width: 800px) {
+  #share-wrapper .head {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), 
+                url(/images/share-bg.jpg) center -80px no-repeat;
+  }
+  #share-wrapper .head h1 {
+    font-size: 33px;
+    margin-top: 40px;
+  }
+  #share-wrapper .head p,
+  #share-wrapper .brand .name,
+  #share-wrapper .brand .to-go {
+    font-size: 18px;
+  }
+  #share-wrapper .brand .name {
+    text-align: left;
+  }
+  #share-wrapper .brand .progress {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #share-wrapper .brand .to-go {
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+  #share-wrapper .body p {
+    color: black;
+    font-size: 18px;
+  }
+  #share-wrapper .sharing .social-network .cta {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  #share-wrapper .sharing .social-network .cta.one-line {
+    margin-top: 0px;
+    line-height: 72px
+  }
+  #share-wrapper .sharing .social-network {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #share-wrapper .sharing .social-network img {
+    width: 72px;
+    float: left;
+  }
+  #share-wrapper .foot {
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+  #share-wrapper .signature {
+    float: left;
+    margin-top: 50px;
+    width: 100%;
+  }
+  #share-wrapper .signature .askbywho {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+  #share-wrapper .signature a {
+    font-size: 16px;
+    text-decoration: underline;
+  }
+}
