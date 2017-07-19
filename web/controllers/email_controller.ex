@@ -15,8 +15,7 @@ defmodule Askbywho.EmailController do
   end
 
   def create(conn, %{"email" => email_params}) do
-    address = (email_params["email"] || "")
-    email   = Repo.get_by(Email, email: address) || %Email{}
+    email = Repo.get_by(Email, email: email_params["email"] || "") || %Email{}
 
     result  =
       email

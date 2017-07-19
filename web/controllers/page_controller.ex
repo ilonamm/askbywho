@@ -14,16 +14,13 @@ defmodule Askbywho.PageController do
   end
 
   def create(conn, %{"email" => email_params}) do
-    result =
-      case Repo.get_by(Email, email: email_params["email"] || "") do
-        nil   -> %Email{} # Email not found, so build one
-        email -> email    # Email already exists, let's use it
-      end
+    email = Repo.get_by(Email, email: email_params["email"] || "") || %Email{}
 
-    result
-    |> Repo.preload([:brands])
-    |> Email.changeset(email_params)
-    |> Repo.insert_or_update
+    result =
+      email
+      |> Repo.preload([:brands])
+      |> Email.changeset(email_params)
+      |> Repo.insert_or_update
 
     case result do
       {:ok, email} -> # Inserted or updated with success
