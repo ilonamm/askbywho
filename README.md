@@ -11,7 +11,7 @@ Welcome to the askbywho.com service.  This is the source code that runs at askby
 Repository in Github: https://github.com/ilonamm/askbywho
 You’ll be happy to know the project is open source!
  
-We like to follow per issue branching, with master being the pristine copy. Feel free to add issues on GitHub for each feature / Trello task. We don't really have too many rules but minimum, we want that, PRs into master and unit tests.
+We like to follow per issue branching, with master being the pristine copy. Feel free to add issues on GitHub for each feature / Trello task. We don't really have too many rules but minimum, we want that, PRs into master and unit tests. When naming branches, use yourname-featurename, for example ilona-herokusetup. When changes have been merged, delete the branch.
  
 ### Coordinating the work
 
