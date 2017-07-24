@@ -1,16 +1,20 @@
 defmodule Askbywho.PageController do
+  require Logger
   @moduledoc """
    Add documentation
   """
 
   use Askbywho.Web, :controller
   alias Askbywho.Email
+  alias Askbywho.Brand
 
   plug :put_layout, "site.html"
 
   def index(conn, _params) do
+    brands = Repo.all(Brand)
+    name_brands = brands |> Enum.map(&{&1.name, &1.name})
     changeset = Email.changeset(%Email{})
-    render(conn, "index.html", changeset: changeset, action: page_path(conn, :create))
+    render(conn, "index.html", changeset: changeset, action: page_path(conn, :create), name_brands: name_brands)
   end
 
   def create(conn, %{"email" => email_params}) do
@@ -26,7 +30,9 @@ defmodule Askbywho.PageController do
       {:ok, email} -> # Inserted or updated with success
         redirect(conn, to: page_path(conn, :share, email.id))
       {:error, changeset} -> # Something went wrong
-        render(conn, "index.html", changeset: changeset, action: page_path(conn, :create))
+        brands = Repo.all(Brand)
+        name_brands = brands |> Enum.map(&{&1.name, &1.name})
+        render(conn, "index.html", changeset: changeset, action: page_path(conn, :create), name_brands: name_brands)
     end
   end
 

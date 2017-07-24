@@ -19,10 +19,27 @@
 
   <div class="form-group">
     <label class="control-label" for="email_brands">Brands</label>    
-    <input class="form-control" id="email_brands" name="email[brands]" type="text">
+    <%= multiple_select f, :name_brands, @name_brands, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<style>
+
+  .select2-container--default .select2-selection--multiple,
+  .select2-container--default.select2-container--focus .select2-selection--multiple {
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: text;
+    font-size: 14px;
+
+  }
+
+</style>
