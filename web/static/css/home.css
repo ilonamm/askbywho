@@ -4,6 +4,7 @@ $font-family-sans-serif: 'Poppins', sans-serif;
 body {
   margin: 0;
   font-family: $font-family-sans-serif;
+  padding-bottom: 60px;
 }
 
 img {
