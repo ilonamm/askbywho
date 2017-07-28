@@ -1,85 +1,80 @@
 <div id="home-wrapper">
-  <div id="beta-message">
+  <div class="hover-message">
     <div class="container">
-      <h1>
+      <h1 class="hover-message__title">
         Ssh! Welcome to our secret beta!
       </h1>
 
-      <p>
+      <p class="hover-message__text">
         Thanks to you we can launch a site that doesn’t look deserted. Please
-        nominate at least five clothing brands, and leave your name & email so
+        nominate at least five clothing brands, and leave your name &amp; email so
         that we can tell you when we launch!
       </p>
 
-      <p>
+      <p class="hover-message__text">
         Click
-        <a href="http://demo.askbywho.com">here</a>
+        <a class="hover-message__link" href="http://demo.askbywho.com">here</a>
         to see the plan for the full site.
 
         Want to help? Join our
-        <a href="http://facebook.com/groups/askbywho">facebook group</a>!
+        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/">facebook group</a>!
       </p>
     </div>
   </div>
 
-  <div id="wanna-know">
-    <div class="container">
-      <h1>
-        I want to know the clothes I buy are made in decent working conditions.
-      </h1>
-    </div>
+  <div class="wanna-know">
+    <div class="wanna-know__content">
+      <div class="container">
+        <h1 class="wanna-know__title">I want to be sure that I buy clothes made in decent working conditions.</h1>
+        <h2 class="wanna-know__ingress">Tell us your favourite brands. We ask how they treat the people making our clothes.</h2>
+      </div>
 
-    <div class="container">
-      <%= form_for @changeset, @action, fn f -> %>
-        <%= if @changeset.action do %>
-          <div class="alert alert-danger">
-            <p>Oops, something went wrong! Please check the errors below.</p>
+      <div class="container">
+        <%= form_for @changeset, @action, fn f -> %>
+          <%= if @changeset.action do %>
+            <div class="alert alert-danger">
+              <p>Oops, something went wrong! Please check the errors below.</p>
+            </div>
+          <% end %>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="wanna-know__field">
+                <input id="email_brands" name="email[brands]" type="text" placeholder="Write brand's name">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wanna-know__tip">
+                separate brands by comma
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="wanna-know__field">
+                <%= text_input f, :name, placeholder: "Name" %>
+                <%= error_tag f, :name %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="wanna-know__field">
+                <%= text_input f, :email, placeholder: "Email" %>
+                <%= error_tag f, :email %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <%= submit "Send", class: :submit %>
+            </div>
           </div>
         <% end %>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="field">
-              <input id="email_brands" name="email[brands]" type="text" placeholder="Write brand's name">
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="tip">
-              separate brands by comma
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="field">
-              <%= text_input f, :name, placeholder: "Name" %>
-              <%= error_tag f, :name %>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="field">
-              <%= text_input f, :email, placeholder: "Email" %>
-              <%= error_tag f, :email %>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <%= submit "Send", class: :submit %>
-          </div>
-        </div>
-      <% end %>
+      </div>
     </div>
-
-
-
-
-
-
   </div>
 </div>
