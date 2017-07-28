@@ -77,7 +77,7 @@ h1 {
   margin-top: -10px;
 }
 
-.submit {
+.wanna-know__submit {
   font-family: 'Roboto', sans-serif;
   width: 100%;
   background: white;
@@ -89,6 +89,44 @@ h1 {
   font-weight: bold;
 }
 
+.pull-quote {
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1.5;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.pull-quote__preformatted {
+  white-space: pre-line;
+}
+
+.child-stats {
+  background: black url(/images/child.jpg) center center / cover;
+  color: white;
+}
+.child-stats__content {
+  padding: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.child-stats__text {
+  float: right;
+}
+.child-stats__stat {
+  margin: 30px 0;
+}
+.child-stats__stat-number {
+  font-size: 34px;
+  font-weight: 500;
+  display: block;
+  line-height: 1;
+}
+.child-stats__stat-description {
+  font-size: 18px;
+  display: block;
+}
 
 /* Change .container width */
 @media (min-width: 1200px) {
@@ -128,5 +166,12 @@ h1 {
   }
   .wanna-know__submit {
     margin-top: 20px;
+  }
+
+  .pull-quote {
+    font-size: 16px;
+  }
+  .pull-quote__preformatted {
+    white-space: normal;
   }
 }

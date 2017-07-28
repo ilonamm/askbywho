@@ -70,10 +70,41 @@
 
           <div class="row">
             <div class="col-md-4">
-              <%= submit "Send", class: :submit %>
+              <%= submit "Send", class: "wanna-know__submit" %>
             </div>
           </div>
         <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <div class="container">
+      <p class="pull-quote__preformatted">We don't want to buy from
+      a factory where 9-year-olds work or
+      where working hours are from 9 am to 9 pm or the
+      pay doesn't allow parents
+      to send their kids to school.<br><br>But most likely we have.</p>
+    </div>
+  </div>
+
+  <div class="child-stats">
+    <div class="child-stats__content">
+      <div class="container">
+        <div class="child-stats__text">
+          <p class="child-stats__stat">
+            <span class="child-stats__stat-number">1.2 billion</span>
+            <span class="child-stats__stat-description">live in extreme poverty</span>
+          </p>
+          <p class="child-stats__stat">
+            <span class="child-stats__stat-number">168 million</span>
+            <span class="child-stats__stat-description">children work</span>
+          </p>
+          <p class="child-stats__stat">
+            <span class="child-stats__stat-number">14.2 million</span>
+            <span class="child-stats__stat-description">people in forced labor</span>
+          </p>
+        </div>
       </div>
     </div>
   </div>
