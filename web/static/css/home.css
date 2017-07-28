@@ -1,5 +1,26 @@
+$font-family-serif: 'Georgia', serif;
+$font-family-sans-serif: 'Poppins', sans-serif;
+
 body {
   margin: 0;
+  font-family: $font-family-sans-serif;
+  padding-bottom: 60px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  border-bottom: 1px solid rgb(0,120,255);
+  color: rgb(0,120,255);
+  transition: 0.2s ease;
+}
+a:hover {
+  opacity: 0.8;
 }
 
 h1 {
@@ -8,43 +29,33 @@ h1 {
   font-style: normal;
 }
 
-#home-wrapper {
-  background: url(/images/home-bg.jpg) top center no-repeat;
-  background-size: 100%;
-  font-family: 'Poppins', sans-serif;
-}
-#beta-message {
+.hover-message {
   background: rgba(255, 244, 183, 0.7);
   padding-bottom: 10px;
 }
-#beta-message p {
+.hover-message__title {
+  color: black;
+}
+.hover-message__text {
   font-size: 21px;
   font-weight: 500;
   color: black;
 }
-#beta-message a,
-#beta-message a:hover {
-  text-decoration: none;
-  border-bottom: 1px solid rgb(0,120,255);
-  color: rgb(0,120,255); 
-}
-#beta-message h1 {
-  color: black;
-}
 
-#wanna-know {
+.wanna-know {
+  background: black url(/images/home-bg.jpg) top center no-repeat;
+  background-size: 100%;
+}
+.wanna-know__content {
   padding-top: 160px;
   padding-bottom: 40px;
   background: rgba(0, 0, 0, 0.5);
-}
-#wanna-know h1 {
   color: white;
 }
-
-.field {
+.wanna-know__field {
   margin-bottom: 20px;
 }
-.field input {
+.wanna-know__field input {
   background: none;
   border: none;
   border-bottom: 1px solid white;
@@ -55,11 +66,24 @@ h1 {
   color: white;
 }
 /* Remove outline when the input gets focus on Chrome */
-.field textarea:focus, .field input:focus {
+.wanna-know__field textarea:focus, .wanna-know__field input:focus {
   outline: none;
 }
+/* Placeholder color */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255,255,255, 0.5);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(255,255,255, 0.5);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(255,255,255, 0.5);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255,255,255, 0.5);
+}
 
-.tip {
+.wanna-know__tip {
   font-style: italic;
   font-size: 16px;
   color: #b5b7b7;
@@ -67,7 +91,7 @@ h1 {
   margin-top: -10px;
 }
 
-.submit {
+.wanna-know__submit {
   font-family: 'Roboto', sans-serif;
   width: 100%;
   background: white;
@@ -79,6 +103,127 @@ h1 {
   font-weight: bold;
 }
 
+@define-mixin quote {
+  font-family: $font-family-serif;
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.pull-quote {
+  @add-mixin quote;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.pull-quote__preformatted {
+  white-space: pre-line;
+}
+
+.child-stats {
+  background: black url(/images/child.jpg) center center / cover;
+  color: white;
+}
+.child-stats__content {
+  padding: 60px;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.child-stats__text {
+  float: right;
+}
+.child-stats__stat {
+  margin: 30px 0;
+}
+.child-stats__stat-number {
+  font-size: 34px;
+  font-weight: 500;
+  display: block;
+  line-height: 1;
+}
+.child-stats__stat-description {
+  font-size: 18px;
+  display: block;
+}
+
+.main-content {
+  position: relative;
+}
+
+.hangtag {
+  position: absolute;
+  left: 0;
+  top: -120px;
+  max-width: 40%;
+}
+.hangtag__image {
+  max-width: 100%;
+}
+
+.testimonials,
+.whats-happening,
+.about-askbywho {
+  padding-left: 40%;
+}
+
+.testimonials__testimonial {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.testimonials__quote {
+  @add-mixin quote;
+  flex: 1;
+}
+.testimonials__author {
+  width: 90px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-family-sans-serif;
+  font-size: 10px;
+}
+.testimonials__author img {
+  width: 60px;
+  height: 54px;
+}
+
+.whats-happening {
+  font-size: 24px;
+  margin: 60px 0;
+}
+.whats-happening__list {
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.about-askbywho {
+  font-weight: 200;
+  display: flex;
+  flex-direction: row;
+}
+.about-askbywho__content {
+  flex: 1;
+}
+.about-askbywho__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  font-size: 30px;
+  font-weight: 500;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+.about-askbywho__logo img {
+  width: 130px;
+}
 
 /* Change .container width */
 @media (min-width: 1200px) {
@@ -93,25 +238,53 @@ h1 {
   #home-wrapper {
     background-image: none;
   }
-  #beta-message p {
+  .hover-message p {
     font-size: 15px;
   }
-  #home-wrapper h1 {
-    font-size: 30px;
+  h1 {
+    font-size: 26px;
   }
-  #wanna-know { 
-    padding: 60px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
-                url(/images/home-bg.jpg) -520px -287px no-repeat;
+  .wanna-know {
+    background-position: 30% 0;
+    background-size: cover;
   }
-  #wanna-know .field {
+  .wanna-know__content {
+    padding-top: 60px;
+  }
+  .wanna-know__ingress {
+    font-size: 14px;
+  }
+  .wanna-know__field {
     margin: 15px 0 10px;
   }
-  #wanna-know .tip {
+  .wanna-know__tip {
     width: 100%;
     color: #fff;
   }
-  #wanna-know .submit {
+  .wanna-know__submit {
     margin-top: 20px;
+  }
+
+  .pull-quote {
+    font-size: 16px;
+  }
+  .pull-quote__preformatted {
+    white-space: normal;
+  }
+
+  .hangtag {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .testimonials,
+  .whats-happening,
+  .about-askbywho {
+    padding-left: 0;
+  }
+
+  .about-askbywho {
+    flex-direction: column;
   }
 }

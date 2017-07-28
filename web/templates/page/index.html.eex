@@ -1,79 +1,184 @@
 <div id="home-wrapper">
-  <div id="beta-message">
+  <section class="hover-message">
     <div class="container">
-      <h1>
+      <h1 class="hover-message__title">
         Ssh! Welcome to our secret beta!
       </h1>
 
-      <p>
+      <p class="hover-message__text">
         Thanks to you we can launch a site that doesn’t look deserted. Please
-        nominate at least five clothing brands, and leave your name & email so
+        nominate at least five clothing brands, and leave your name &amp; email so
         that we can tell you when we launch!
       </p>
 
-      <p>
+      <p class="hover-message__text">
         Click
-        <a href="http://demo.askbywho.com">here</a>
+        <a class="hover-message__link" href="http://demo.askbywho.com">here</a>
         to see the plan for the full site.
 
         Want to help? Join our
-        <a href="http://facebook.com/groups/askbywho">facebook group</a>!
+        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/">facebook group</a>!
       </p>
     </div>
-  </div>
+  </section>
 
-  <div id="wanna-know">
-    <div class="container">
-      <h1>
-        I want to know the clothes I buy are made in decent working conditions.
-      </h1>
-    </div>
+  <section class="wanna-know">
+    <div class="wanna-know__content">
+      <div class="container">
+        <h1 class="wanna-know__title" id="i-want-to-know">I want to be sure that I buy clothes made in decent working conditions.</h1>
+        <h2 class="wanna-know__ingress">Tell us your favourite brands. We ask how they treat the people making our clothes.</h2>
+      </div>
 
-    <div class="container">
-      <%= form_for @changeset, @action, fn f -> %>
-        <%= if @changeset.action do %>
-          <div class="alert alert-danger">
-            <p>Oops, something went wrong! Please check the errors below.</p>
+      <div class="container">
+        <%= form_for @changeset, @action, fn f -> %>
+          <%= if @changeset.action do %>
+            <div class="alert alert-danger">
+              <p>Oops, something went wrong! Please check the errors below.</p>
+            </div>
+          <% end %>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="wanna-know__field">
+                <%= multiple_select(f, :name_brands, @name_brands) %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="wanna-know__field">
+                <%= text_input f, :email, placeholder: "Email" %>
+                <%= error_tag f, :email %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="wanna-know__field">
+                <%= text_input f, :name, placeholder: "Name" %>
+                <%= error_tag f, :name %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <%= submit "Send", class: "wanna-know__submit" %>
+            </div>
           </div>
         <% end %>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="field">
-              <%= multiple_select(f, :name_brands, @name_brands) %>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="tip">
-              separate brands by comma
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="field">
-              <%= text_input f, :name, placeholder: "Name" %>
-              <%= error_tag f, :name %>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="field">
-              <%= text_input f, :email, placeholder: "Email" %>
-              <%= error_tag f, :email %>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <%= submit "Send", class: :submit %>
-          </div>
-        </div>
-      <% end %>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="pull-quote">
+    <div class="container">
+      <p class="pull-quote__preformatted">We don't want to buy from
+      a factory where 9-year-olds work or
+      where working hours are from 9 am to 9 pm or the
+      pay doesn't allow parents
+      to send their kids to school.<br><br>But most likely we have.</p>
+    </div>
+  </section>
+
+  <section class="child-stats">
+    <div class="child-stats__content">
+      <div class="container">
+        <div class="child-stats__text">
+          <p class="child-stats__stat">
+            <span class="child-stats__stat-number">1.2 billion</span>
+            <span class="child-stats__stat-description">live in extreme poverty</span>
+          </p>
+          <p class="child-stats__stat">
+            <span class="child-stats__stat-number">168 million</span>
+            <span class="child-stats__stat-description">children work</span>
+          </p>
+          <p class="child-stats__stat">
+            <span class="child-stats__stat-number">14.2 million</span>
+            <span class="child-stats__stat-description">people in forced labor</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <div class="container">
+      <div class="hangtag">
+        <img class="hangtag__image" src="/images/hangtag.png" alt="Clothes hangtag: Who made this dress?">
+      </div>
+      <div class="testimonials">
+        <div class="testimonials__testimonial">
+          <div class="testimonials__quote">
+            When I buy 37 euro pants for my 1-year-old, I want to know they were not made by a 9-year-old in Bangladesh.
+          </div>
+          <div class="testimonials__author">
+            <img src="https://rm-content.s3.amazonaws.com/5857e1aaf3c177741f8df43d/810860/upload-060dc5a0-630d-11e7-b794-d5c65b0df4d6.png" alt="">
+            <span class="author__name">Person</span>
+            <span class="author__link">@person</span>
+          </div>
+        </div>
+
+        <div class="testimonials__testimonial">
+          <div class="testimonials__quote">
+            It is so difficult to know what is really ethical. That’s why we need transparency, to see for ourselves.
+          </div>
+          <div class="testimonials__author">
+            <img src="https://rm-content.s3.amazonaws.com/5857e1aaf3c177741f8df43d/810860/upload-060dc5a0-630d-11e7-b794-d5c65b0df4d6.png" alt="">
+            <span class="author__name">Human</span>
+            <span class="author__link">@human</span>
+          </div>
+        </div>
+
+        <div class="testimonials__testimonial">
+          <div class="testimonials__quote">
+            We have Wikipedia, Twitter &amp; Facebook, but have no idea if our clothing was made in sweatshops.
+          </div>
+          <div class="testimonials__author">
+            <img src="https://rm-content.s3.amazonaws.com/5857e1aaf3c177741f8df43d/810860/upload-060dc5a0-630d-11e7-b794-d5c65b0df4d6.png" alt="">
+            <span class="author__name">Someone</span>
+            <span class="author__link">@someone</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="whats-happening">
+        <strong>What’s happening:</strong>
+
+        <div class="whats-happening__list">
+          <strong>1.</strong> 1,000+ people nominate a brand.<br>
+          <strong>2.</strong> We will contact the brand and ask how they treat their workers and discuss ways to be more transparent.<br>
+          <strong>3.</strong> We will tell you what they say.<br>
+          Technology has changed our lives. We think we need to use it for more: to ensure the people making our clothes live in freedom and their fundamental rights are respected.
+        </div>
+
+        <p>
+          Do you want to wear clothes made in decent working conditions?
+        </p>
+
+        <p>
+          <strong>
+            <a href="#i-want-to-know">Yes.</a>
+          </strong>
+        </p>
+      </div>
+
+      <div class="about-askbywho">
+        <div class="about-askbywho__content">
+          <p>
+            We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you.
+          </p>
+          <p>
+            <a href="mailto:askbywho@workahead.co">askbywho@workahead.co</a>
+          </p>
+        </div>
+        <div class="about-askbywho__logo">
+          <img src="/images/logo.png" alt="">
+          <span>ask by who</span>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
