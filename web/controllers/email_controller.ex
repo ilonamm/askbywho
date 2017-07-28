@@ -2,6 +2,7 @@ defmodule Askbywho.EmailController do
   use Askbywho.Web, :controller
 
   alias Askbywho.Email
+  alias Askbywho.Brand
 
 
   def index(conn, _params) do
@@ -10,8 +11,11 @@ defmodule Askbywho.EmailController do
   end
 
   def new(conn, _params) do
+    brands = Repo.all(Brand)
+    name_brands = brands |> Enum.map(&{&1.name, &1.name})
+
     changeset = Email.changeset(%Email{})
-    render(conn, "new.html", changeset: changeset)
+    render(conn, "new.html", changeset: changeset, name_brands: name_brands)
   end
 
   def create(conn, %{"email" => email_params}) do
@@ -29,7 +33,9 @@ defmodule Askbywho.EmailController do
         |> put_flash(:info, "Email created successfully.")
         |> redirect(to: email_path(conn, :index))
       {:error, changeset} -> # Something went wrong
-        render(conn, "new.html", changeset: changeset)
+        brands = Repo.all(Brand)
+        name_brands = brands |> Enum.map(&{&1.name, &1.name})
+        render(conn, "new.html", changeset: changeset, name_brands: name_brands)
     end
   end
 
@@ -54,8 +60,10 @@ defmodule Askbywho.EmailController do
   def edit(conn, %{"id" => id}) do
     email = Repo.get!(Email, id)
     email_with_brands = Repo.preload(email, :brands)
+    brands = Repo.all(Brand)
+    name_brands = brands |> Enum.map(&{&1.name, &1.name})
     changeset = Email.changeset(email_with_brands)
-    render(conn, "edit.html", email: email, changeset: changeset)
+    render(conn, "edit.html", email: email, changeset: changeset, name_brands: name_brands)
   end
 
   def update(conn, %{"id" => id, "email" => email_params}) do
@@ -69,7 +77,9 @@ defmodule Askbywho.EmailController do
         |> put_flash(:info, "Email updated successfully.")
         |> redirect(to: email_path(conn, :show, email))
       {:error, changeset} ->
-        render(conn, "edit.html", email: email, changeset: changeset)
+        brands = Repo.all(Brand)
+        name_brands = brands |> Enum.map(&{&1.name, &1.name})
+        render(conn, "edit.html", email: email, changeset: changeset, name_brands: name_brands)
     end
   end
 

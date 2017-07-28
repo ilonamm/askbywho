@@ -63,8 +63,16 @@ exports.config = {
 
   npm: {
     enabled: true,
+    globals: {
+      $: 'jquery',
+      jQuery: 'jquery',
+      select2: "select2"
+    },
+    styles: {
+      select2: ['dist/css/select2.css']
+    },
     // Whitelist the npm deps to be pulled in as front-end assets.
     // All other deps in package.json will be excluded from the bundle.
-    whitelist: ["phoenix", "phoenix_html"]
+    whitelist: ["phoenix", "phoenix_html", "jquery", "select2"]
   }
 };
