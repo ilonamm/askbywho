@@ -270,4 +270,20 @@ h1 {
   .pull-quote__preformatted {
     white-space: normal;
   }
+
+  .hangtag {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .testimonials,
+  .whats-happening,
+  .about-askbywho {
+    padding-left: 0;
+  }
+
+  .about-askbywho {
+    flex-direction: column;
+  }
 }
