@@ -1,6 +1,25 @@
+$font-family-serif: 'Georgia', serif;
+$font-family-sans-serif: 'Poppins', sans-serif;
+
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-family-sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  border-bottom: 1px solid rgb(0,120,255);
+  color: rgb(0,120,255);
+  transition: 0.2s ease;
+}
+a:hover {
+  opacity: 0.8;
 }
 
 h1 {
@@ -20,12 +39,6 @@ h1 {
   font-size: 21px;
   font-weight: 500;
   color: black;
-}
-.hover-message__link,
-.hover-message__link:hover {
-  text-decoration: none;
-  border-bottom: 1px solid rgb(0,120,255);
-  color: rgb(0,120,255);
 }
 
 .wanna-know {
@@ -89,11 +102,15 @@ h1 {
   font-weight: bold;
 }
 
-.pull-quote {
-  font-family: 'Georgia', serif;
+@define-mixin quote {
+  font-family: $font-family-serif;
   font-size: 24px;
   font-style: italic;
   line-height: 1.5;
+}
+
+.pull-quote {
+  @add-mixin quote;
   padding: 60px 0;
   text-align: center;
 }
@@ -108,7 +125,7 @@ h1 {
 }
 .child-stats__content {
   padding: 60px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
 .child-stats__text {
@@ -126,6 +143,85 @@ h1 {
 .child-stats__stat-description {
   font-size: 18px;
   display: block;
+}
+
+.main-content {
+  position: relative;
+}
+
+.hangtag {
+  position: absolute;
+  left: 0;
+  top: -120px;
+  max-width: 40%;
+}
+.hangtag__image {
+  max-width: 100%;
+}
+
+.testimonials,
+.whats-happening,
+.about-askbywho {
+  padding-left: 40%;
+}
+
+.testimonials__testimonial {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.testimonials__quote {
+  @add-mixin quote;
+  flex: 1;
+}
+.testimonials__author {
+  width: 90px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-family-sans-serif;
+  font-size: 10px;
+}
+.testimonials__author img {
+  width: 60px;
+  height: 54px;
+}
+
+.whats-happening {
+  font-size: 24px;
+  margin: 60px 0;
+}
+.whats-happening__list {
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.about-askbywho {
+  font-weight: 200;
+  display: flex;
+  flex-direction: row;
+}
+.about-askbywho__content {
+  flex: 1;
+}
+.about-askbywho__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  font-size: 30px;
+  font-weight: 500;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+.about-askbywho__logo img {
+  width: 130px;
 }
 
 /* Change .container width */
