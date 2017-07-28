@@ -76,3 +76,19 @@ form.link, form.button {
     border-bottom: 0;
   }
 }
+
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border-color: currentcolor currentcolor white;
+  border-image: none;
+  border-radius: 0;
+  border-style: none none solid;
+  border-width: medium medium 2px;
+  cursor: text;
+  font-family: "Roboto",sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+

@@ -40,21 +40,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="wanna-know__field">
-                <input id="email_brands" name="email[brands]" type="text" placeholder="Write brand's name">
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="wanna-know__tip">
-                separate brands by comma
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="wanna-know__field">
-                <%= text_input f, :name, placeholder: "Name" %>
-                <%= error_tag f, :name %>
+                <%= multiple_select(f, :name_brands, @name_brands) %>
               </div>
             </div>
           </div>
@@ -64,6 +50,15 @@
               <div class="wanna-know__field">
                 <%= text_input f, :email, placeholder: "Email" %>
                 <%= error_tag f, :email %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="wanna-know__field">
+                <%= text_input f, :name, placeholder: "Name" %>
+                <%= error_tag f, :name %>
               </div>
             </div>
           </div>

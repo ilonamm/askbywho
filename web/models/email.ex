@@ -6,6 +6,7 @@ defmodule Askbywho.Email do
   schema "emails" do
     field :name, :string
     field :email, :string
+    field :name_brands, :string, virtual: true
     many_to_many :brands, Brand, join_through: "brands_emails", on_replace: :delete
     timestamps
   end
@@ -25,9 +26,8 @@ defmodule Askbywho.Email do
   end
 
   defp parse_brands(params) do
-    brands = (params["brands"] || "")
+    brands = (params["name_brands"] || [""])
     brands
-    |> String.split(",")
     |> Enum.map(&String.trim/1)
     |> Enum.reject(& &1 == "")
     |> Enum.map(&get_or_insert_brand/1)
