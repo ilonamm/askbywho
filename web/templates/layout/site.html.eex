@@ -9,7 +9,7 @@
 
     <title>beta ask by who</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700|Roboto" rel="stylesheet">
     <!-- Hotjar Tracking Code for http://beta.askbywho.com/ -->
     <script>
       (function(h,o,t,j,a,r){

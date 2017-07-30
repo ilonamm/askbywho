@@ -24,7 +24,7 @@ a:hover {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: bold;
   font-style: normal;
 }
@@ -43,7 +43,7 @@ h1 {
 }
 
 .wanna-know {
-  background: black url(/images/home-bg.jpg) top center no-repeat;
+  background: black url(/images/home-bg.jpg) bottom center no-repeat;
   background-size: 100%;
 }
 .wanna-know__content {
@@ -51,6 +51,23 @@ h1 {
   padding-bottom: 40px;
   background: rgba(0, 0, 0, 0.5);
   color: white;
+}
+.wanna-know__title {
+  font-size: 42px;
+  line-height: 60px;
+  font-weight: 600;
+}
+.wanna-know__ingress {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  max-width: 540px;
+}
+.wanna-know__ingress2 {
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: 500;
+  max-width: 540px;
 }
 .wanna-know__field {
   margin-bottom: 20px;
@@ -200,6 +217,8 @@ h1 {
   padding-left: 20px;
   margin-top: 20px;
   margin-bottom: 40px;
+  line-height: 40px;
+  font-size: 22px;
 }
 
 .about-askbywho {
@@ -245,14 +264,27 @@ h1 {
     font-size: 26px;
   }
   .wanna-know {
-    background-position: 30% 0;
+    background-position: 30% 0%;
     background-size: cover;
   }
   .wanna-know__content {
     padding-top: 60px;
   }
+  .wanna-know__title {
+    font-size: 42px;
+    line-height: 60px;
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+  }
   .wanna-know__ingress {
+    font-size: 20px;
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+  }
+  .wanna-know__ingress2 {
     font-size: 14px;
+    font-family: $font-family-sans-serif;
+    font-weight: 600;
   }
   .wanna-know__field {
     margin: 15px 0 10px;

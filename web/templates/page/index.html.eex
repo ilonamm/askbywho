@@ -12,12 +12,8 @@
       </p>
 
       <p class="hover-message__text">
-        Click
-        <a class="hover-message__link" href="http://demo.askbywho.com">here</a>
-        to see the plan for the full site.
-
         Want to help? Join our
-        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/">facebook group</a>!
+        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank">facebook group</a>!
       </p>
     </div>
   </section>
@@ -25,8 +21,10 @@
   <section class="wanna-know">
     <div class="wanna-know__content">
       <div class="container">
-        <h1 class="wanna-know__title" id="i-want-to-know">I want to be sure that I buy clothes made in decent working conditions.</h1>
-        <h2 class="wanna-know__ingress">Tell us your favourite brands. We ask how they treat the people making our clothes.</h2>
+        <h1 class="wanna-know__title" id="i-want-to-know">Do you want your clothes made in decent working conditions?</h1>
+        <h2 class="wanna-know__ingress">Join 2,547 people asking their favorite brands be transparent about working conditions.</h2>
+        <h2 class="wanna-know__ingress2">When 1,000 people nominate a brand, we will contact them to show that a lot of us want to know that the people making our clothes were treated decently.</h2>
+
       </div>
 
       <div class="container">
@@ -48,16 +46,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="wanna-know__field">
-                <%= text_input f, :email, placeholder: "Email" %>
-                <%= error_tag f, :email %>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="wanna-know__field">
-                <%= text_input f, :name, placeholder: "Name" %>
+                <%= text_input f, :name, placeholder: "First name" %>
                 <%= error_tag f, :name %>
               </div>
             </div>
@@ -65,7 +54,17 @@
 
           <div class="row">
             <div class="col-md-4">
-              <%= submit "Send", class: "wanna-know__submit" %>
+              <div class="wanna-know__field">
+                <%= text_input f, :email, placeholder: "Email" %>
+                <%= error_tag f, :email %>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-4">
+              <%= submit "Nominate", class: "wanna-know__submit" %>
             </div>
           </div>
         <% end %>
@@ -155,7 +154,7 @@
         </div>
 
         <p>
-          Do you want to wear clothes made in decent working conditions?
+          <strong>Do you want to wear clothes made in decent working conditions?</strong>
         </p>
 
         <p>
