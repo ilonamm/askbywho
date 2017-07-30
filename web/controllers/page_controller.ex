@@ -11,8 +11,16 @@ defmodule Askbywho.PageController do
   plug :put_layout, "site.html"
 
   def index(conn, _params) do
-    brands = Repo.all(Brand)
-    name_brands = brands |> Enum.map(&{&1.name, &1.name})
+    import Ecto.Query
+    import String
+
+    # Selecting the brands in alphabetical order
+    # Now ordering uppercase, then lowercase --> TODO ignore case
+    query = from b in Brand,
+      order_by: [asc: b.name],
+      select: b.name
+
+    name_brands = Repo.all(query)
     changeset = Email.changeset(%Email{})
     render(conn, "index.html", changeset: changeset, action: page_path(conn, :create), name_brands: name_brands)
   end
