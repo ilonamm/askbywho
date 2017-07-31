@@ -271,18 +271,20 @@ h1 {
     padding-top: 60px;
   }
   .wanna-know__title {
-    font-size: 42px;
-    line-height: 60px;
+    font-size: 27px;
+    line-height: 34px;
     font-family: $font-family-sans-serif;
     font-weight: 700;
   }
   .wanna-know__ingress {
-    font-size: 20px;
+    font-size: 14px;
+    line-height: 18px;
     font-family: $font-family-sans-serif;
     font-weight: 700;
   }
   .wanna-know__ingress2 {
-    font-size: 14px;
+    font-size: 11px;
+    line-height: 14px;
     font-family: $font-family-sans-serif;
     font-weight: 600;
   }
@@ -315,7 +317,17 @@ h1 {
   .about-askbywho {
     padding-left: 0;
   }
-
+  .testimonials__quote {
+    @add-mixin quote;
+    flex: 1;
+    font-size: 16px;
+  }
+  .whats-happening__list {
+    font-size: 16px;
+    line-height: 26px;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
   .about-askbywho {
     flex-direction: column;
   }

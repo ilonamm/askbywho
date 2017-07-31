@@ -22,8 +22,8 @@
     <div class="wanna-know__content">
       <div class="container">
         <h1 class="wanna-know__title" id="i-want-to-know">Do you want your clothes made in decent working conditions?</h1>
-        <h2 class="wanna-know__ingress">Join <%= count_emails %> people asking their favorite brands be transparent about working conditions.</h2>
-        <h2 class="wanna-know__ingress2">When 1,000 people nominate a brand, we will contact the brand to show that we want to know the people making our clothes were treated decently.</h2>
+        <h2 class="wanna-know__ingress">Join <%= count_emails %> people asking their favorite brands to be transparent about working conditions.</h2>
+        <h2 class="wanna-know__ingress2">When 1,000 people nominate a brand, we will contact the brand to show that a lot of us want to know the people making our clothes are treated decently.</h2>
 
       </div>
 
@@ -149,7 +149,7 @@
         <div class="whats-happening__list">
           <strong>1.</strong> 1,000+ people nominate a brand.<br>
           <strong>2.</strong> We will contact the brand and ask how they treat their workers and discuss ways to be more transparent.<br>
-          <strong>3.</strong> We will tell you what they say.<br>
+          <strong>3.</strong> We will tell you what they say.<br><br>
           Technology has changed our lives. We think we need to use it for more: to ensure the people making our clothes live in freedom and their fundamental rights are respected.
         </div>
 
