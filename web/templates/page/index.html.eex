@@ -22,7 +22,7 @@
     <div class="wanna-know__content">
       <div class="container">
         <h1 class="wanna-know__title" id="i-want-to-know">Do you want your clothes made in decent working conditions?</h1>
-        <h2 class="wanna-know__ingress">Join 2,547 people asking their favorite brands be transparent about working conditions.</h2>
+        <h2 class="wanna-know__ingress">Join <%= count_emails %> people asking their favorite brands be transparent about working conditions.</h2>
         <h2 class="wanna-know__ingress2">When 1,000 people nominate a brand, we will contact them to show that a lot of us want to know that the people making our clothes were treated decently.</h2>
 
       </div>
