@@ -2,11 +2,11 @@
   <section class="hover-message">
     <div class="container">
       <h1 class="hover-message__title">
-        Ssh! Welcome to our secret beta!
+        Welcome to our secret beta!
       </h1>
 
       <p class="hover-message__text">
-        Thanks to you we can launch a site that doesn’t look deserted. Please
+        Help us out to launch a site with at least 1,000 people! Please
         nominate at least five clothing brands, and leave your name &amp; email so
         that we can tell you when we launch!
       </p>
@@ -23,7 +23,7 @@
       <div class="container">
         <h1 class="wanna-know__title" id="i-want-to-know">Do you want your clothes made in decent working conditions?</h1>
         <h2 class="wanna-know__ingress">Join <%= count_emails %> people asking their favorite brands be transparent about working conditions.</h2>
-        <h2 class="wanna-know__ingress2">When 1,000 people nominate a brand, we will contact them to show that a lot of us want to know that the people making our clothes were treated decently.</h2>
+        <h2 class="wanna-know__ingress2">When 1,000 people nominate a brand, we will contact the brand to show we want to know that the people making our clothes were treated decently.</h2>
 
       </div>
 

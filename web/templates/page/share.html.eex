@@ -1,12 +1,27 @@
 <div id="share-wrapper">
+<section class="hover-message">
+  <div class="container">
+  <p class="hover-message__text">
+      <strong>Thank you for joining our beta!</strong>
+    </p>
+    <p class="hover-message__text">
+      We'll send you an email when we're ready to launch!
+      <br>Want to help? Join our
+      <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank">facebook group</a>!
+    </p>
+  </div>
+</section>
+
+
   <div class="head">
     <div class="container">
       <h1>
-        You've nominated <%= count_brands_message @brands %>!
+        Thank you for nominating <%= count_brands_message @brands %>!
       </h1>
 
       <p>
-        We have this much to go:
+        When we get to 1,000 nominations, we'll reach out to the brands.
+        This is how many others have nominated your favorite brands:
       </p>
 
       <div class="brands">
@@ -14,9 +29,9 @@
           <div class="brand">
             <div class="name"><%= brand.name %></div>
             <div class="progress">
-              <div class="progress-bar" 
-                   role="progressbar" 
-                   aria-valuenow="<%= percent_nominations(brand.id) %>" 
+              <div class="progress-bar"
+                   role="progressbar"
+                   aria-valuenow="<%= percent_nominations(brand.id) %>"
                    style="width: <%= percent_nominations(brand.id) %>%"
                    aria-valuemin="0" aria-valuemax="100">
                  <span><%= count_nominations(brand.id) %></span>
@@ -34,24 +49,39 @@
   <div class="body">
     <div class="container">
       <p>
-        <%= count_emails %> people have nominated 
-        <%= count_brands %> brands 
+        Overall,
+        <%= count_emails %> people have nominated
+        <%= count_brands %> brands
         <%= count_nominations %> times.
       </p>
 
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v2.10";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
       <p>
-        Every voice counts - share ask by who:
+        Help us get to 1,000 people before the site launch - click the button below to ask a friend join via Facebook Message!
       </p>
 
+      <div class="fb-send" data-href="https://beta.askbywho.com"></div>
+      <p></p>
+      <p></p>
+
+
+
+      <!--
       <div class="sharing">
         <div class="social-network">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=www.askbywho.com">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=beta.askbywho.com"></a>
             <img src="/images/facebook.png">
-            <div class="cta">
-              share 
-              askbywho.com
-            </div>
-          </a>
+              <div class="cta">
+                beta.askbywho.com
+              </div>
         </div>
 
         <div class="social-network">
@@ -62,16 +92,18 @@
             </div>
           </a>
         </div>
+        -->
       </div>
     </div>
   </div>
 
+<!-- replace with the new footer
   <div class="foot">
     <div class="container">
       <p>
         Follow us
       </p>
-      
+
       <div class="social">
         <a href="https://www.facebook.com/sharer/sharer.php?u=www.askbywho.com">
           <img src="/images/facebook.png">
@@ -90,4 +122,5 @@
       </div>
     </div>
   </div>
+  -->
 </div>

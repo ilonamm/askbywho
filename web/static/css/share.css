@@ -6,13 +6,14 @@
 }
 
 #share-wrapper h1 {
-  font-size: 54px;
+  font-size: 42px;
   font-weight: normal;
   margin: 120px 0 40px;
 }
 
 #share-wrapper p {
-  font-size: 28px;
+  font-size: 22px;
+  line-height: 40px;
   margin: 20px 0;
 }
 #share-wrapper .brand {
@@ -130,7 +131,7 @@
 /* Media query for mobile devices. */
 @media only screen and (max-width: 800px) {
   #share-wrapper .head {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
                 url(/images/share-bg.jpg) center -80px no-repeat;
   }
   #share-wrapper .head h1 {
