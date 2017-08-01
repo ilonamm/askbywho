@@ -13,7 +13,7 @@ We believe transparency is the key to creating decent working conditions and tru
 
 ### Be Positive
 
-This stuff is hard and the conditions can be depressing or shocking but instead of focusing on the negative, we like to look on the bright side and push for change in a positive way.  This means we __do not shame__ consumers or companies to make changes, we don't want to __exploit workers__ for marketing purposes.  We want consumer and corporate behaviors to change based on transparent data and they truly believe it is the decent thing to do.
+This stuff is hard and the conditions can be depressing or shocking but instead of focusing on the negative, we like to look on the bright side and push for change in a positive way.  This means we __do not shame__ consumers or companies to make changes, we __do not exploit workers__ for marketing purposes.  We want consumer and corporate behaviors to change based on transparent data and they truly believe it is the decent thing to do.
 
 ### Be Business-minded
 
