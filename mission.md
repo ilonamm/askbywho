@@ -19,6 +19,6 @@ This stuff is hard and the conditions can be depressing or shocking but instead 
 
 We believe that the only way to make this work is to create a viable business model to support these efforts.  This means both for us and companies who want to improve their working conditions.  Our efforts should improve their sales, cut costs, improve productivity, increase worker satisfaction etc.  In the end, for us to be successful, companies have to be successful.
 
-A concept similar is what [Give and Take](http://knowledge.wharton.upenn.edu/article/givers-vs-takers-the-surprising-truth-about-who-gets-ahead/) refers to as `otherish`, givers who help others but also make sure to take care of their own interests so they can sustain their efforts.
+This concept is what [Give and Take](http://knowledge.wharton.upenn.edu/article/givers-vs-takers-the-surprising-truth-about-who-gets-ahead/) refers to as `otherish`, givers who help others but also make sure to take care of their own interests so they can sustain their efforts.
 
 More in-depth information on how askbywho works is [here](https://docs.google.com/document/d/1l643wqatX4FfunQEvKdikGGeJmgxnR8R937fa3TxvuE/edit)
