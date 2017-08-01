@@ -24,6 +24,10 @@ defmodule Askbywho.Router do
     plug Coherence.Authentication.Session, protected: true  # Add this
   end
 
+  pipeline :api do
+    plug :accepts, ["json"]
+  end
+
   # Add this block
   scope "/" do
     pipe_through :browser
@@ -49,5 +53,12 @@ defmodule Askbywho.Router do
     resources "/emails", EmailController
     resources "/brands", BrandController
     resources "/users", UserController
+  end
+
+  scope "/api", Askbywho do
+    pipe_through :api
+    scope "/v1" do
+      resources "/brands", BrandController, only: [:index]
+    end
   end
 end

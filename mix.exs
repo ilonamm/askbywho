@@ -22,7 +22,7 @@ defmodule Askbywho.Mixfile do
   def application do
     [mod: {Askbywho, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :coherence]]
+                    :phoenix_ecto, :postgrex, :coherence, :filterable, :scrivener_ecto, :scrivener_html]]
   end
 
   # Specifies which paths to compile per environment.
@@ -42,8 +42,11 @@ defmodule Askbywho.Mixfile do
      {:coherence, "~> 0.4"},
      {:cowboy, "~> 1.0"},
      {:poison, "~> 2.0"},
+     {:filterable, "~> 0.5.2"},
      {:dogma, "~> 0.1.15", only: :dev},
-     {:excoveralls, "~> 0.7", only: :test},]
+     {:excoveralls, "~> 0.7", only: :test},
+     {:scrivener_ecto, "~> 1.0"},
+     {:scrivener_html, "~> 1.7"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.
