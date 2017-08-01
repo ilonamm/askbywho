@@ -1,5 +1,7 @@
 <h2>Listing brands</h2>
 
+<%= pagination_links @page %>
+
 <table class="table">
   <thead>
     <tr>
