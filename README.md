@@ -2,7 +2,10 @@
 
 # askbywho.com
 
-Welcome to the askbywho.com service.  This is the source code that runs at askbywho.com, and changes here (to master) will be pushed to the prod service
+Welcome to the askbywho.com service.  This is the source code that runs at [askbywho.com](https://beta.askbywho.com/) (currently in beta), and changes here to master will be pushed to the prod service.
+
+Read more about our [mission](mission.md).
+
 
 ## Getting started
 
@@ -36,8 +39,6 @@ Think of an estimate how many hours it will take you to do the task. It is a com
 Add your estimate as a comment. Then after you’re done the development, update it with approximately how long it took you. Just be honest. The point is to learn about workload estimation and help with overall planning.
  
 When you start the development, please drag the Trello card to ‘doing’. And when you’re done, drag it to the code review.
-
-
 
 
 ## Local Setup
