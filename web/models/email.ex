@@ -26,8 +26,8 @@ defmodule Askbywho.Email do
   end
 
   defp parse_brands(params) do
-    brands = (params["name_brands"] || [""])
-    brands
+    new_brands = (params["name_brands"] || [""])
+    new_brands
     |> Enum.map(&String.trim/1)
     |> Enum.reject(& &1 == "")
     |> Enum.map(&get_or_insert_brand/1)

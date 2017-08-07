@@ -7,30 +7,23 @@ defmodule Askbywho.PageController do
   use Askbywho.Web, :controller
   alias Askbywho.Email
   alias Askbywho.Brand
+  import Ecto.Query
 
   plug :put_layout, "site.html"
 
-  def index(conn, _params) do
-    import Ecto.Query
-    import String
-
-    # Selecting the brands in alphabetical order
-    # Now ordering uppercase, then lowercase --> TODO ignore case
-    query = from b in Brand,
-      order_by: [asc: b.name],
-      select: b.name
-
-    name_brands = Repo.all(query)
+  def index(conn, params) do
     changeset = Email.changeset(%Email{})
-    render(conn, "index.html", changeset: changeset, action: page_path(conn, :create), name_brands: name_brands)
+    render(conn, "index.html", changeset: changeset, action: page_path(conn, :create), name_brands: [])
   end
 
   def create(conn, %{"email" => email_params}) do
-    email = Repo.get_by(Email, email: email_params["email"] || "") || %Email{}
+    email_object = Repo.get_by(Email, email: email_params["email"] || "") || %Email{}
+    email = email_object |> Repo.preload([:brands])
+    old_name_brands = %{"name_brands" => email.brands |> Enum.map(fn(x) -> x.name end)}
+    email_params = Map.merge(email_params, old_name_brands, fn _k, v1, v2 -> v1 ++ v2 end)
 
     result =
       email
-      |> Repo.preload([:brands])
       |> Email.changeset(email_params)
       |> Repo.insert_or_update
 
@@ -38,8 +31,8 @@ defmodule Askbywho.PageController do
       {:ok, email} -> # Inserted or updated with success
         redirect(conn, to: page_path(conn, :share, email.id))
       {:error, changeset} -> # Something went wrong
-        brands = Repo.all(Brand)
-        name_brands = brands |> Enum.map(&{&1.name, &1.name})
+        brands = email_params["name_brands"] || []
+        name_brands = brands |> Enum.map(&{&1, &1})
         render(conn, "index.html", changeset: changeset, action: page_path(conn, :create), name_brands: name_brands)
     end
   end
@@ -49,4 +42,5 @@ defmodule Askbywho.PageController do
     brands = Repo.preload(email, :brands).brands
     render(conn, "share.html", email: email, brands: brands)
   end
+
 end
