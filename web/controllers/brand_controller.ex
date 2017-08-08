@@ -1,13 +1,23 @@
 defmodule Askbywho.BrandController do
   use Askbywho.Web, :controller
+  use Filterable.Phoenix.Controller
+  import Ecto.Query
 
   alias Askbywho.Brand
 
   plug :scrub_params, "brand" when action in [:create, :update]
 
-  def index(conn, _params) do
-    brands = Repo.all(Brand)
-    render(conn, "index.html", brands: brands)
+  filterable do
+    @options param: :q
+    filter search(query, value, _conn) do
+      query |> where([u], ilike(u.name, ^"%#{value}%"))
+    end
+  end
+
+  def index(conn, params) do
+    with {:ok, query, filter_values} <- apply_filters(Brand, conn),
+         page                       <- Repo.paginate(query, params),
+     do: render(conn, :index, brands: page.entries, meta: filter_values, page: page)
   end
 
   def new(conn, _params) do
