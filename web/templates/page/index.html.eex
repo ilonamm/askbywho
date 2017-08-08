@@ -21,7 +21,8 @@
   <section class="wanna-know">
     <div class="wanna-know__content">
       <div class="container">
-        <h1 class="wanna-know__title" id="i-want-to-know">Do you want your clothes made in decent working conditions?</h1>
+        <p class="wanna-know__title" id="i-want-to-know">Make our clothes
+        in decent working conditions</p>
         <h2 class="wanna-know__ingress">Join <%= count_emails %> people asking their favorite brands to be transparent about working conditions.</h2>
         <h2 class="wanna-know__ingress2">When 1,000 people nominate a brand, we will contact the brand to show that a lot of us want to know the people making our clothes are treated decently.</h2>
 
@@ -72,13 +73,21 @@
     </div>
   </section>
 
-  <section class="pull-quote">
+  <section class="dont-want-clothes-by-section">
     <div class="container">
-      <p class="pull-quote__preformatted">We don't want to buy from
-      a factory where 9-year-olds work or
-      where working hours are from 9 am to 9 pm or the
-      pay doesn't allow parents
-      to send their kids to school.<br><br>But most likely we have.</p>
+      <p class="dont-want-clothes-by"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
+        <span class="dont-want-clothes-by__end">9-year-olds.</span></p>
+      <p class="dont-want-clothes-by"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
+        <span class="dont-want-clothes-by__end">people working from 9 am to 9 pm.</span></p>
+      <p class="dont-want-clothes-by"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
+        <span class="dont-want-clothes-by__end">parents who can't afford to send
+        their kids to school.</span></p>
+      <p class="dont-want-clothes-by dont-want-clothes-by__3rd_last"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
+        <span class="dont-want-clothes-by__end">people risking their health.</span></p>
+      <p class="dont-want-clothes-by dont-want-clothes-by__2nd_last"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
+        <span class="dont-want-clothes-by__end">people risking their unborn baby.</span></p>
+      <p class="dont-want-clothes-by dont-want-clothes-by__last"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
+        <span class="dont-want-clothes-by__end">people in dangerous conditions.</span></p>
     </div>
   </section>
 

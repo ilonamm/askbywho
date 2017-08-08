@@ -53,6 +53,7 @@ h1 {
   color: white;
 }
 .wanna-know__title {
+  white-space: pre-line;
   font-size: 42px;
   line-height: 60px;
   font-weight: 600;
@@ -127,19 +128,43 @@ h1 {
   line-height: 1.5;
 }
 
-.pull-quote {
-  @add-mixin quote;
-  padding: 60px 0;
-  text-align: center;
+.dont-want-clothes-by-section {
+  padding: 40px 0;
+  font-size: 20px;
 }
 
-.pull-quote__preformatted {
-  white-space: pre-line;
+.dont-want-clothes-by {
+  padding: 0px;
+}
+
+.dont-want-clothes-by__start {
+  font-weight: 100;
+}
+
+.dont-want-clothes-by__end {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.dont-want-clothes-by__last {
+  color: rgba(0, 0, 0, 0.1);
+
+}
+
+.dont-want-clothes-by__2nd_last {
+  color: rgba(0, 0, 0, 0.3);
+
+}
+
+.dont-want-clothes-by__3rd_last {
+  color: rgba(0, 0, 0, 0.6);
+
 }
 
 .child-stats {
   background: black url(/images/child.jpg) center center / cover;
   color: white;
+  margin-top: -40px;
 }
 .child-stats__content {
   padding: 60px;
@@ -275,6 +300,7 @@ h1 {
     line-height: 34px;
     font-family: $font-family-sans-serif;
     font-weight: 700;
+    white-space: normal;
   }
   .wanna-know__ingress {
     font-size: 14px;
@@ -299,11 +325,29 @@ h1 {
     margin-top: 20px;
   }
 
-  .pull-quote {
-    font-size: 16px;
+  .dont-want-clothes-by-section {
+    padding: 5px;
+    font-size: 15px;
+    line-height: normal;
+    white-space: pre-line;
+    max-width: 350px;
+    margin: auto;
+
   }
-  .pull-quote__preformatted {
-    white-space: normal;
+
+  .dont-want-clothes-by {
+    padding: 0px;
+    line-height: normal;
+    margin-bottom: -10px;
+  }
+
+
+  .dont-want-clothes-by__start {
+    font-style: italic;
+  }
+
+  .child-stats {
+    margin-top: -30px;
   }
 
   .hangtag {
@@ -331,4 +375,5 @@ h1 {
   .about-askbywho {
     flex-direction: column;
   }
+
 }
