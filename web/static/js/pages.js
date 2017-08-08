@@ -8,7 +8,9 @@ $('#email_name_brands').select2({
     data: function(params) {
       return {
         q: params.term,
-        page: params.page
+        page: params.page,
+        sort: 'name',
+        order: 'asc'
       };
     },
     processResults: function(data, params) {
@@ -23,7 +25,6 @@ $('#email_name_brands').select2({
     },
     cache: true
   },
-  minimumInputLength: 2,
   templateSelection: function(resultado) {
     return resultado.text;
   },

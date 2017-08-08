@@ -1,6 +1,17 @@
 defmodule Askbywho.Brand do
   use Askbywho.Web, :model
   alias Askbywho.Email
+  use Filterable.Phoenix.Model
+  import Ecto.Query
+
+  filterable do
+    orderable [:name]
+
+    @options param: :q
+    filter search(query, value, _conn) do
+      query |> where([u], ilike(u.name, ^"%#{value}%"))
+    end
+  end
 
   schema "brands" do
     field :name, :string
