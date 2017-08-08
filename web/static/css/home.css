@@ -326,18 +326,18 @@ h1 {
   }
 
   .dont-want-clothes-by-section {
-    padding: 3px;
-    font-size: 14px;
+    padding: 5px;
+    font-size: 15px;
     line-height: normal;
     white-space: pre-line;
-    margin-top: -10px;
+    max-width: 350px;
+    margin: auto;
 
   }
 
   .dont-want-clothes-by {
     padding: 0px;
     line-height: normal;
-    height: auto;
     margin-bottom: -10px;
   }
 
@@ -346,6 +346,9 @@ h1 {
     font-style: italic;
   }
 
+  .child-stats {
+    margin-top: -30px;
+  }
 
   .hangtag {
     position: static;
