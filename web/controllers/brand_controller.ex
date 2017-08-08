@@ -1,6 +1,5 @@
 defmodule Askbywho.BrandController do
   use Askbywho.Web, :controller
-  use Filterable.Phoenix.Controller
   import Ecto.Query
 
   alias Askbywho.Brand
