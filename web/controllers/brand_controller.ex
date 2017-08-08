@@ -1,13 +1,15 @@
 defmodule Askbywho.BrandController do
   use Askbywho.Web, :controller
+  import Ecto.Query
 
   alias Askbywho.Brand
 
   plug :scrub_params, "brand" when action in [:create, :update]
 
-  def index(conn, _params) do
-    brands = Repo.all(Brand)
-    render(conn, "index.html", brands: brands)
+  def index(conn, params) do
+    with {:ok, query, filter_values} <- Brand.apply_filters(conn),
+         page                       <- Repo.paginate(query, params),
+     do: render(conn, :index, brands: page.entries, meta: filter_values, page: page)
   end
 
   def new(conn, _params) do

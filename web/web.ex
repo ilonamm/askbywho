@@ -29,6 +29,7 @@ defmodule Askbywho.Web do
   def controller do
     quote do
       use Phoenix.Controller
+      use Filterable
 
       alias Askbywho.Repo
       import Ecto
