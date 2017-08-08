@@ -128,12 +128,12 @@ h1 {
   line-height: 1.5;
 }
 
-.dont-want-clothes-by {
+.dont-want-clothes-by-section {
   padding: 40px 0;
   font-size: 20px;
 }
 
-p.dont-want-clothes-by {
+.dont-want-clothes-by {
   padding: 0px;
 }
 
@@ -325,17 +325,22 @@ p.dont-want-clothes-by {
     margin-top: 20px;
   }
 
-  .dont-want-clothes-by {
+  .dont-want-clothes-by-section {
     padding: 3px;
     font-size: 14px;
+    line-height: normal;
     white-space: pre-line;
-    margin: 0px;
+    margin-top: -10px;
+
   }
 
-  p.dont-want-clothes-by {
+  .dont-want-clothes-by {
     padding: 0px;
-    margin: 0px;
+    line-height: normal;
+    height: auto;
+    margin-bottom: -10px;
   }
+
 
   .dont-want-clothes-by__start {
     font-style: italic;
