@@ -59,7 +59,7 @@ defmodule Askbywho.PageView do
     |> raw
   end
 
-  def on_qa() do
+  def on_qa do
     IO.puts("environment var is #{inspect Application.get_env(:askbywho, :env)}")
     Application.get_env(:askbywho, :env) == :qa
   end
