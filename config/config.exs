@@ -54,4 +54,4 @@ config :scrivener_html,
   view_style: :bootstrap
 
 # Setting environment available
-config :askbywho, env: Mix.env
+config :askbywho, is_qa: Mix.is_qa
