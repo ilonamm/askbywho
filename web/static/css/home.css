@@ -33,6 +33,10 @@ h1 {
   background: rgba(255, 244, 183, 0.7);
   padding-bottom: 10px;
 }
+.hover-message-qa {
+  background: rgba(255, 0, 0, 0.7);
+  padding-bottom: 10px;
+}
 .hover-message__title {
   color: black;
 }

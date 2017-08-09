@@ -30,7 +30,7 @@ defmodule Askbywho.PageController do
       |> Map.put(:longitude, longitude)
       |> Map.put(:location, location)
 
-    IO.puts("inspecting email: #{inspect email}")
+    # IO.puts("inspecting email: #{inspect email}")
     old_name_brands = %{"name_brands" => email.brands |> Enum.map(fn(x) -> x.name end)}
 
     email_params = Map.merge(email_params, old_name_brands, fn _k, v1, v2 -> v1 ++ v2 end)
