@@ -8,6 +8,7 @@ defmodule Askbywho.PageController do
   alias Askbywho.Email
   alias Askbywho.Brand
   import Ecto.Query
+  import Ecto.Changeset
 
   plug :put_layout, "site.html"
 
@@ -17,10 +18,27 @@ defmodule Askbywho.PageController do
   end
 
   def create(conn, %{"email" => email_params}) do
+    # email_params is a map, "email" => %{"email" => "ilona.mooney@gmail.com", "name" => "Ilona", "name_brands" => ["le"]}
+
+    #fetching location
+    %{location: location, latitude: latitude, longitude: longitude} = look_up_location(conn)
+
     email_object = Repo.get_by(Email, email: email_params["email"] || "") || %Email{}
-    email = email_object |> Repo.preload([:brands])
+    email = email_object
+      |> Repo.preload([:brands])
+      |> Map.put(:latitude, latitude)
+      |> Map.put(:longitude, longitude)
+      |> Map.put(:location, location)
+
+    IO.puts("inspecting email: #{inspect email}")
     old_name_brands = %{"name_brands" => email.brands |> Enum.map(fn(x) -> x.name end)}
+
     email_params = Map.merge(email_params, old_name_brands, fn _k, v1, v2 -> v1 ++ v2 end)
+      |> Map.put("latitude", latitude)
+      |> Map.put("longitude", longitude)
+      |> Map.put("location", location)
+
+    # IO.puts("env is #{Application.get_env(:askbywho, :env)}")
 
     result =
       email
@@ -41,6 +59,34 @@ defmodule Askbywho.PageController do
     email = Repo.get!(Email, id)
     brands = Repo.preload(email, :brands).brands
     render(conn, "share.html", email: email, brands: brands)
+  end
+
+  defp look_up_location(conn) do
+    {:ok, %GeoIP.Location{:city => city, :region_name => region, :country_name => country, :latitude => latitude, :longitude => longitude}} =
+      # this is for testing on localhost
+      if conn.remote_ip == {127, 0, 0, 1} do
+        GeoIP.lookup({Enum.random(1..255), Enum.random(1..255), Enum.random(1..255), Enum.random(1..254)})
+      else
+        GeoIP.lookup(conn)
+      end
+
+    location = formatted_location(%{city: city, region: region, country: country})
+
+    if latitude == 0 && longitude == 0 do
+      %{location: "n/a", latitude: 0.0, longitude: 0.0}
+    else
+      %{location: location, latitude: latitude, longitude: longitude}
+    end
+  end
+
+  defp formatted_location(%{city: "", region: "", country: country}) do
+    country
+  end
+  defp formatted_location(%{city: "", region: region, country: country}) do
+    region <> ", " <> country
+  end
+  defp formatted_location(%{city: city, region: region, country: country}) do
+    city <> ", " <> region <> ", " <> country
   end
 
 end
