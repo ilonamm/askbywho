@@ -60,7 +60,7 @@ defmodule Askbywho.PageView do
   end
 
   def on_qa do
-    IO.puts("environment var is_qa is #{inspect Application.get_env(:askbywho, :is_qa)}")
-    Application.get_env(:askbywho, :is_qa) == :yes
+    IO.puts("environment var is_qa is #{inspect System.get_env("is_qa")}")
+    System.get_env("is_qa") == :yes
   end
 end
