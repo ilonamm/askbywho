@@ -70,6 +70,9 @@ defmodule Askbywho.PageController do
       else
         GeoIP.lookup(conn)
       end
+      IO.puts("inspecting ip: #{conn.remote_ip}")
+      IO.puts("inspecting geoIP result: #{inspect GeoIP.lookup(conn)}")
+
 
     location = formatted_location(%{city: city, region: region, country: country})
 
