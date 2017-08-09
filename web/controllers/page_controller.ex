@@ -38,7 +38,7 @@ defmodule Askbywho.PageController do
     Map.put(email_params, "longitude", longitude)
     Map.put(email_params, "location", location)
 
-    # IO.puts("env is #{Application.get_env(:askbywho, :env)}")
+    IO.puts("env is #{Application.get_env(:askbywho, :env)}")
 
     result =
       email
