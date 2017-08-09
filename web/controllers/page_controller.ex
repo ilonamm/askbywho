@@ -20,7 +20,7 @@ defmodule Askbywho.PageController do
   def create(conn, %{"email" => email_params}) do
     # email_params is a map, "email" => %{"email" => "ilona.mooney@gmail.com", "name" => "Ilona", "name_brands" => ["le"]}
 
-    #fetching location
+    # fetching location
     %{location: location, latitude: latitude, longitude: longitude} = look_up_location(conn)
 
     email_object = Repo.get_by(Email, email: email_params["email"] || "") || %Email{}
@@ -34,9 +34,9 @@ defmodule Askbywho.PageController do
     old_name_brands = %{"name_brands" => email.brands |> Enum.map(fn(x) -> x.name end)}
 
     email_params = Map.merge(email_params, old_name_brands, fn _k, v1, v2 -> v1 ++ v2 end)
-      |> Map.put("latitude", latitude)
-      |> Map.put("longitude", longitude)
-      |> Map.put("location", location)
+    Map.put(email_params, "latitude", latitude)
+    Map.put(email_params, "longitude", longitude)
+    Map.put(email_params, "location", location)
 
     # IO.puts("env is #{Application.get_env(:askbywho, :env)}")
 
@@ -62,7 +62,8 @@ defmodule Askbywho.PageController do
   end
 
   defp look_up_location(conn) do
-    {:ok, %GeoIP.Location{:city => city, :region_name => region, :country_name => country, :latitude => latitude, :longitude => longitude}} =
+    {:ok, %GeoIP.Location{:city => city, :region_name => region,
+      :country_name => country, :latitude => latitude, :longitude => longitude}} =
       # this is for testing on localhost
       if conn.remote_ip == {127, 0, 0, 1} do
         GeoIP.lookup({Enum.random(1..255), Enum.random(1..255), Enum.random(1..255), Enum.random(1..254)})
