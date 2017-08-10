@@ -1,4 +1,4 @@
-defmodule RemoteIPPlug do
+defmodule Askbywhoplugs.RemoteIPPlug do
   @behaviour Plug
   import Plug.Conn
 
