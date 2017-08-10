@@ -63,16 +63,14 @@ defmodule Askbywho.PageController do
 
   defp look_up_location(conn) do
     {:ok, %GeoIP.Location{:city => city, :region_name => region,
-      :country_name => country, :latitude => latitude, :longitude => longitude}} =
+      :country_name => country, :latitude => latitude, :longitude => longitude}} = GeoIP.lookup(conn)
       # this is for testing on localhost
-      if conn.remote_ip == {127, 0, 0, 1} do
-        GeoIP.lookup({Enum.random(1..255), Enum.random(1..255), Enum.random(1..255), Enum.random(1..254)})
-      else
-        GeoIP.lookup(conn)
-      end
+      # if conn.remote_ip == {127, 0, 0, 1} do
+      # GeoIP.lookup({Enum.random(1..255), Enum.random(1..255), Enum.random(1..255), Enum.random(1..254)})
+      # else
+      # end
       IO.puts("inspecting ip: #{inspect conn.remote_ip}")
       IO.puts("inspecting geoIP result: #{inspect GeoIP.lookup(conn)}")
-
 
     location = formatted_location(%{city: city, region: region, country: country})
 

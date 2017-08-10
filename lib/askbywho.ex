@@ -4,9 +4,6 @@ defmodule Askbywho do
   """
 
   use Application
-  use Plug.Builder
-
-  plug RemoteIp
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
