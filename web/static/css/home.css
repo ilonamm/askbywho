@@ -59,12 +59,14 @@ h1 {
   font-weight: 600;
 }
 .wanna-know__ingress {
+  white-space: pre-line;
   font-size: 20px;
   line-height: 32px;
   font-weight: 500;
   max-width: 540px;
 }
 .wanna-know__ingress2 {
+  white-space: pre-line;
   font-size: 13px;
   line-height: 21px;
   font-weight: 500;
