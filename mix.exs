@@ -47,7 +47,8 @@ defmodule Askbywho.Mixfile do
      {:excoveralls, "~> 0.7", only: :test},
      {:scrivener_ecto, "~> 1.0"},
      {:scrivener_html, "~> 1.7"},
-     {:geoip, "~> 0.1"},]
+     {:geoip, "~> 0.1"},
+     {:plug, "~> 1.3.4"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

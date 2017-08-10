@@ -39,6 +39,7 @@ defmodule Askbywho.PageController do
     Map.put(email_params, "location", location)
 
     IO.puts("env is_qa is #{Application.get_env(:askbywho, :is_qa)}")
+    IO.puts("inspect conn #{inspect conn}")
 
     result =
       email
@@ -69,7 +70,7 @@ defmodule Askbywho.PageController do
       # GeoIP.lookup({Enum.random(1..255), Enum.random(1..255), Enum.random(1..255), Enum.random(1..254)})
       # else
       # end
-      IO.puts("inspecting ip: #{inspect conn.remote_ip}")
+      IO.puts("3. inspecting ip: #{inspect conn.remote_ip}")
       IO.puts("inspecting geoIP result: #{inspect GeoIP.lookup(conn)}")
 
     location = formatted_location(%{city: city, region: region, country: country})
@@ -81,6 +82,9 @@ defmodule Askbywho.PageController do
     end
   end
 
+  defp formatted_location(%{city: nil, region: nil, country: nil}) do
+    "n/a"
+  end
   defp formatted_location(%{city: "", region: "", country: country}) do
     country
   end
