@@ -21,10 +21,12 @@
   <section class="wanna-know">
     <div class="wanna-know__content">
       <div class="container">
-        <p class="wanna-know__title" id="i-want-to-know">Make our clothes
-        in decent working conditions</p>
-        <h2 class="wanna-know__ingress">Join <%= count_emails %> people asking their favorite brands to be transparent about working conditions.</h2>
-        <h2 class="wanna-know__ingress2">When 1,000 people nominate a brand, we will contact the brand to show that a lot of us want to know the people making our clothes are treated decently.</h2>
+        <p class="wanna-know__ingress">Tell your favorite brands</p>
+        <p class="wanna-know__title" id="i-want-to-know">I want my clothes made in
+        decent working conditions.</p>
+
+        <h2 class="wanna-know__ingress">There's already <%= count_emails %> of us saying that the people making our clothes matter.</h2>
+
 
       </div>
 
@@ -69,6 +71,10 @@
             </div>
           </div>
         <% end %>
+        <h2 class="wanna-know__ingress2">Your voice counts:
+        1. 1,000 people nominate a brand
+        2. We tell the brand 1,000 of us want to know how our clothes are made
+        3. We tell you what they say</h2>
       </div>
     </div>
   </section>
