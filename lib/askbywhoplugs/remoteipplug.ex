@@ -5,7 +5,7 @@ defmodule Askbywhoplugs.RemoteIPPlug do
   def init([]), do: []
 
   def call(conn, []) do
-    case get_req_header(conn, "x-real-ip") do
+    case get_req_header(conn, "x-forwarded-for") do
       [] -> conn
       [real_ip] ->
         case :inet_parse.address(to_char_list(real_ip)) do
