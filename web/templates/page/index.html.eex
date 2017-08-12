@@ -1,19 +1,21 @@
+
+
 <div id="home-wrapper">
   <section class="hover-message">
     <div class="container">
       <h1 class="hover-message__title">
-        Welcome to our secret beta!
+        <%= gettext "Welcome to our secret beta!" %>
       </h1>
 
       <p class="hover-message__text">
-        Help us out to launch a site with at least 1,000 people! Please
+        <%= gettext "Help us out to launch a site with at least 1,000 people! Please
         nominate at least five clothing brands, and leave your name &amp; email so
-        that we can tell you when we launch!
+        that we can tell you when we launch!" %>
       </p>
 
       <p class="hover-message__text">
-        Want to help? Join our
-        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank">facebook group</a>!
+      <%= gettext "Want to help? Join our" %>
+        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank"><%= gettext "Facebook group" %></a>!
       </p>
     </div>
   </section>
@@ -21,11 +23,11 @@
   <section class="wanna-know">
     <div class="wanna-know__content">
       <div class="container">
-        <p class="wanna-know__ingress">Tell your favorite brands</p>
-        <p class="wanna-know__title" id="i-want-to-know">I want my clothes made in
-        decent working conditions.</p>
+        <p class="wanna-know__ingress"><%= gettext "Tell your favorite brands" %></p>
+        <p class="wanna-know__title" id="i-want-to-know"><%= gettext "I want my clothes made in
+        decent working conditions." %></p>
 
-        <h2 class="wanna-know__ingress">There's already <%= count_emails %> of us saying that the people making our clothes matter.</h2>
+        <h2 class="wanna-know__ingress"><%= gettext "There's already "  %><%=  count_emails  %> <%= gettext "of us saying that the people making our clothes matter." %></h2>
 
 
       </div>
@@ -34,7 +36,7 @@
         <%= form_for @changeset, @action, fn f -> %>
           <%= if @changeset.action do %>
             <div class="alert alert-danger">
-              <p>Oops, something went wrong! Please check the errors below.</p>
+              <p><%= gettext "Oops, something went wrong! Please check the errors below. "%></p>
             </div>
           <% end %>
 
@@ -49,7 +51,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="wanna-know__field">
-                <%= text_input f, :name, placeholder: "First name" %>
+                <%= text_input f, :name, placeholder: gettext "First name" %>
                 <%= error_tag f, :name %>
               </div>
             </div>
@@ -58,7 +60,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="wanna-know__field">
-                <%= text_input f, :email, placeholder: "Email" %>
+                <%= text_input f, :email, placeholder: gettext "Email" %>
                 <%= error_tag f, :email %>
               </div>
             </div>
@@ -71,10 +73,10 @@
             </div>
           </div>
         <% end %>
-        <h2 class="wanna-know__ingress2">Your voice counts:
+        <h2 class="wanna-know__ingress2"><%= gettext "Your voice counts:
         1. 1,000 people nominate a brand
         2. We tell the brand 1,000 of us want to know how our clothes are made
-        3. We tell you what they say</h2>
+        3. We tell you what they say" %></h2>
       </div>
     </div>
   </section>
