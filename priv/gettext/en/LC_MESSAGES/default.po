@@ -1,0 +1,59 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+
+#: web/templates/page/index.html.eex:11
+msgid "Help us out to launch a site with at least 1,000 people! Please\n        nominate at least five clothing brands, and leave your name &amp; email so\n        that we can tell you when we launch!"
+msgstr ""
+
+#: web/templates/page/index.html.eex:7
+msgid "Welcome to our secret beta!"
+msgstr ""
+
+#: web/templates/page/index.html.eex:63
+msgid "Email"
+msgstr ""
+
+#: web/templates/page/index.html.eex:18
+msgid "Facebook group"
+msgstr ""
+
+#: web/templates/page/index.html.eex:54
+msgid "First name"
+msgstr ""
+
+#: web/templates/page/index.html.eex:27
+msgid "I want my clothes made in\n        decent working conditions."
+msgstr ""
+
+#: web/templates/page/index.html.eex:39
+msgid "Oops, something went wrong! Please check the errors below. "
+msgstr ""
+
+#: web/templates/page/index.html.eex:26
+msgid "Tell your favorite brands"
+msgstr ""
+
+#: web/templates/page/index.html.eex:30
+msgid "There's already "
+msgstr ""
+
+#: web/templates/page/index.html.eex:17
+msgid "Want to help? Join our"
+msgstr ""
+
+#: web/templates/page/index.html.eex:76
+msgid "Your voice counts:\n        1. 1,000 people nominate a brand\n        2. We tell the brand 1,000 of us want to know how our clothes are made\n        3. We tell you what they say"
+msgstr ""
+
+#: web/templates/page/index.html.eex:30
+msgid "of us saying that the people making our clothes matter."
+msgstr ""
