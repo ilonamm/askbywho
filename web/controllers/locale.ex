@@ -15,8 +15,8 @@ defmodule Askbywho.Locale do
     case get_req_header(conn, "accept-language") do
       [language] ->
         pattern  = :binary.compile_pattern([",", ";"])
-        split_string = String.split(language, pattern)
-        choose_locale(conn, split_string, langs)
+        IO.puts("accept-language is #{language}")
+        choose_locale(conn, String.split(language, pattern), langs)
     end
 
     # Test different language versions with URL, for example beta.askbywho.com/?locale=fi
