@@ -50,9 +50,9 @@
     <div class="container">
       <p>
         Overall,
-        <%= count_emails %> people have nominated
-        <%= count_brands %> brands
-        <%= count_nominations %> times.
+        <%= count_emails() %> people have nominated
+        <%= count_brands() %> brands
+        <%= count_nominations() %> times.
       </p>
 
       <div id="fb-root"></div>

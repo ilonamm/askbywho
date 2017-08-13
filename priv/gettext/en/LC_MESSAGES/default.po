@@ -57,3 +57,101 @@ msgstr ""
 #: web/templates/page/index.html.eex:30
 msgid "of us saying that the people making our clothes matter."
 msgstr ""
+
+#: web/templates/page/index.html.eex:187
+msgid "\n            We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you."
+msgstr ""
+
+#: web/templates/page/index.html.eex:167
+msgid "1,000+ people nominate a brand."
+msgstr ""
+
+#: web/templates/page/index.html.eex:107
+msgid "1.2 billion"
+msgstr ""
+
+#: web/templates/page/index.html.eex:115
+msgid "14.2 million"
+msgstr ""
+
+#: web/templates/page/index.html.eex:111
+msgid "168 million"
+msgstr ""
+
+#: web/templates/page/index.html.eex:87
+msgid "9-year-olds."
+msgstr ""
+
+#: web/templates/page/index.html.eex:174
+msgid "Do you want to wear clothes made in decent working conditions?"
+msgstr ""
+
+#: web/templates/page/index.html.eex:86 web/templates/page/index.html.eex:88
+#: web/templates/page/index.html.eex:90 web/templates/page/index.html.eex:93
+#: web/templates/page/index.html.eex:95 web/templates/page/index.html.eex:97
+msgid "I don't want to buy clothes made by"
+msgstr ""
+
+#: web/templates/page/index.html.eex:142
+msgid "It is so difficult to know what is really ethical. That’s why we need transparency, to see for ourselves."
+msgstr ""
+
+#: web/templates/page/index.html.eex:170
+msgid "Technology has changed our lives. We think we need to use it for more: to ensure the people making our clothes live in freedom and their fundamental rights are respected."
+msgstr ""
+
+#: web/templates/page/index.html.eex:153
+msgid "We have Wikipedia, Twitter &amp; Facebook, but have no idea if our clothing was made in sweatshops."
+msgstr ""
+
+#: web/templates/page/index.html.eex:168
+msgid "We will contact the brand and ask how they treat their workers and discuss ways to be more transparent."
+msgstr ""
+
+#: web/templates/page/index.html.eex:169
+msgid "We will tell you what they say."
+msgstr ""
+
+#: web/templates/page/index.html.eex:164
+msgid "What’s happening:"
+msgstr ""
+
+#: web/templates/page/index.html.eex:131
+msgid "When I buy 37 euro pants for my 1-year-old, I want to know they were not made by a 9-year-old in Bangladesh."
+msgstr ""
+
+#: web/templates/page/index.html.eex:179
+msgid "Yes."
+msgstr ""
+
+#: web/templates/page/index.html.eex:112
+msgid "children work"
+msgstr ""
+
+#: web/templates/page/index.html.eex:108
+msgid "live in extreme poverty"
+msgstr ""
+
+#: web/templates/page/index.html.eex:91
+msgid "parents who can't afford to send\n        their kids to school."
+msgstr ""
+
+#: web/templates/page/index.html.eex:98
+msgid "people in dangerous conditions."
+msgstr ""
+
+#: web/templates/page/index.html.eex:116
+msgid "people in forced labor"
+msgstr ""
+
+#: web/templates/page/index.html.eex:94
+msgid "people risking their health."
+msgstr ""
+
+#: web/templates/page/index.html.eex:96
+msgid "people risking their unborn baby."
+msgstr ""
+
+#: web/templates/page/index.html.eex:89
+msgid "people working from 9 am to 9 pm"
+msgstr ""

@@ -2,7 +2,7 @@ defmodule Askbywho.Locale do
   import Plug.Conn
 
 
-  def init(opts), do: nil
+  def init(_opts), do: nil
 
   def call(conn, _opts) do
     langs = %{"en" => "en", "en-us" => "en", "fi" => "fi", "fi-FI" => "fi",
