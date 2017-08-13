@@ -17,14 +17,16 @@ defmodule Askbywho.Locale do
         pattern  = :binary.compile_pattern([",", ";"])
         IO.puts("accept-language is #{language}")
         choose_locale(conn, String.split(language, pattern), langs)
+      [] -> conn
     end
 
     # Test different language versions with URL, for example beta.askbywho.com/?locale=fi
     case conn.params["locale"] || get_session(conn, :locale) do
-      nil     -> conn
-      locale  ->
+        nil     -> conn
+        locale  ->
         Gettext.put_locale(Askbywho.Gettext, locale)
         conn |> put_session(:locale, locale)
+
     end
   end
 
