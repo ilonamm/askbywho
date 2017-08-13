@@ -5,7 +5,8 @@ defmodule Askbywho.Locale do
   def init(opts), do: nil
 
   def call(conn, _opts) do
-    langs = %{"en" => "en", "en-us" => "en", "fi" => "fi", "pt-BR" => "pt-BR"}
+    langs = %{"en" => "en", "en-us" => "en", "fi" => "fi", "fi-FI" => "fi",
+    "fi-fi" => "fi", "pt-BR" => "pt-BR", "pt-br" => "pt-BR", "pt" => "pt-BR"}
 
 
     case get_req_header(conn, "accept-language") do
