@@ -23,11 +23,11 @@
   <section class="wanna-know">
     <div class="wanna-know__content">
       <div class="container">
-        <p class="wanna-know__ingress"><%= gettext "Tell your favorite brands" %></p>
+        <p class="wanna-know__in  gress"><%= gettext "Tell your favorite brands" %></p>
         <p class="wanna-know__title" id="i-want-to-know"><%= gettext "I want my clothes made in
         decent working conditions." %></p>
 
-        <h2 class="wanna-know__ingress"><%= gettext "There's already "  %><%=  count_emails()  %> <%= gettext "of us saying that the people making our clothes matter." %></h2>
+        <h2 class="wanna-know__ingress"><%= gettext "There's already " %><%= count_emails() %> <%= gettext "of us saying that the people making our clothes matter." %></h2>
 
 
       </div>
