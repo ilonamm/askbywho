@@ -19,13 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.3\n"
 
-#: web/templates/page/index.html.eex:11
-msgid ""
-"Help us out to launch a site with at least 1,000 people! Please\n"
-"        nominate at least five clothing brands, and leave your name &amp; email so\n"
-"        that we can tell you when we launch!"
-msgstr ""
-
 #: web/templates/page/index.html.eex:7
 msgid "Welcome to our secret beta!"
 msgstr "Bem-vindo ao site beta!"
@@ -43,9 +36,7 @@ msgid "First name"
 msgstr ""
 
 #: web/templates/page/index.html.eex:27
-msgid ""
-"I want my clothes made in\n"
-"        decent working conditions."
+msgid "I want my clothes made in\n        decent working conditions."
 msgstr ""
 "Eu quero minha roupa feita em\n"
 "        condições decentes."
@@ -67,11 +58,7 @@ msgid "Want to help? Join our"
 msgstr ""
 
 #: web/templates/page/index.html.eex:76
-msgid ""
-"Your voice counts:\n"
-"        1. 1,000 people nominate a brand\n"
-"        2. We tell the brand 1,000 of us want to know how our clothes are made\n"
-"        3. We tell you what they say"
+msgid "Your voice counts:\n        1. 1,000 people nominate a brand\n        2. We tell the brand 1,000 of us want to know how our clothes are made\n        3. We tell you what they say"
 msgstr ""
 
 #: web/templates/page/index.html.eex:30
@@ -79,9 +66,7 @@ msgid "of us saying that the people making our clothes matter."
 msgstr ""
 
 #: web/templates/page/index.html.eex:187
-msgid ""
-"\n"
-"            We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you."
+msgid "\n            We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you."
 msgstr ""
 
 #: web/templates/page/index.html.eex:167
@@ -114,16 +99,13 @@ msgstr ""
 msgid "I don't want to buy clothes made by"
 msgstr ""
 
+#, fuzzy
 #: web/templates/page/index.html.eex:142
-msgid "It is so difficult to know what is really ethical. Thatâs why we need transparency, to see for ourselves."
+msgid "It is so difficult to know what is really ethical. That’s why we need transparency, to see for ourselves."
 msgstr ""
 
 #: web/templates/page/index.html.eex:170
 msgid "Technology has changed our lives. We think we need to use it for more: to ensure the people making our clothes live in freedom and their fundamental rights are respected."
-msgstr ""
-
-#: web/templates/page/index.html.eex:153
-msgid "We have Wikipedia, Twitter &amp; Facebook, but have no idea if our clothing was made in sweatshops."
 msgstr ""
 
 #: web/templates/page/index.html.eex:168
@@ -134,8 +116,9 @@ msgstr ""
 msgid "We will tell you what they say."
 msgstr ""
 
+#, fuzzy
 #: web/templates/page/index.html.eex:164
-msgid "Whatâs happening:"
+msgid "What’s happening:"
 msgstr ""
 
 #: web/templates/page/index.html.eex:131
@@ -155,9 +138,7 @@ msgid "live in extreme poverty"
 msgstr ""
 
 #: web/templates/page/index.html.eex:91
-msgid ""
-"parents who can't afford to send\n"
-"        their kids to school."
+msgid "parents who can't afford to send\n        their kids to school."
 msgstr ""
 
 #: web/templates/page/index.html.eex:98
@@ -178,4 +159,22 @@ msgstr ""
 
 #: web/templates/page/index.html.eex:89
 msgid "people working from 9 am to 9 pm"
+msgstr ""
+
+#: web/views/page_view.ex:67
+msgid "Click to write/choose brands"
+msgstr ""
+
+#, fuzzy
+#: web/templates/page/index.html.eex:11
+msgid "Help us out to launch a site with at least 1,000 people! Please\n        nominate at least five clothing brands, and leave your name and email so\n        that we can tell you when we launch!"
+msgstr ""
+
+#: web/views/page_view.ex:63
+msgid "Nominate"
+msgstr ""
+
+#, fuzzy
+#: web/templates/page/index.html.eex:153
+msgid "We have Wikipedia, Twitter and Facebook, but have no idea if our clothing was made in sweatshops."
 msgstr ""

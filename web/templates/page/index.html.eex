@@ -9,7 +9,7 @@
 
       <p class="hover-message__text">
         <%= gettext "Help us out to launch a site with at least 1,000 people! Please
-        nominate at least five clothing brands, and leave your name &amp; email so
+        nominate at least five clothing brands, and leave your name and email so
         that we can tell you when we launch!" %>
       </p>
 
@@ -69,7 +69,7 @@
 
           <div class="row">
             <div class="col-md-4">
-              <%= submit "Nominate", class: "wanna-know__submit" %>
+              <%= submit add_nominate(), class: "wanna-know__submit" %>
             </div>
           </div>
         <% end %>
@@ -150,7 +150,7 @@
 
         <div class="testimonials__testimonial">
           <div class="testimonials__quote">
-            <%= gettext "We have Wikipedia, Twitter &amp; Facebook, but have no idea if our clothing was made in sweatshops." %>
+            <%= gettext "We have Wikipedia, Twitter and Facebook, but have no idea if our clothing was made in sweatshops." %>
           </div>
           <div class="testimonials__author">
             <img src="https://rm-content.s3.amazonaws.com/5857e1aaf3c177741f8df43d/810860/upload-060dc5a0-630d-11e7-b794-d5c65b0df4d6.png" alt="">

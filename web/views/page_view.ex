@@ -59,5 +59,12 @@ defmodule Askbywho.PageView do
     |> raw
   end
 
+  def add_nominate() do
+    gettext "Nominate"
+  end
+
+  def add_autocomplete_placeholder() do
+    gettext "Click to write/choose brands"
+  end
 
 end

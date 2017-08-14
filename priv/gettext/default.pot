@@ -10,10 +10,6 @@
 msgid ""
 msgstr ""
 
-#: web/templates/page/index.html.eex:11
-msgid "Help us out to launch a site with at least 1,000 people! Please\n        nominate at least five clothing brands, and leave your name &amp; email so\n        that we can tell you when we launch!"
-msgstr ""
-
 #: web/templates/page/index.html.eex:7
 msgid "Welcome to our secret beta!"
 msgstr ""
@@ -100,10 +96,6 @@ msgstr ""
 msgid "Technology has changed our lives. We think we need to use it for more: to ensure the people making our clothes live in freedom and their fundamental rights are respected."
 msgstr ""
 
-#: web/templates/page/index.html.eex:153
-msgid "We have Wikipedia, Twitter &amp; Facebook, but have no idea if our clothing was made in sweatshops."
-msgstr ""
-
 #: web/templates/page/index.html.eex:168
 msgid "We will contact the brand and ask how they treat their workers and discuss ways to be more transparent."
 msgstr ""
@@ -154,4 +146,20 @@ msgstr ""
 
 #: web/templates/page/index.html.eex:89
 msgid "people working from 9 am to 9 pm"
+msgstr ""
+
+#: web/views/page_view.ex:67
+msgid "Click to write/choose brands"
+msgstr ""
+
+#: web/templates/page/index.html.eex:11
+msgid "Help us out to launch a site with at least 1,000 people! Please\n        nominate at least five clothing brands, and leave your name and email so\n        that we can tell you when we launch!"
+msgstr ""
+
+#: web/views/page_view.ex:63
+msgid "Nominate"
+msgstr ""
+
+#: web/templates/page/index.html.eex:153
+msgid "We have Wikipedia, Twitter and Facebook, but have no idea if our clothing was made in sweatshops."
 msgstr ""

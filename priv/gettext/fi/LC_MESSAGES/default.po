@@ -19,13 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.3\n"
 
-#: web/templates/page/index.html.eex:11
-msgid ""
-"Help us out to launch a site with at least 1,000 people! Please\n"
-"        nominate at least five clothing brands, and leave your name &amp; email so\n"
-"        that we can tell you when we launch!"
-msgstr "Auta meitä saamaan tuhat ihmistä mukaan ennen kampanjan julkaisua!"
-
 #: web/templates/page/index.html.eex:7
 msgid "Welcome to our secret beta!"
 msgstr "Tervetuloa kampanjamme salaiseen betaan!"
@@ -43,9 +36,7 @@ msgid "First name"
 msgstr "Etunimi"
 
 #: web/templates/page/index.html.eex:27
-msgid ""
-"I want my clothes made in\n"
-"        decent working conditions."
+msgid "I want my clothes made in\n        decent working conditions."
 msgstr ""
 "Haluan että vaatteeni tehdään\n"
 "        inhimillisissä työoloissa."
@@ -67,11 +58,7 @@ msgid "Want to help? Join our"
 msgstr "Haluatko tulla tekemään kampanjaa? Liity"
 
 #: web/templates/page/index.html.eex:76
-msgid ""
-"Your voice counts:\n"
-"        1. 1,000 people nominate a brand\n"
-"        2. We tell the brand 1,000 of us want to know how our clothes are made\n"
-"        3. We tell you what they say"
+msgid "Your voice counts:\n        1. 1,000 people nominate a brand\n        2. We tell the brand 1,000 of us want to know how our clothes are made\n        3. We tell you what they say"
 msgstr ""
 "Sinä voit vaikuttaa:\n"
 "        1. 1,000 ihmistä valitsee saman vaatebrändin\n"
@@ -84,9 +71,7 @@ msgid "of us saying that the people making our clothes matter."
 msgstr "toivomassa ihmisarvoista kohtelua vaatteidemme tekijöille."
 
 #: web/templates/page/index.html.eex:187
-msgid ""
-"\n"
-"            We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you."
+msgid "\n            We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you."
 msgstr ""
 "\n"
 "            Olemme startup. Kehitämme teknologiaa, joka edistää läpinäkyvyyttä, ihmisoikeuksia ja inhimillisiä työoloja. Tämä kampanja on rakennettu avoimen lähdekoodin periaatteilla, vapaaehtoisten, kuluttajien, eettisesti ajattelevien järjestöjen ja yritysten voimin."
@@ -129,10 +114,6 @@ msgstr "On vaikea tietää mikä todella on eettistä. Siksi tarvitsemme läpin�
 msgid "Technology has changed our lives. We think we need to use it for more: to ensure the people making our clothes live in freedom and their fundamental rights are respected."
 msgstr "Teknologia on muuttanut elämämme. Meidän mielestä voimme käyttää sitä vielä enemmän: varmistamaan että vaatteitamme tekevät ihmiset elävät vapaina, ja että heillä on samat ihmisoikeudet kuin meilläkin."
 
-#: web/templates/page/index.html.eex:153
-msgid "We have Wikipedia, Twitter &amp; Facebook, but have no idea if our clothing was made in sweatshops."
-msgstr "Meillä on Wikipedia, Twitter ja Facebook, mutta ei hajuakaan onko vaatteemme tehty hikipajoissa."
-
 #: web/templates/page/index.html.eex:168
 msgid "We will contact the brand and ask how they treat their workers and discuss ways to be more transparent."
 msgstr "Kerromme vaatebrändille että meitä on 1,000 kuluttajaa, jotka haluavat tietää millaisissa oloissa vaatteet tehdään."
@@ -162,9 +143,7 @@ msgid "live in extreme poverty"
 msgstr "elää äärimmäisessä köyhyydessä"
 
 #: web/templates/page/index.html.eex:91
-msgid ""
-"parents who can't afford to send\n"
-"        their kids to school."
+msgid "parents who can't afford to send\n        their kids to school."
 msgstr ""
 "tienaavat niin vähän, etteivät\n"
 "        lapset pääse kouluun."
@@ -188,3 +167,19 @@ msgstr "vaarantavat syntymättömän lapsen terveyden."
 #: web/templates/page/index.html.eex:89
 msgid "people working from 9 am to 9 pm"
 msgstr "työskentelevät aamuyhdeksästä iltayhdeksään"
+
+#: web/views/page_view.ex:67
+msgid "Click to write/choose brands"
+msgstr ""
+
+#: web/templates/page/index.html.eex:11
+msgid "Help us out to launch a site with at least 1,000 people! Please\n        nominate at least five clothing brands, and leave your name and email so\n        that we can tell you when we launch!"
+msgstr "Auta meitä saamaan tuhat ihmistä mukaan ennen kampanjan julkaisua!"
+
+#: web/views/page_view.ex:63
+msgid "Nominate"
+msgstr "Lähetä"
+
+#: web/templates/page/index.html.eex:153
+msgid "We have Wikipedia, Twitter and Facebook, but have no idea if our clothing was made in sweatshops."
+msgstr "Meillä on Wikipedia, Twitter ja Facebook, mutta ei hajuakaan onko vaatteemme tehty hikipajoissa."
