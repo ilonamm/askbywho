@@ -170,7 +170,7 @@ msgstr "työskentelevät aamuyhdeksästä iltayhdeksään"
 
 #: web/views/page_view.ex:67
 msgid "Click to write/choose brands"
-msgstr ""
+msgstr "Klikkaa ja kirjoita/valitse merkit"
 
 #: web/templates/page/index.html.eex:11
 msgid "Help us out to launch a site with at least 1,000 people! Please\n        nominate at least five clothing brands, and leave your name and email so\n        that we can tell you when we launch!"
