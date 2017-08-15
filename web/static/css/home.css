@@ -12,11 +12,9 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-}
-
-p.lang-menu {
-  color: rgb(255,255,255);
-}
+  padding-top:5px;
+  font-size: 10px;
+  }
 
 img {
   max-width: 100%;

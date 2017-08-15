@@ -67,5 +67,8 @@ defmodule Askbywho.PageView do
     gettext "Click to write/choose brands"
   end
 
-
+  def add_languages() do
+    menu = %{"en" => "in english", "fi" => "suomeksi"}
+    Map.delete(menu, Gettext.get_locale(Askbywho.Gettext))
+  end
 end

@@ -1,7 +1,8 @@
 defmodule Askbywho.Locale do
   import Plug.Conn
 
-  def init(_opts), do: nil
+  def init(_opts) do
+  end
 
   def call(conn, _opts) do
     # These languages assign a locale automatically
@@ -22,10 +23,11 @@ defmodule Askbywho.Locale do
 
     # Test different language versions with URL, for example beta.askbywho.com/?locale=fi
     case conn.params["locale"] || get_session(conn, :locale) do
-        nil     -> conn
+        nil     ->
+          conn
         locale  ->
-        Gettext.put_locale(Askbywho.Gettext, locale)
-        conn |> put_session(:locale, locale)
+          Gettext.put_locale(Askbywho.Gettext, locale)
+          conn |> put_session(:locale, locale)
 
     end
   end
@@ -44,4 +46,5 @@ defmodule Askbywho.Locale do
         end
     end
   end
+
 end
