@@ -7,6 +7,17 @@ body {
   padding-bottom: 60px;
 }
 
+.lang-menu {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+p.lang-menu {
+  color: rgb(255,255,255);
+}
+
 img {
   max-width: 100%;
 }
@@ -32,6 +43,7 @@ h1 {
 .hover-message {
   background: rgba(255, 244, 183, 0.7);
   padding-bottom: 10px;
+  padding-top: 20px;
 }
 .hover-message__title {
   color: black;
