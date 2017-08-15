@@ -19,45 +19,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.3\n"
 
-#: web/templates/page/index.html.eex:7
+#: web/templates/page/index.html.eex:11
 msgid "Welcome to our secret beta!"
 msgstr "Tervetuloa kampanjamme salaiseen betaan!"
 
-#: web/templates/page/index.html.eex:63
+#: web/templates/page/index.html.eex:67
 msgid "Email"
 msgstr "Sähköposti"
 
-#: web/templates/page/index.html.eex:18
+#: web/templates/page/index.html.eex:22
 msgid "Facebook group"
 msgstr "Facebook-ryhmäämme"
 
-#: web/templates/page/index.html.eex:54
+#: web/templates/page/index.html.eex:58
 msgid "First name"
 msgstr "Etunimi"
 
-#: web/templates/page/index.html.eex:27
+#: web/templates/page/index.html.eex:31
 msgid "I want my clothes made in\n        decent working conditions."
 msgstr ""
 "Haluan että vaatteeni tehdään\n"
 "        inhimillisissä työoloissa."
 
-#: web/templates/page/index.html.eex:39
+#: web/templates/page/index.html.eex:43
 msgid "Oops, something went wrong! Please check the errors below. "
 msgstr "Hups! Jotain meni pieleen! Tarkista alla olevat virheet. "
 
-#: web/templates/page/index.html.eex:26
+#: web/templates/page/index.html.eex:30
 msgid "Tell your favorite brands"
 msgstr "Kerro lempivaatemerkeillesi:"
 
-#: web/templates/page/index.html.eex:30
+#: web/templates/page/index.html.eex:34
 msgid "There's already "
 msgstr "Meitä on jo "
 
-#: web/templates/page/index.html.eex:17
+#: web/templates/page/index.html.eex:21
 msgid "Want to help? Join our"
 msgstr "Haluatko tulla tekemään kampanjaa? Liity"
 
-#: web/templates/page/index.html.eex:76
+#: web/templates/page/index.html.eex:80
 msgid "Your voice counts:\n        1. 1,000 people nominate a brand\n        2. We tell the brand 1,000 of us want to know how our clothes are made\n        3. We tell you what they say"
 msgstr ""
 "Sinä voit vaikuttaa:\n"
@@ -66,105 +66,105 @@ msgstr ""
 "jotka haluavat tietää missä oloissa vaatteet tehdään\n"
 "        3. Kerromme sinulle, mitä brändit vastaavat"
 
-#: web/templates/page/index.html.eex:30
+#: web/templates/page/index.html.eex:34
 msgid "of us saying that the people making our clothes matter."
-msgstr "toivomassa ihmisarvoista kohtelua vaatteidemme tekijöille."
+msgstr "mukana pyytämässä ihmisarvoista kohtelua vaatteidemme tekijöille."
 
-#: web/templates/page/index.html.eex:187
+#: web/templates/page/index.html.eex:191
 msgid "\n            We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you."
 msgstr ""
 "\n"
 "            Olemme startup. Kehitämme teknologiaa, joka edistää läpinäkyvyyttä, ihmisoikeuksia ja inhimillisiä työoloja. Tämä kampanja on rakennettu avoimen lähdekoodin periaatteilla, vapaaehtoisten, kuluttajien, eettisesti ajattelevien järjestöjen ja yritysten voimin."
 
-#: web/templates/page/index.html.eex:167
+#: web/templates/page/index.html.eex:171
 msgid "1,000+ people nominate a brand."
 msgstr "1,000 ihmistä valitsee brändin."
 
-#: web/templates/page/index.html.eex:107
+#: web/templates/page/index.html.eex:111
 msgid "1.2 billion"
 msgstr "1,2 miljardia"
 
-#: web/templates/page/index.html.eex:115
+#: web/templates/page/index.html.eex:119
 msgid "14.2 million"
 msgstr "14,2 miljoonaa"
 
-#: web/templates/page/index.html.eex:111
+#: web/templates/page/index.html.eex:115
 msgid "168 million"
 msgstr "168 miljoonaa"
 
-#: web/templates/page/index.html.eex:87
+#: web/templates/page/index.html.eex:91
 msgid "9-year-olds."
 msgstr "ovat 9-vuotiaita."
 
-#: web/templates/page/index.html.eex:174
+#: web/templates/page/index.html.eex:178
 msgid "Do you want to wear clothes made in decent working conditions?"
 msgstr "Haluatko ostaa vaatteita, jotka on tehty inhimillisissä oloissa?"
 
-#: web/templates/page/index.html.eex:86 web/templates/page/index.html.eex:88
-#: web/templates/page/index.html.eex:90 web/templates/page/index.html.eex:93
-#: web/templates/page/index.html.eex:95 web/templates/page/index.html.eex:97
+#: web/templates/page/index.html.eex:90 web/templates/page/index.html.eex:92
+#: web/templates/page/index.html.eex:94 web/templates/page/index.html.eex:97
+#: web/templates/page/index.html.eex:99 web/templates/page/index.html.eex:101
 msgid "I don't want to buy clothes made by"
 msgstr "En halua ostaa vaatteita, joiden tekijät"
 
-#: web/templates/page/index.html.eex:142
+#: web/templates/page/index.html.eex:146
 msgid "It is so difficult to know what is really ethical. That’s why we need transparency, to see for ourselves."
 msgstr "On vaikea tietää mikä todella on eettistä. Siksi tarvitsemme läpinäkyvyyttä, jotta voimme itse nähdä, miten asia on."
 
-#: web/templates/page/index.html.eex:170
+#: web/templates/page/index.html.eex:174
 msgid "Technology has changed our lives. We think we need to use it for more: to ensure the people making our clothes live in freedom and their fundamental rights are respected."
 msgstr "Teknologia on muuttanut elämämme. Meidän mielestä voimme käyttää sitä vielä enemmän: varmistamaan että vaatteitamme tekevät ihmiset elävät vapaina, ja että heillä on samat ihmisoikeudet kuin meilläkin."
 
-#: web/templates/page/index.html.eex:168
+#: web/templates/page/index.html.eex:172
 msgid "We will contact the brand and ask how they treat their workers and discuss ways to be more transparent."
 msgstr "Kerromme vaatebrändille että meitä on 1,000 kuluttajaa, jotka haluavat tietää millaisissa oloissa vaatteet tehdään."
 
-#: web/templates/page/index.html.eex:169
+#: web/templates/page/index.html.eex:173
 msgid "We will tell you what they say."
 msgstr "Kerromme sinulle, mitä brändit vastaavat."
 
-#: web/templates/page/index.html.eex:164
+#: web/templates/page/index.html.eex:168
 msgid "What’s happening:"
 msgstr "Mitä tapahtuu:"
 
-#: web/templates/page/index.html.eex:131
+#: web/templates/page/index.html.eex:135
 msgid "When I buy 37 euro pants for my 1-year-old, I want to know they were not made by a 9-year-old in Bangladesh."
 msgstr "Kun ostan 37 euron housut 1-vuotiaalleni, haluan tietää ettei niiden tekijä ollut 9-vuotias bangladeshilainen lapsi."
 
-#: web/templates/page/index.html.eex:179
+#: web/templates/page/index.html.eex:183
 msgid "Yes."
 msgstr "Kyllä."
 
-#: web/templates/page/index.html.eex:112
+#: web/templates/page/index.html.eex:116
 msgid "children work"
 msgstr "lasta käy töissä"
 
-#: web/templates/page/index.html.eex:108
+#: web/templates/page/index.html.eex:112
 msgid "live in extreme poverty"
 msgstr "elää äärimmäisessä köyhyydessä"
 
-#: web/templates/page/index.html.eex:91
+#: web/templates/page/index.html.eex:95
 msgid "parents who can't afford to send\n        their kids to school."
 msgstr ""
 "tienaavat niin vähän, etteivät\n"
 "        lapset pääse kouluun."
 
-#: web/templates/page/index.html.eex:98
+#: web/templates/page/index.html.eex:102
 msgid "people in dangerous conditions."
 msgstr "tekevät töitä vaarallisissa olosuhteissa."
 
-#: web/templates/page/index.html.eex:116
+#: web/templates/page/index.html.eex:120
 msgid "people in forced labor"
 msgstr "on orjatyössä"
 
-#: web/templates/page/index.html.eex:94
+#: web/templates/page/index.html.eex:98
 msgid "people risking their health."
 msgstr "vaarantavat terveytensä."
 
-#: web/templates/page/index.html.eex:96
+#: web/templates/page/index.html.eex:100
 msgid "people risking their unborn baby."
 msgstr "vaarantavat syntymättömän lapsen terveyden."
 
-#: web/templates/page/index.html.eex:89
+#: web/templates/page/index.html.eex:93
 msgid "people working from 9 am to 9 pm"
 msgstr "työskentelevät aamuyhdeksästä iltayhdeksään"
 
@@ -172,7 +172,7 @@ msgstr "työskentelevät aamuyhdeksästä iltayhdeksään"
 msgid "Click to write/choose brands"
 msgstr "Klikkaa ja kirjoita/valitse merkit"
 
-#: web/templates/page/index.html.eex:11
+#: web/templates/page/index.html.eex:15
 msgid "Help us out to launch a site with at least 1,000 people! Please\n        nominate at least five clothing brands, and leave your name and email so\n        that we can tell you when we launch!"
 msgstr "Auta meitä saamaan tuhat ihmistä mukaan ennen kampanjan julkaisua!"
 
@@ -180,6 +180,10 @@ msgstr "Auta meitä saamaan tuhat ihmistä mukaan ennen kampanjan julkaisua!"
 msgid "Nominate"
 msgstr "Lähetä"
 
-#: web/templates/page/index.html.eex:153
+#: web/templates/page/index.html.eex:157
 msgid "We have Wikipedia, Twitter and Facebook, but have no idea if our clothing was made in sweatshops."
 msgstr "Meillä on Wikipedia, Twitter ja Facebook, mutta ei hajuakaan onko vaatteemme tehty hikipajoissa."
+
+#: web/templates/page/index.html.eex:1
+msgid "Change language: "
+msgstr "Vaihda kieltä: "
