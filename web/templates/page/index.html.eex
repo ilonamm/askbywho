@@ -1,5 +1,5 @@
 <div class="container lang-menu"><%= gettext "Change language: " %>
-<%= for {k, v} <-  add_languages do %>
+<%= for {k, v} <- add_languages do %>
   <a href="?locale=<%= k %>"><%= v %></a>
 <%= end %>
 </div>
