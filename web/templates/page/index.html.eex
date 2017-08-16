@@ -200,6 +200,29 @@
           <span>ask by who</span>
         </div>
       </div>
+      <div class="about-askbywho__share">
+          <h2>Share</h2>
+          <a href="http://fb.me/askbywhocom"><img src="/images/facebook.png" alt="Facebook"></a>
+          <a href="https://twitter.com/askbywho"><img src="/images/twitter.png" alt="Twitter"></a>
+          <a href="https://www.instagram.com/askbywho/"><img src="/images/instagram.png" alt="Instagram"></a>
+
+          <h2>Join</h2>
+          <div class="about-askbywho__share__join">
+            <div class="about-askbywho__share__row"><a href="https://github.com/ilonamm/askbywho/"><img src="/images/github.png" alt="Github"></a><br>open source code</div>
+            <div class="about-askbywho__share__row"><a href="https://trello.com/b/lUaYwCg9/ask-by-who"><img src="/images/trello.png" alt="Trello"></a><br>open todo list</div>
+          </div>
+
+          <div class="about-askbywho__share__support">
+          <h3>We are grateful for the support of</h3>
+          <a href="https://spiceprogram.org/"><img src="/images/futurice.png" alt="Futurice"></a>
+          <a href="http://www.vanhack.com/"><img src="/images/vanhack.png" alt="Vanhack"></a>
+          </div>
+
+          <div class="about-askbywho__share__built">
+          <p>Built with love in Helsinki | San Francisco | Teresina<br>
+          🇫🇮 &nbsp;🎅🏼 &nbsp;🇺🇸  &nbsp;🌉  &nbsp;🇧🇷 &nbsp;<img src="/images/teresina.png"></p>
+          </div>
+      </div>
     </div>
   </section>
 </div>

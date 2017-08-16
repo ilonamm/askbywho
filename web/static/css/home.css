@@ -280,6 +280,52 @@ h1 {
 .about-askbywho__logo img {
   width: 130px;
 }
+.about-askbywho__share {
+  text-align: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.about-askbywho__share img {
+  width: 52px;
+  padding-right: 5px;
+}
+.about-askbywho__share a {
+   text-decoration: none;
+}
+.about-askbywho__share__join {
+  float: center;
+  font-size: 10px;
+  padding: 0px;
+  width: 260px;
+  margin: auto;
+  justify-content: center;
+  display: block;
+}
+.about-askbywho__share__row {
+  float: left;
+  display: inline-block;
+}
+.about-askbywho__share__join img {
+  width: 130px;
+}
+.about-askbywho__share__support {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  clear: both;
+}
+.about-askbywho__share__support img {
+  width: 62px;
+}
+.about-askbywho__share__support h3 {
+  font-size: 16px;
+}
+.about-askbywho__share__built {
+  font-weight: 300;
+}
+.about-askbywho__share__built img {
+  width: 22px;
+  height: 15px;
+}
 
 /* Change .container width */
 @media (min-width: 1200px) {
