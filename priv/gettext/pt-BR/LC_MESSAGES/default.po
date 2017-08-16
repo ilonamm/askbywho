@@ -178,3 +178,19 @@ msgstr ""
 #: web/templates/page/index.html.eex:1
 msgid "Change language: "
 msgstr ""
+
+#: web/templates/page/index.html.eex:222
+msgid "Built with love in Helsinki | San Francisco | Teresina"
+msgstr ""
+
+#: web/templates/page/index.html.eex:209
+msgid "Join"
+msgstr ""
+
+#: web/templates/page/index.html.eex:204
+msgid "Share"
+msgstr ""
+
+#: web/templates/page/index.html.eex:216
+msgid "We are grateful for the support of"
+msgstr ""
