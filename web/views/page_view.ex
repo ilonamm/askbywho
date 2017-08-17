@@ -44,7 +44,7 @@ defmodule Askbywho.PageView do
   end
 
   def percent_nominations(brand_id) do
-    count_nominations(brand_id) / 1000
+    count_nominations(brand_id) / 1000 * 100
   end
 
   def to_go(brand_id) do

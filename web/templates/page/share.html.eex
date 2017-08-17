@@ -1,27 +1,29 @@
 <div id="share-wrapper">
-<section class="hover-message">
-  <div class="container">
-  <p class="hover-message__text">
-      <strong><%= gettext "Thank you for joining!" %></strong>
-    </p>
+  <section class="hover-message">
+    <div class="container">
     <p class="hover-message__text">
-      <%= gettext "We'll send you an email when we're ready to launch!" %>
-      <br>  <%= gettext "Want to help? Join our" %>
-      <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank"><%= gettext "facebook group" %></a>!
-    </p>
-  </div>
-</section>
+        <strong><%= gettext "Thank you for joining!" %></strong>
+      </p>
+      <p class="hover-message__text">
+        <%= gettext "We'll send you an email when we're ready to launch!" %>
+        <br>  <%= gettext "Want to help? Join our" %>
+        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank"><%= gettext "facebook group" %></a>!
+      </p>
+    </div>
+  </section>
+
 
 
   <div class="head">
     <div class="container">
-      <h1>
-        Thank yo<%= count_brands_message @brands %>!
-      </h1>
+      <h2>
+        You selected <%= count_brands_message @brands %>!
+      </h2>
 
       <p>
-        When 1,000 people choose the same brand, we'll reach out to them and
-        how many of us want to know how our clothes are made.
+      1. 1,000 people nominate a brand<br>
+      2. We tell the brand 1,000 of us want to know how our clothes are made<br>
+      3. We tell you what they say
       </p>
       <h2>This is how many others have nominated your favorite brands:</h2>
 
@@ -72,12 +74,11 @@
       <div class="fb-send" data-href="https://beta.askbywho.com"></div>
       <p></p>
       <p></p>
-
-      <%= render "footer.html" %>
-
       </div>
 
     </div>
   </div>
 
 </div>
+
+      <%= render "footer.html" %>

@@ -25,13 +25,13 @@
   text-align: right;
   float: left;
   margin-right: 10px;
-  font-size: 22px;
-  line-height: 40px;
+  font-size: 16px;
+  line-height: 30px;
 }
 #share-wrapper .brand .progress {
   width: 400px;
   float: left;
-  height: 40px;
+  height: 30px;
   border: 2px solid white;
   background: none;
 }
@@ -43,14 +43,15 @@
 }
 #share-wrapper .brand .progress-bar span {
   color: black;
-  font-size: 20px;
-  line-height: 40px;
+  text-shadow: 0 0 5px rgba(255,255,255,0.3);
+  font-size: 16px;
+  line-height: 30px;
   padding-left: 10px;
 }
 #share-wrapper .brand .to-go {
   float: left;
-  font-size: 20px;
-  line-height: 40px;
+  font-size: 16px;
+  line-height: 30px;
   padding-left: 10px;
 }
 
@@ -139,15 +140,18 @@
     margin-top: 40px;
   }
   #share-wrapper .head p,
+  #share-wrapper .brand {
+    width: 100%;
+    clear: both;
+  }
   #share-wrapper .brand .name,
   #share-wrapper .brand .to-go {
-    font-size: 18px;
+    font-size: 16px;
   }
   #share-wrapper .brand .name {
     text-align: left;
   }
   #share-wrapper .brand .progress {
-    width: 100%;
     margin-bottom: 5px;
   }
   #share-wrapper .brand .to-go {

@@ -1,8 +1,14 @@
+<div class="container">
+
 <div class="about-askbywho">
   <div class="about-askbywho__content">
     <p>
     <p><%= gettext "
-      We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you." %>
+      We are a startup. We use modern technology to further transparency,
+      human rights and decent working conditions in supply chains.
+      But we've been told people don't care about transparency.
+      So we wanted to ask you. This ask by who campaign is built on open source,
+      by volunteers, companies, and you." %>
     </p>
     <p>
       <a href="mailto:askbywho@workahead.co">askbywho@workahead.co</a>
@@ -36,4 +42,5 @@
     <p><%= gettext "Built with love in Helsinki | San Francisco | Teresina" %><br>
     🇫🇮 &nbsp;🎅🏼 &nbsp;🇺🇸  &nbsp;🌉  &nbsp;🇧🇷 &nbsp;<img src="/images/teresina.png"></p>
     </div>
+</div>
 </div>
