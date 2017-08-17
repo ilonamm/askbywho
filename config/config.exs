@@ -17,7 +17,9 @@ config :askbywho, Askbywho.Endpoint,
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id]
+  metadata: [:request_id],
+  backends: [:console],
+  compile_time_purge_level: :info
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
@@ -52,3 +54,6 @@ config :scrivener_html,
   routes_helper: Askbywho.Router.Helpers,
   # If you use a single view style everywhere, you can configure it here. See View Styles below for more info.
   view_style: :bootstrap
+
+# Setting environment available
+# config :askbywho, is_qa: Mix.is_qa

@@ -1,5 +1,6 @@
 defmodule Askbywho.Locale do
   import Plug.Conn
+  require Logger
 
   def init(_opts) do
   end
@@ -16,7 +17,9 @@ defmodule Askbywho.Locale do
     case get_req_header(conn, "accept-language") do
       [language] ->
         pattern  = :binary.compile_pattern([",", ";"])
-        IO.puts("accept-language is #{language}")
+        Logger.info fn ->
+          "Browser's accept-language is #{language}"
+        end
         choose_locale(conn, String.split(language, pattern), langs)
       [] -> conn
     end
@@ -38,7 +41,9 @@ defmodule Askbywho.Locale do
       {:ok, l}  ->
         Gettext.put_locale(Askbywho.Gettext, l)
         conn |> put_session(:locale, l)
-        IO.puts("locale set as #{l}")
+        Logger.info fn ->
+          "Setting locale as #{l}"
+        end
       :error  ->
         case tail do
           [] -> conn

@@ -5,6 +5,7 @@ defmodule Askbywho.PageView do
 
   use Askbywho.Web, :view
 
+  require Logger
   alias Askbywho.Repo
   alias Askbywho.Email
   alias Askbywho.Brand
@@ -57,6 +58,13 @@ defmodule Askbywho.PageView do
   def render("scripts.html", _assigns) do
     ~s{<script>require("web/static/js/pages")</script>}
     |> raw
+  end
+
+  def on_qa do
+    Logger.info fn ->
+      "Environment variable is_qa is #{inspect System.get_env("is_qa")}"
+    end
+    System.get_env("is_qa") == "yes"
   end
 
   def add_nominate do
