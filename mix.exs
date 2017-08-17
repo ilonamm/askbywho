@@ -46,7 +46,8 @@ defmodule Askbywho.Mixfile do
      {:dogma, "~> 0.1.15", only: :dev},
      {:excoveralls, "~> 0.7", only: :test},
      {:scrivener_ecto, "~> 1.0"},
-     {:scrivener_html, "~> 1.7"}]
+     {:scrivener_html, "~> 1.7"},
+     {:gettext, "~> 0.13"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

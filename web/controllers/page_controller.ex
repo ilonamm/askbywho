@@ -6,12 +6,10 @@ defmodule Askbywho.PageController do
 
   use Askbywho.Web, :controller
   alias Askbywho.Email
-  alias Askbywho.Brand
-  import Ecto.Query
 
   plug :put_layout, "site.html"
 
-  def index(conn, params) do
+  def index(conn, _params) do
     changeset = Email.changeset(%Email{})
     render(conn, "index.html", changeset: changeset, action: page_path(conn, :create), name_brands: [])
   end

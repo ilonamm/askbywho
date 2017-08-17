@@ -59,5 +59,16 @@ defmodule Askbywho.PageView do
     |> raw
   end
 
+  def add_nominate do
+    gettext "Nominate"
+  end
 
+  def add_autocomplete_placeholder do
+    gettext "Click to write/choose brands"
+  end
+
+  def add_languages do
+    menu = %{"en" => "in english", "fi" => "suomeksi"}
+    Map.delete(menu, Gettext.get_locale(Askbywho.Gettext))
+  end
 end

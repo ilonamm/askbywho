@@ -1,19 +1,25 @@
+<div class="container lang-menu"><%= gettext "Change language: " %>
+<%= for {k, v} <- add_languages() do %>
+  <a href="?locale=<%= k %>"><%= v %></a>
+<%= end %>
+</div>
+
 <div id="home-wrapper">
   <section class="hover-message">
     <div class="container">
       <h1 class="hover-message__title">
-        Welcome to our secret beta!
+        <%= gettext "Welcome to our secret beta!" %>
       </h1>
 
       <p class="hover-message__text">
-        Help us out to launch a site with at least 1,000 people! Please
-        nominate at least five clothing brands, and leave your name &amp; email so
-        that we can tell you when we launch!
+        <%= gettext "Help us out to launch a site with at least 1,000 people! Please
+        nominate at least five clothing brands, and leave your name and email so
+        that we can tell you when we launch!" %>
       </p>
 
       <p class="hover-message__text">
-        Want to help? Join our
-        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank">facebook group</a>!
+      <%= gettext "Want to help? Join our" %>
+        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank"><%= gettext "Facebook group" %></a>!
       </p>
     </div>
   </section>
@@ -21,11 +27,11 @@
   <section class="wanna-know">
     <div class="wanna-know__content">
       <div class="container">
-        <p class="wanna-know__ingress">Tell your favorite brands</p>
-        <p class="wanna-know__title" id="i-want-to-know">I want my clothes made in
-        decent working conditions.</p>
+        <p class="wanna-know__ingress"><%= gettext "Tell your favorite brands" %></p>
+        <p class="wanna-know__title" id="i-want-to-know"><%= gettext "I want my clothes made in
+        decent working conditions." %></p>
 
-        <h2 class="wanna-know__ingress">There's already <%= count_emails %> of us saying that the people making our clothes matter.</h2>
+        <h2 class="wanna-know__ingress"><%= gettext "There's already " %><%= count_emails() %> <%= gettext "of us saying that the people making our clothes matter." %></h2>
 
 
       </div>
@@ -34,7 +40,7 @@
         <%= form_for @changeset, @action, fn f -> %>
           <%= if @changeset.action do %>
             <div class="alert alert-danger">
-              <p>Oops, something went wrong! Please check the errors below.</p>
+              <p><%= gettext "Oops, something went wrong! Please check the errors below. "%></p>
             </div>
           <% end %>
 
@@ -49,7 +55,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="wanna-know__field">
-                <%= text_input f, :name, placeholder: "First name" %>
+                <%= text_input f, :name, placeholder: gettext "First name" %>
                 <%= error_tag f, :name %>
               </div>
             </div>
@@ -58,7 +64,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="wanna-know__field">
-                <%= text_input f, :email, placeholder: "Email" %>
+                <%= text_input f, :email, placeholder: gettext "Email" %>
                 <%= error_tag f, :email %>
               </div>
             </div>
@@ -67,33 +73,33 @@
 
           <div class="row">
             <div class="col-md-4">
-              <%= submit "Nominate", class: "wanna-know__submit" %>
+              <%= submit add_nominate(), class: "wanna-know__submit" %>
             </div>
           </div>
         <% end %>
-        <h2 class="wanna-know__ingress2">Your voice counts:
+        <h2 class="wanna-know__ingress2"><%= gettext "Your voice counts:
         1. 1,000 people nominate a brand
         2. We tell the brand 1,000 of us want to know how our clothes are made
-        3. We tell you what they say</h2>
+        3. We tell you what they say" %></h2>
       </div>
     </div>
   </section>
 
   <section class="dont-want-clothes-by-section">
     <div class="container">
-      <p class="dont-want-clothes-by"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
-        <span class="dont-want-clothes-by__end">9-year-olds.</span></p>
-      <p class="dont-want-clothes-by"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
-        <span class="dont-want-clothes-by__end">people working from 9 am to 9 pm.</span></p>
-      <p class="dont-want-clothes-by"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
-        <span class="dont-want-clothes-by__end">parents who can't afford to send
-        their kids to school.</span></p>
-      <p class="dont-want-clothes-by dont-want-clothes-by__3rd_last"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
-        <span class="dont-want-clothes-by__end">people risking their health.</span></p>
-      <p class="dont-want-clothes-by dont-want-clothes-by__2nd_last"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
-        <span class="dont-want-clothes-by__end">people risking their unborn baby.</span></p>
-      <p class="dont-want-clothes-by dont-want-clothes-by__last"><span class="dont-want-clothes-by__start">I don't want to buy clothes made by</span>
-        <span class="dont-want-clothes-by__end">people in dangerous conditions.</span></p>
+      <p class="dont-want-clothes-by"><span class="dont-want-clothes-by__start"><%= gettext "I don't want to buy clothes made by" %></span>
+        <span class="dont-want-clothes-by__end"><%= gettext "9-year-olds." %></span></p>
+      <p class="dont-want-clothes-by"><span class="dont-want-clothes-by__start"><%= gettext "I don't want to buy clothes made by" %></span>
+        <span class="dont-want-clothes-by__end"><%= gettext "people working from 9 am to 9 pm" %>.</span></p>
+      <p class="dont-want-clothes-by"><span class="dont-want-clothes-by__start"><%= gettext "I don't want to buy clothes made by" %></span>
+        <span class="dont-want-clothes-by__end"><%= gettext "parents who can't afford to send
+        their kids to school." %></span></p>
+      <p class="dont-want-clothes-by dont-want-clothes-by__3rd_last"><span class="dont-want-clothes-by__start"><%= gettext "I don't want to buy clothes made by" %></span>
+        <span class="dont-want-clothes-by__end"><%= gettext "people risking their health." %></span></p>
+      <p class="dont-want-clothes-by dont-want-clothes-by__2nd_last"><span class="dont-want-clothes-by__start"><%= gettext "I don't want to buy clothes made by" %></span>
+        <span class="dont-want-clothes-by__end"><%= gettext "people risking their unborn baby." %></span></p>
+      <p class="dont-want-clothes-by dont-want-clothes-by__last"><span class="dont-want-clothes-by__start"><%= gettext "I don't want to buy clothes made by" %></span>
+        <span class="dont-want-clothes-by__end"><%= gettext "people in dangerous conditions." %></span></p>
     </div>
   </section>
 
@@ -102,16 +108,16 @@
       <div class="container">
         <div class="child-stats__text">
           <p class="child-stats__stat">
-            <span class="child-stats__stat-number">1.2 billion</span>
-            <span class="child-stats__stat-description">live in extreme poverty</span>
+            <span class="child-stats__stat-number"><%= gettext "1.2 billion" %></span>
+            <span class="child-stats__stat-description"><%= gettext "live in extreme poverty" %></span>
           </p>
           <p class="child-stats__stat">
-            <span class="child-stats__stat-number">168 million</span>
-            <span class="child-stats__stat-description">children work</span>
+            <span class="child-stats__stat-number"><%= gettext "168 million" %></span>
+            <span class="child-stats__stat-description"><%= gettext "children work" %></span>
           </p>
           <p class="child-stats__stat">
-            <span class="child-stats__stat-number">14.2 million</span>
-            <span class="child-stats__stat-description">people in forced labor</span>
+            <span class="child-stats__stat-number"><%= gettext "14.2 million" %></span>
+            <span class="child-stats__stat-description"><%= gettext "people in forced labor" %></span>
           </p>
         </div>
       </div>
@@ -126,7 +132,7 @@
       <div class="testimonials">
         <div class="testimonials__testimonial">
           <div class="testimonials__quote">
-            When I buy 37 euro pants for my 1-year-old, I want to know they were not made by a 9-year-old in Bangladesh.
+            <%= gettext "When I buy 37 euro pants for my 1-year-old, I want to know they were not made by a 9-year-old in Bangladesh." %>
           </div>
           <div class="testimonials__author">
             <img src="https://rm-content.s3.amazonaws.com/5857e1aaf3c177741f8df43d/810860/upload-060dc5a0-630d-11e7-b794-d5c65b0df4d6.png" alt="">
@@ -137,7 +143,7 @@
 
         <div class="testimonials__testimonial">
           <div class="testimonials__quote">
-            It is so difficult to know what is really ethical. That’s why we need transparency, to see for ourselves.
+            <%= gettext "It is so difficult to know what is really ethical. That’s why we need transparency, to see for ourselves." %>
           </div>
           <div class="testimonials__author">
             <img src="https://rm-content.s3.amazonaws.com/5857e1aaf3c177741f8df43d/810860/upload-060dc5a0-630d-11e7-b794-d5c65b0df4d6.png" alt="">
@@ -148,7 +154,7 @@
 
         <div class="testimonials__testimonial">
           <div class="testimonials__quote">
-            We have Wikipedia, Twitter &amp; Facebook, but have no idea if our clothing was made in sweatshops.
+            <%= gettext "We have Wikipedia, Twitter and Facebook, but have no idea if our clothing was made in sweatshops." %>
           </div>
           <div class="testimonials__author">
             <img src="https://rm-content.s3.amazonaws.com/5857e1aaf3c177741f8df43d/810860/upload-060dc5a0-630d-11e7-b794-d5c65b0df4d6.png" alt="">
@@ -159,22 +165,22 @@
       </div>
 
       <div class="whats-happening">
-        <strong>What’s happening:</strong>
+        <strong><%= gettext "What’s happening:" %></strong>
 
         <div class="whats-happening__list">
-          <strong>1.</strong> 1,000+ people nominate a brand.<br>
-          <strong>2.</strong> We will contact the brand and ask how they treat their workers and discuss ways to be more transparent.<br>
-          <strong>3.</strong> We will tell you what they say.<br><br>
-          Technology has changed our lives. We think we need to use it for more: to ensure the people making our clothes live in freedom and their fundamental rights are respected.
+          <strong>1.</strong> <%= gettext "1,000+ people nominate a brand." %><br>
+          <strong>2.</strong> <%= gettext "We will contact the brand and ask how they treat their workers and discuss ways to be more transparent." %><br>
+          <strong>3.</strong> <%= gettext "We will tell you what they say." %><br><br>
+          <%= gettext "Technology has changed our lives. We think we need to use it for more: to ensure the people making our clothes live in freedom and their fundamental rights are respected." %>
         </div>
 
         <p>
-          <strong>Do you want to wear clothes made in decent working conditions?</strong>
+          <strong><%= gettext "Do you want to wear clothes made in decent working conditions?" %></strong>
         </p>
 
         <p>
           <strong>
-            <a href="#i-want-to-know">Yes.</a>
+            <a href="#i-want-to-know"><%= gettext "Yes." %></a>
           </strong>
         </p>
       </div>
@@ -182,7 +188,8 @@
       <div class="about-askbywho">
         <div class="about-askbywho__content">
           <p>
-            We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you.
+          <p><%= gettext "
+            We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you." %>
           </p>
           <p>
             <a href="mailto:askbywho@workahead.co">askbywho@workahead.co</a>
@@ -192,6 +199,30 @@
           <img src="/images/logo.png" alt="">
           <span>ask by who</span>
         </div>
+      </div>
+      <div class="about-askbywho__share">
+          <h2><%= gettext "Share" %></h2>
+          <a href="http://fb.me/askbywhocom" target="_blank"><img src="/images/facebook.png" alt="Facebook"></a>
+          <a href="https://twitter.com/askbywho" target="_blank"><img src="/images/twitter.png" alt="Twitter"></a>
+          <a href="https://www.instagram.com/askbywho/" target="_blank"><img src="/images/instagram.png" alt="Instagram"></a>
+          <a href="https://medium.com/@askbywho" target="_blank"><img src="/images/medium.png" alt="Medium"></a>
+
+          <h2><%= gettext "Join" %></h2>
+          <div class="about-askbywho__share__join">
+            <div class="about-askbywho__share__row"><a href="https://github.com/ilonamm/askbywho/" target="_blank"><img src="/images/github.png" alt="Github"></a><br>open source code</div>
+            <div class="about-askbywho__share__row"><a href="https://trello.com/b/lUaYwCg9/ask-by-who" target="_blank"><img src="/images/trello.png" alt="Trello"></a><br>open todo list</div>
+          </div>
+
+          <div class="about-askbywho__share__support">
+          <h3><%= gettext "We are grateful for the support of" %></h3>
+          <a href="https://spiceprogram.org/" target="_blank"><img src="/images/futurice.png" alt="Futurice"></a>
+          <a href="http://www.vanhack.com/" target="_blank"><img src="/images/vanhack.png" alt="Vanhack"></a>
+          </div>
+
+          <div class="about-askbywho__share__built">
+          <p><%= gettext "Built with love in Helsinki | San Francisco | Teresina" %><br>
+          🇫🇮 &nbsp;🎅🏼 &nbsp;🇺🇸  &nbsp;🌉  &nbsp;🇧🇷 &nbsp;<img src="/images/teresina.png"></p>
+          </div>
       </div>
     </div>
   </section>

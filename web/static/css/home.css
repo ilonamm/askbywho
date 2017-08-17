@@ -7,6 +7,15 @@ body {
   padding-bottom: 60px;
 }
 
+.lang-menu {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-top:5px;
+  font-size: 10px;
+  }
+
 img {
   max-width: 100%;
 }
@@ -32,6 +41,7 @@ h1 {
 .hover-message {
   background: rgba(255, 244, 183, 0.7);
   padding-bottom: 10px;
+  padding-top: 20px;
 }
 .hover-message__title {
   color: black;
@@ -269,6 +279,53 @@ h1 {
 }
 .about-askbywho__logo img {
   width: 130px;
+}
+.about-askbywho__share {
+  text-align: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-top: 40px;
+}
+.about-askbywho__share img {
+  width: 52px;
+  padding-right: 5px;
+}
+.about-askbywho__share a {
+   text-decoration: none;
+}
+.about-askbywho__share__join {
+  float: center;
+  font-size: 10px;
+  padding: 0px;
+  width: 260px;
+  margin: auto;
+  justify-content: center;
+  display: block;
+}
+.about-askbywho__share__row {
+  float: left;
+  display: inline-block;
+}
+.about-askbywho__share__join img {
+  width: 130px;
+}
+.about-askbywho__share__support {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  clear: both;
+}
+.about-askbywho__share__support img {
+  width: 62px;
+}
+.about-askbywho__share__support h3 {
+  font-size: 16px;
+}
+.about-askbywho__share__built {
+  font-weight: 300;
+}
+.about-askbywho__share__built img {
+  width: 22px;
+  height: 15px;
 }
 
 /* Change .container width */
