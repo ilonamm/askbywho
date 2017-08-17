@@ -31,6 +31,13 @@
       ga('create', 'UA-102168277-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <script>
+      var TRANSLATIONS = {
+        placeholder: "<%= gettext "Click to write/choose brands" %>",
+      };
+    </script>
+
   </head>
 
   <body>

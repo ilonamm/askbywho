@@ -31,5 +31,5 @@ $('#email_name_brands').select2({
   escapeMarkup: function(m) {
     return m;
   },
-  placeholder: 'Click to write/choose brands'
+  placeholder: TRANSLATIONS.placeholder
 });
