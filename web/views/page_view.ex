@@ -5,6 +5,7 @@ defmodule Askbywho.PageView do
 
   use Askbywho.Web, :view
 
+  require Logger
   alias Askbywho.Repo
   alias Askbywho.Email
   alias Askbywho.Brand
@@ -60,7 +61,22 @@ defmodule Askbywho.PageView do
   end
 
   def on_qa do
-    IO.puts("environment var is_qa is #{inspect System.get_env("is_qa")}")
+    Logger.info fn ->
+      "Environment variable is_qa is #{inspect System.get_env("is_qa")}"
+    end
     System.get_env("is_qa") == "yes"
+  end
+
+  def add_nominate do
+    gettext "Nominate"
+  end
+
+  def add_autocomplete_placeholder do
+    gettext "Click to write/choose brands"
+  end
+
+  def add_languages do
+    menu = %{"en" => "in english", "fi" => "suomeksi"}
+    Map.delete(menu, Gettext.get_locale(Askbywho.Gettext))
   end
 end

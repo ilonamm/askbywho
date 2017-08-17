@@ -16,7 +16,7 @@ defmodule Askbywho.Brand do
   schema "brands" do
     field :name, :string
     many_to_many :emails, Email, join_through: "brands_emails"
-    timestamps
+    timestamps()
   end
 
   @doc """

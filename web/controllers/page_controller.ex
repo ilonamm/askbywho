@@ -6,13 +6,10 @@ defmodule Askbywho.PageController do
 
   use Askbywho.Web, :controller
   alias Askbywho.Email
-  alias Askbywho.Brand
-  import Ecto.Query
-  import Ecto.Changeset
 
   plug :put_layout, "site.html"
 
-  def index(conn, params) do
+  def index(conn, _params) do
     changeset = Email.changeset(%Email{})
     render(conn, "index.html", changeset: changeset, action: page_path(conn, :create), name_brands: [])
   end
@@ -60,12 +57,6 @@ defmodule Askbywho.PageController do
   defp look_up_location(conn) do
     {:ok, %GeoIP.Location{:city => city, :region_name => region,
       :country_name => country, :latitude => latitude, :longitude => longitude}} = GeoIP.lookup(conn)
-      # this is for testing on localhost
-      # if conn.remote_ip == {127, 0, 0, 1} do
-      # GeoIP.lookup({Enum.random(1..255), Enum.random(1..255), Enum.random(1..255), Enum.random(1..254)})
-      # else
-      # GeoIP.lookup(conn)
-      # end
 
     location = formatted_location(%{city: city, region: region, country: country})
 

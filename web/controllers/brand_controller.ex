@@ -1,6 +1,5 @@
 defmodule Askbywho.BrandController do
   use Askbywho.Web, :controller
-  import Ecto.Query
 
   alias Askbywho.Brand
 

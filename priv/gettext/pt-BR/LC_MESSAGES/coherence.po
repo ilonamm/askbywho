@@ -1,0 +1,330 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: pt-BR\n"
+
+#: web/emails/coherence/user_email.ex:27
+msgid "%{site_name} - Confirm your new account"
+msgstr ""
+
+#: web/emails/coherence/user_email.ex:36
+msgid "%{site_name} - Invitation to create a new account"
+msgstr ""
+
+#: web/emails/coherence/user_email.ex:18
+msgid "%{site_name} - Reset password instructions"
+msgstr ""
+
+#: web/emails/coherence/user_email.ex:45
+msgid "%{site_name} - Unlock Instructions"
+msgstr ""
+
+#: web/coherence_messages.ex:22
+msgid "Account already confirmed."
+msgstr ""
+
+#: web/coherence_messages.ex:23
+msgid "Account is not locked."
+msgstr ""
+
+#: web/coherence_messages.ex:24
+msgid "Account updated successfully."
+msgstr ""
+
+#: web/coherence_messages.ex:27
+msgid "Already logged in."
+msgstr ""
+
+#: web/coherence_messages.ex:29
+msgid "Can't find that token"
+msgstr ""
+
+#: web/templates/coherence/password/edit.html.eex:23
+#: web/templates/coherence/password/new.html.eex:15
+#: web/templates/coherence/session/new.html.eex:28
+#: web/templates/coherence/unlock/new.html.eex:19
+msgid "Cancel"
+msgstr ""
+
+#: web/templates/coherence/email/password.html.eex:7
+msgid "Change my password"
+msgstr ""
+
+#: web/templates/coherence/email/confirmation.html.eex:7
+msgid "Confirm my Account"
+msgstr ""
+
+#: web/coherence_messages.ex:30
+msgid "Confirmation email sent."
+msgstr ""
+
+#: web/coherence_messages.ex:31
+msgid "Confirmation token expired."
+msgstr ""
+
+#: web/coherence_messages.ex:32
+msgid "Could not find that email address"
+msgstr ""
+
+#: web/templates/coherence/password/edit.html.eex:3
+msgid "Create a New Password"
+msgstr ""
+
+#: web/templates/coherence/email/invitation.html.eex:7
+msgid "Create my Account"
+msgstr ""
+
+#: web/templates/coherence/unlock/new.html.eex:6
+msgid "Email"
+msgstr ""
+
+#: web/coherence_messages.ex:33 web/views/coherence/coherence_view_helpers.ex:12
+msgid "Forgot your password?"
+msgstr ""
+
+#: web/coherence_messages.ex:34
+msgid "HTTP Authentication Required"
+msgstr ""
+
+#: web/templates/coherence/email/confirmation.html.eex:2
+#: web/templates/coherence/email/invitation.html.eex:2
+#: web/templates/coherence/email/password.html.eex:2
+#: web/templates/coherence/email/unlock.html.eex:2
+msgid "Hello %{name}!"
+msgstr ""
+
+#: web/templates/coherence/email/password.html.eex:10
+msgid "If you didn't request this, please ignore this email."
+msgstr ""
+
+#: web/coherence_messages.ex:35
+msgid "Incorrect %{login_field} or password."
+msgstr ""
+
+#: web/coherence_messages.ex:74
+msgid "Invalid %{user_token} error: %{error}"
+msgstr ""
+
+#: web/coherence_messages.ex:37
+msgid "Invalid Invitation. Please contact the site administrator."
+msgstr ""
+
+#: web/coherence_messages.ex:38
+msgid "Invalid Request."
+msgstr ""
+
+#: web/coherence_messages.ex:39
+msgid "Invalid confirmation token."
+msgstr ""
+
+#: web/coherence_messages.ex:40
+msgid "Invalid email or password."
+msgstr ""
+
+#: web/coherence_messages.ex:41
+msgid "Invalid invitation token."
+msgstr ""
+
+#: web/coherence_messages.ex:42
+msgid "Invalid reset token."
+msgstr ""
+
+#: web/coherence_messages.ex:43
+msgid "Invalid unlock token."
+msgstr ""
+
+#: web/coherence_messages.ex:44
+msgid "Invitation already sent."
+msgstr ""
+
+#: web/coherence_messages.ex:45
+msgid "Invitation sent."
+msgstr ""
+
+#: web/coherence_messages.ex:46 web/views/coherence/coherence_view_helpers.ex:15
+msgid "Invite Someone"
+msgstr ""
+
+#: web/coherence_messages.ex:78
+msgid "Mailer configuration required!"
+msgstr ""
+
+#: web/coherence_messages.ex:48
+msgid "Maximum Login attempts exceeded. Your account has been locked."
+msgstr ""
+
+#: web/coherence_messages.ex:50 web/views/coherence/coherence_view_helpers.ex:14
+msgid "Need An Account?"
+msgstr ""
+
+#: web/templates/coherence/password/edit.html.eex:10
+#: web/templates/coherence/session/new.html.eex:13
+#: web/templates/coherence/unlock/new.html.eex:12
+msgid "Password"
+msgstr ""
+
+#: web/templates/coherence/password/edit.html.eex:16
+msgid "Password Confirmation"
+msgstr ""
+
+#: web/coherence_messages.ex:52
+msgid "Password reset token expired."
+msgstr ""
+
+#: web/coherence_messages.ex:53
+msgid "Password updated successfully."
+msgstr ""
+
+#: web/coherence_messages.ex:55
+msgid "Problem confirming user account. Please contact the system administrator."
+msgstr ""
+
+#: web/coherence_messages.ex:57
+msgid "Registration created successfully."
+msgstr ""
+
+#: web/templates/coherence/session/new.html.eex:21
+msgid "Remember Me?"
+msgstr ""
+
+#: web/coherence_messages.ex:59 web/views/coherence/coherence_view_helpers.ex:16
+msgid "Resend confirmation email"
+msgstr ""
+
+#: web/templates/coherence/password/new.html.eex:14
+msgid "Reset Password"
+msgstr ""
+
+#: web/coherence_messages.ex:60
+msgid "Reset email sent. Check your email for a reset link."
+msgstr ""
+
+#: web/coherence_messages.ex:61
+msgid "Restricted Area"
+msgstr ""
+
+#: web/templates/coherence/unlock/new.html.eex:18
+msgid "Send Instructions"
+msgstr ""
+
+#: web/coherence_messages.ex:62 web/views/coherence/coherence_view_helpers.ex:13
+msgid "Send an unlock email"
+msgstr ""
+
+#: web/templates/coherence/password/new.html.eex:3
+msgid "Send reset password link"
+msgstr ""
+
+#: web/coherence_messages.ex:63 web/templates/coherence/session/new.html.eex:27
+#: web/views/coherence/coherence_view_helpers.ex:17
+msgid "Sign In"
+msgstr ""
+
+#: web/coherence_messages.ex:64 web/views/coherence/coherence_view_helpers.ex:18
+msgid "Sign Out"
+msgstr ""
+
+#: web/coherence_messages.ex:65
+msgid "Signed in successfully."
+msgstr ""
+
+#: web/templates/coherence/email/password.html.eex:4
+msgid "Someone has requested a link to change your password, and you can do this through the link below."
+msgstr ""
+
+#: web/templates/coherence/email/confirmation.html.eex:9
+#: web/templates/coherence/email/invitation.html.eex:9
+#: web/templates/coherence/email/unlock.html.eex:9
+msgid "Thank you!"
+msgstr ""
+
+#: web/coherence_messages.ex:66
+msgid "Too many failed login attempts. Account has been locked."
+msgstr ""
+
+#: web/coherence_messages.ex:67
+msgid "Unauthorized IP Address"
+msgstr ""
+
+#: web/coherence_messages.ex:68
+msgid "Unlock Instructions sent."
+msgstr ""
+
+#: web/templates/coherence/email/unlock.html.eex:7
+msgid "Unlock my Account"
+msgstr ""
+
+#: web/templates/coherence/password/edit.html.eex:22
+msgid "Update Password"
+msgstr ""
+
+#: web/coherence_messages.ex:69
+msgid "User account confirmed successfully."
+msgstr ""
+
+#: web/coherence_messages.ex:70
+msgid "User already has an account!"
+msgstr ""
+
+#: web/coherence_messages.ex:76
+msgid "You are using an invalid security token for this site! This security violation has been logged."
+msgstr ""
+
+#: web/templates/coherence/email/invitation.html.eex:4
+msgid "You have been invited to create an Account. Use the link below to create an account."
+msgstr ""
+
+#: web/coherence_messages.ex:71
+msgid "You must confirm your account before you can login."
+msgstr ""
+
+#: web/templates/coherence/email/unlock.html.eex:4
+msgid "You requested unlock instructions for your locked account. Please click the link below to unlock your account."
+msgstr ""
+
+#: web/coherence_messages.ex:72
+msgid "Your account has been unlocked"
+msgstr ""
+
+#: web/coherence_messages.ex:73
+msgid "Your account is not locked."
+msgstr ""
+
+#: web/templates/coherence/email/confirmation.html.eex:4
+msgid "Your new account is almost ready. Click the link below to confirm you new account."
+msgstr ""
+
+#: web/templates/coherence/email/password.html.eex:13
+msgid "Your password won't change until you access the link above and create a new one."
+msgstr ""
+
+#: web/coherence_messages.ex:25
+msgid "already confirmed"
+msgstr ""
+
+#: web/coherence_messages.ex:26
+msgid "already locked"
+msgstr ""
+
+#: web/coherence_messages.ex:28
+msgid "can't be blank"
+msgstr ""
+
+#: web/coherence_messages.ex:36
+msgid "invalid current password"
+msgstr ""
+
+#: web/coherence_messages.ex:51
+msgid "not locked"
+msgstr ""
+
+#: web/coherence_messages.ex:58
+msgid "required"
+msgstr ""

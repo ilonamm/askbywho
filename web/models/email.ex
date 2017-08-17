@@ -11,7 +11,7 @@ defmodule Askbywho.Email do
     field :latitude, :float
     field :longitude, :float
     many_to_many :brands, Brand, join_through: "brands_emails", on_replace: :delete
-    timestamps
+    timestamps()
   end
 
   @doc """
