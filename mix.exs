@@ -22,7 +22,7 @@ defmodule Askbywho.Mixfile do
   def application do
     [mod: {Askbywho, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :coherence, :filterable, :scrivener_ecto, :scrivener_html]]
+                    :phoenix_ecto, :postgrex, :coherence, :filterable, :scrivener_ecto, :scrivener_html, :geoip]]
   end
 
   # Specifies which paths to compile per environment.
@@ -47,6 +47,8 @@ defmodule Askbywho.Mixfile do
      {:excoveralls, "~> 0.7", only: :test},
      {:scrivener_ecto, "~> 1.0"},
      {:scrivener_html, "~> 1.7"},
+     {:geoip, "~> 0.1"},
+     {:plug, "~> 1.3.4"},
      {:gettext, "~> 0.13"}]
   end
 

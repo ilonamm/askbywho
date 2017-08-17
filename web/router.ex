@@ -14,6 +14,7 @@ defmodule Askbywho.Router do
     plug :put_secure_browser_headers
     plug Askbywho.Locale
     plug Coherence.Authentication.Session  # Add this
+    plug Askbywhoplugs.RemoteIPPlug
   end
 
   pipeline :protected do

@@ -7,6 +7,9 @@ defmodule Askbywho.Email do
     field :name, :string
     field :email, :string
     field :name_brands, :string, virtual: true
+    field :location, :string
+    field :latitude, :float
+    field :longitude, :float
     many_to_many :brands, Brand, join_through: "brands_emails", on_replace: :delete
     timestamps()
   end

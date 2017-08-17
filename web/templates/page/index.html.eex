@@ -5,6 +5,7 @@
 </div>
 
 <div id="home-wrapper">
+<%= if on_qa() do render "qa.html" end %>
   <section class="hover-message">
     <div class="container">
       <h1 class="hover-message__title">
