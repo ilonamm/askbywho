@@ -1,0 +1,39 @@
+<div class="about-askbywho">
+  <div class="about-askbywho__content">
+    <p>
+    <p><%= gettext "
+      We are a startup. We use modern technology to further transparency, human rights and decent working conditions in supply chains. But we've been told people don't care about transparency. So we wanted to ask you. This ask by who campaign is built on open source, by volunteers, companies, and you." %>
+    </p>
+    <p>
+      <a href="mailto:askbywho@workahead.co">askbywho@workahead.co</a>
+    </p>
+  </div>
+  <div class="about-askbywho__logo">
+    <img src="/images/logo.png" alt="">
+    <span>ask by who</span>
+  </div>
+</div>
+<div class="about-askbywho__share">
+    <h2><%= gettext "Share" %></h2>
+    <a href="http://fb.me/askbywhocom" target="_blank"><img src="/images/facebook.png" alt="Facebook"></a>
+    <a href="https://twitter.com/askbywho" target="_blank"><img src="/images/twitter.png" alt="Twitter"></a>
+    <a href="https://www.instagram.com/askbywho/" target="_blank"><img src="/images/instagram.png" alt="Instagram"></a>
+    <a href="https://medium.com/@askbywho" target="_blank"><img src="/images/medium.png" alt="Medium"></a>
+
+    <h2><%= gettext "Join" %></h2>
+    <div class="about-askbywho__share__join">
+      <div class="about-askbywho__share__row"><a href="https://github.com/ilonamm/askbywho/" target="_blank"><img src="/images/github.png" alt="Github"></a><br>open source code</div>
+      <div class="about-askbywho__share__row"><a href="https://trello.com/b/lUaYwCg9/ask-by-who" target="_blank"><img src="/images/trello.png" alt="Trello"></a><br>open todo list</div>
+    </div>
+
+    <div class="about-askbywho__share__support">
+    <h3><%= gettext "We are grateful for the support of" %></h3>
+    <a href="https://spiceprogram.org/" target="_blank"><img src="/images/futurice.png" alt="Futurice"></a>
+    <a href="http://www.vanhack.com/" target="_blank"><img src="/images/vanhack.png" alt="Vanhack"></a>
+    </div>
+
+    <div class="about-askbywho__share__built">
+    <p><%= gettext "Built with love in Helsinki | San Francisco | Teresina" %><br>
+    🇫🇮 &nbsp;🎅🏼 &nbsp;🇺🇸  &nbsp;🌉  &nbsp;🇧🇷 &nbsp;<img src="/images/teresina.png"></p>
+    </div>
+</div>
