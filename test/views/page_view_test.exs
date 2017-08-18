@@ -54,7 +54,7 @@ defmodule Askbywho.PageViewTest do
 
     adidas = Repo.get_by(Brand, %{name: "Adidas"})
 
-    assert PageView.percent_nominations(adidas.id) == 0.002
+    assert PageView.percent_nominations(adidas.id) == 0.2
   end
 
   test "#to_go should show the message of how many nominations a brand need to get 1k" do
