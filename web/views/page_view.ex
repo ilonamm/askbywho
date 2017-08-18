@@ -72,7 +72,7 @@ defmodule Askbywho.PageView do
   end
 
   def add_languages do
-    menu = %{"en" => "in english", "fi" => "suomeksi"}
+    menu = %{"en" => "in english", "fi" => "suomeksi", "pt-BR" => "em português"}
     Map.delete(menu, Gettext.get_locale(Askbywho.Gettext))
   end
 end

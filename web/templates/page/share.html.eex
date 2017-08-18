@@ -20,11 +20,11 @@
         You selected <%= count_brands_message @brands %>!
       </h2>
 
-      <p>
+      <h2 class="share__happening">
       1. 1,000 people nominate a brand<br>
-      2. We tell the brand 1,000 of us want to know how our clothes are made<br>
+      2. We tell the brand 1,000 people want to know how their clothes are made<br>
       3. We tell you what they say
-      </p>
+      </h2>
       <h2>This is how many others have nominated your favorite brands:</h2>
 
       <div class="brands">

@@ -172,7 +172,7 @@ msgstr "Indique"
 
 #: web/templates/page/index.html.eex:157
 msgid "We have Wikipedia, Twitter and Facebook, but have no idea if our clothing was made in sweatshops."
-msgstr "Temos Wikipedia, Twitter e Facebook, mais não fazemos ideia se nossas roupas são feita em ateliês."
+msgstr "Temos Wikipedia, Twitter e Facebook, mas não fazemos ideia se nossas roupas são feita em ateliês."
 
 #: web/templates/page/index.html.eex:1
 msgid "Change language: "
