@@ -10,15 +10,22 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-Askbywho.Repo.delete_all Askbywho.User
+alias Askbywho.Repo
+alias Askbywho.Brand
+alias Askbywho.User
+alias Askbywho.Email
 
-changeset = Askbywho.User.changeset(%Askbywho.User{}, %{
+Repo.delete_all User
+Repo.delete_all Email
+Repo.delete_all Brand
+
+changeset = User.changeset(%User{}, %{
   name: "Test User",
   email: "abw-user@email.com",
   password: "secret",
   password_confirmation: "secret"
 })
-Askbywho.Repo.insert! changeset
+Repo.insert! changeset
 
 %Email{}
   |> Email.changeset(%{"email" => "test1@email.com", "name" => "Test1",
@@ -59,11 +66,11 @@ Askbywho.Repo.insert! changeset
   |> Repo.insert
 
 %Email{}
-  |> Email.changeset(%{"email" => "test7@email.com", "name" => "Test9",
+  |> Email.changeset(%{"email" => "test8@email.com", "name" => "Test9",
   "name_brands" => ["Aarrekid", "Nanso", "Marimekko", "Polarn O. Pyret"]})
   |> Repo.insert
 
 %Email{}
-  |> Email.changeset(%{"email" => "test7@email.com", "name" => "Test10",
+  |> Email.changeset(%{"email" => "test9@email.com", "name" => "Test10",
   "name_brands" => ["Converse", "Aigle", "Stella McCartney"]})
   |> Repo.insert
