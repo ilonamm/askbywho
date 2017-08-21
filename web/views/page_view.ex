@@ -9,18 +9,21 @@ defmodule Askbywho.PageView do
   alias Askbywho.Repo
   alias Askbywho.Email
   alias Askbywho.Brand
+  import Askbywho.Gettext
+
 
   def count_emails do
     Repo.aggregate Email, :count, :id
   end
 
   def count_brands_message([_]) do
-    "1 brand"
+    gettext "1 brand"
   end
 
   def count_brands_message(list) do
     count = length list
-    "#{count} brands"
+    text = ngettext " brand", " brands", count
+    Integer.to_string(count) <> text
   end
 
   def count_brands do

@@ -16,16 +16,17 @@
 
   <div class="head">
     <div class="container">
-      <h2>
-        You selected <%= count_brands_message @brands %>!
-      </h2>
+      <div class="share-top">
+        <h1>
+          <%= gettext "Your voice matters." %>
+        </h1>
+        <p>
+          <%= "You are one of us " %> <%= count_emails() %>
+          <%= gettext "saying that the people making our clothes matter." %>
+        </p>
+      </div>
 
-      <h2 class="share__happening">
-      1. 1,000 people nominate a brand<br>
-      2. We tell the brand 1,000 people want to know how their clothes are made<br>
-      3. We tell you what they say
-      </h2>
-      <h2>This is how many others have nominated your favorite brands:</h2>
+      <h2>You nominated  <%= count_brands_message @brands %></h2>
 
       <div class="brands">
         <%= for brand <- @brands do %>
@@ -37,7 +38,7 @@
                    aria-valuenow="<%= percent_nominations(brand.id) %>"
                    style="width: <%= percent_nominations(brand.id) %>%"
                    aria-valuemin="0" aria-valuemax="100">
-                 <span><%= count_nominations(brand.id) %></span>
+                 <span><%= count_nominations(brand.id) %><%= gettext " peo" %></span>
               </div>
             </div>
             <div class="to-go">
@@ -46,34 +47,46 @@
           </div>
         <% end %>
       </div>
+
+      <h2 class="share__happening">
+      1. 1,000 people nominate a brand<br>
+      2. We tell the brand 1,000 people want to know how their clothes are made<br>
+      3. We tell you what they say
+      </h2>
+
     </div>
   </div>
 
   <div class="body">
     <div class="container">
+    <!--
       <p>
         Overall,
         <%= count_emails() %> people have nominated
         <%= count_brands() %> brands
         <%= count_nominations() %> times.
-      </p>
+      </p> -->
 
       <div id="fb-root"></div>
       <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v2.10";
+        js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.10";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
 
       <p>
-        Help us get to 1,000 people before the site launch - click the button below to ask a friend join via Facebook Message!
+        Invite your friends!</p><p>
       </p>
 
-      <div class="fb-send" data-href="https://beta.askbywho.com"></div>
-      <p></p>
-      <p></p>
+      <!-- This is ugly and always in English, needs fixing
+      <div class="fb-send" data-href="https://beta.askbywho.com"></div> -->
+
+      <a href="whatsapp://send?text="We all know a lot of clothes are made
+      in inhumane conditions. Go to this site to say to your favorite clothing brands
+      that you want clothes made in decent working conditions!" data-href="https://beta.askbywho.com">
+      <img src="/images/whatsapp.png" alt="Whatsapp"><%= gettext "Share via Whatsapp" %></a>
       </div>
 
     </div>

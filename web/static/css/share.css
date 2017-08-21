@@ -11,11 +11,21 @@
   margin: 120px 0 40px;
 }
 
+
 .share__happening {
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 400;
-  max-width: 460px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  max-width: 340px;
+}
+
+.share-top h1 {
+  font-size: 18px;
+}
+
+.share-top p {
+  font-size: 12px;
+  line-height: normal;
 }
 
 #share-wrapper p {
