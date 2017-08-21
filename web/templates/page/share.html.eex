@@ -26,7 +26,7 @@
         </p>
       </div>
 
-      <h2>You nominated  <%= count_brands_message @brands %></h2>
+      <h2><%= gettext "You nominated" %> <%= count_brands_message @brands %></h2>
 
       <div class="brands">
         <%= for brand <- @brands do %>
@@ -38,7 +38,7 @@
                    aria-valuenow="<%= percent_nominations(brand.id) %>"
                    style="width: <%= percent_nominations(brand.id) %>%"
                    aria-valuemin="0" aria-valuemax="100">
-                 <span><%= count_nominations(brand.id) %><%= gettext " peo" %></span>
+                 <span><%= count_nominations(brand.id) %></span>
               </div>
             </div>
             <div class="to-go">
@@ -49,9 +49,10 @@
       </div>
 
       <h2 class="share__happening">
+      <%= gettext "
       1. 1,000 people nominate a brand<br>
       2. We tell the brand 1,000 people want to know how their clothes are made<br>
-      3. We tell you what they say
+      3. We tell you what they say" %>
       </h2>
 
     </div>
@@ -77,15 +78,15 @@
       }(document, 'script', 'facebook-jssdk'));</script>
 
       <p>
-        Invite your friends!</p><p>
+        <%= gettext "Invite your friends!" %></p><p>
       </p>
 
       <!-- This is ugly and always in English, needs fixing
       <div class="fb-send" data-href="https://beta.askbywho.com"></div> -->
 
-      <a href="whatsapp://send?text="We all know a lot of clothes are made
+      <a href="whatsapp://send?text="<%= gettext "We all know a lot of clothes are made
       in inhumane conditions. Go to this site to say to your favorite clothing brands
-      that you want clothes made in decent working conditions!" data-href="https://beta.askbywho.com">
+      that you want clothes made in decent working conditions!" %>" data-href="https://beta.askbywho.com">
       <img src="/images/whatsapp.png" alt="Whatsapp"><%= gettext "Share via Whatsapp" %></a>
       </div>
 
