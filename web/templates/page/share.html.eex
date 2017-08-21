@@ -49,10 +49,9 @@
       </div>
 
       <h2 class="share__happening">
-      <%= gettext "
-      1. 1,000 people nominate a brand<br>
-      2. We tell the brand 1,000 people want to know how their clothes are made<br>
-      3. We tell you what they say" %>
+      <%= gettext "1. 1,000 people nominate a brand" %><br>
+      <%= gettext "2. We tell the brand 1,000 people want to know how their clothes are made" %><br>
+      <%= gettext "3. We tell you what they say" %>
       </h2>
 
     </div>
