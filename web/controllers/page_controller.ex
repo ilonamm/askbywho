@@ -16,7 +16,10 @@ defmodule Askbywho.PageController do
   end
 
   def mobile_brands(conn, _params) do
-    brands = Repo.all(Brand) |> Enum.map(&(&1.name))
+    query = from b in Brand, select: b.name, order_by: b.name
+    brands = query
+      |> Repo.all()
+
     changeset = Email.changeset(%Email{})
     render(conn, "mobile_brands.html", changeset: changeset, action: page_path(conn, :create), name_brands: brands)
   end
