@@ -1,28 +1,31 @@
 <div id="share-wrapper">
-<section class="hover-message">
-  <div class="container">
-  <p class="hover-message__text">
-      <strong>Thank you for joining our beta!</strong>
-    </p>
+  <section class="hover-message">
+    <div class="container">
     <p class="hover-message__text">
-      We'll send you an email when we're ready to launch!
-      <br>Want to help? Join our
-      <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank">facebook group</a>!
-    </p>
-  </div>
-</section>
+        <strong><%= gettext "Thank you for joining!" %></strong>
+      </p>
+      <p class="hover-message__text">
+        <%= gettext "We'll send you an email when we're ready to launch!" %>
+        <br>  <%= gettext "Want to help? Join our" %>
+        <a class="hover-message__link" href="https://www.facebook.com/groups/weaskbywho/" target="_blank"><%= gettext "facebook group" %></a>!
+      </p>
+    </div>
+  </section>
+
 
 
   <div class="head">
     <div class="container">
-      <h1>
-        Thank you for nominating <%= count_brands_message @brands %>!
-      </h1>
+      <h2>
+        You selected <%= count_brands_message @brands %>!
+      </h2>
 
-      <p>
-        When we get to 1,000 nominations, we'll reach out to the brands.
-        This is how many others have nominated your favorite brands:
-      </p>
+      <h2 class="share__happening">
+      1. 1,000 people nominate a brand<br>
+      2. We tell the brand 1,000 people want to know how their clothes are made<br>
+      3. We tell you what they say
+      </h2>
+      <h2>This is how many others have nominated your favorite brands:</h2>
 
       <div class="brands">
         <%= for brand <- @brands do %>
@@ -71,56 +74,11 @@
       <div class="fb-send" data-href="https://beta.askbywho.com"></div>
       <p></p>
       <p></p>
-
-
-
-      <!--
-      <div class="sharing">
-        <div class="social-network">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=beta.askbywho.com"></a>
-            <img src="/images/facebook.png">
-              <div class="cta">
-                beta.askbywho.com
-              </div>
-        </div>
-
-        <div class="social-network">
-          <a href="https://twitter.com/home?status=www.askbywho.com">
-            <img src="/images/twitter.png">
-            <div class="cta one-line">
-              tweet
-            </div>
-          </a>
-        </div>
-        -->
       </div>
+
     </div>
   </div>
 
-<!-- replace with the new footer
-  <div class="foot">
-    <div class="container">
-      <p>
-        Follow us
-      </p>
-
-      <div class="social">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=www.askbywho.com">
-          <img src="/images/facebook.png">
-        </a>
-
-        <a href="https://twitter.com/home?status=www.askbywho.com">
-          <img src="/images/twitter.png">
-        </a>
-      </div>
-      <div class="signature">
-         <img src="/images/logo.png" />
-         <div class="">
-           <span class="askbywho">ask by who</span>
-           <a class="email" href="askbywho@workahead.co">askbywho@workahead.co</a>
-         </div>
-      </div>
-    </div>
-  </div>
-  -->
 </div>
+
+      <%= render "footer.html" %>

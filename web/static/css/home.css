@@ -289,6 +289,7 @@ h1 {
   justify-content: center;
   font-weight: 600;
   margin-top: 40px;
+  font-size: 14px;
 }
 .about-askbywho__share img {
   width: 52px;
@@ -296,6 +297,7 @@ h1 {
 }
 .about-askbywho__share a {
    text-decoration: none;
+   border: none;
 }
 .about-askbywho__share__join {
   float: center;

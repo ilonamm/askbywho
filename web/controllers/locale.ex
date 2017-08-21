@@ -8,10 +8,7 @@ defmodule Askbywho.Locale do
   def call(conn, _opts) do
     # These languages assign a locale automatically
     langs = %{"en" => "en", "en-us" => "en", "fi" => "fi",
-    "fi-fi" => "fi"}
-
-    # TODO add when portuguese translation is ready
-    # "pt-br" => "pt-BR", "pt" => "pt-BR"
+    "fi-fi" => "fi", "pt-br" => "pt-BR", "pt" => "pt-BR"}
 
     # fetching browser's guess of what languages the user prefers
     case get_req_header(conn, "accept-language") do
