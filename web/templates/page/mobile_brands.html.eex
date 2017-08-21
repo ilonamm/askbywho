@@ -1,0 +1,66 @@
+  <%= form_for @changeset, @action, fn f -> %>
+    <%= if @changeset.action do %>
+      <div class="alert alert-danger">
+        <p><%= gettext "Oops, something went wrong! Please check the errors below. "%></p>
+      </div>
+    <% end %>
+
+    <div id="js-nominate-phase-1" class="mobile-brands__list">
+      <div class="container">
+        <h2 class="mobile-brands__heading">
+          <%= gettext "Choose your favorite brands" %>
+        </h2>
+        <p class="mobile_brands__description">
+          <%= gettext "To say" %>
+          <em><%= gettext "I want to wear clothes made in decent working conditions" %></em>
+        </p>
+        <%= for name <- @name_brands do %>
+          <label class="mobile-brands__option">
+            <input type="checkbox" name="email[name_brands][]" value="<%= name %>">
+            <%= name %>
+          </label>
+        <% end %>
+      </div>
+
+      <div class="mobile-brands__button-row">
+        <div class="container">
+          <a class="mobile-brands__small-text" href="/"><%= gettext "Go back" %></a>
+          <button class="wanna-know__submit" type="button" id="js-nominate-switch-phase"><%= done_choosing() %></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="js-nominate-phase-2" hidden class="mobile-brands__form">
+      <div class="container">
+        <h2 class="mobile-brands__heading">
+          <%= gettext "Thank you for adding " %>
+          <span id="js-nominate-brand-count"></span>
+          <%= gettext "brands" %>
+        </h2>
+        <p class="mobile_brands__description">
+          <%= gettext "We'd like to send you an email when we hear back from your favorite brands." %>
+        </p>
+
+        <div class="row">
+          <div class="mobile-brands__field">
+            <%= text_input f, :name, placeholder: gettext "First name" %>
+            <%= error_tag f, :name %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="mobile-brands__field">
+            <%= text_input f, :email, placeholder: gettext "Email" %>
+            <%= error_tag f, :email %>
+          </div>
+        </div>
+
+        <%= submit add_nominate(), class: "mobile-brands__submit" %>
+
+        <p class="mobile-brands__small-text"><%= gettext "We will keep your email safe and never send any spam." %></p>
+      </div>
+    </div>
+
+  <% end %>
+
+</div>

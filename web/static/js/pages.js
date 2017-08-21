@@ -33,3 +33,19 @@ $('#email_name_brands').select2({
   },
   placeholder: 'Click to write/choose brands'
 });
+
+$('#js-nominate-switch-phase').click(function() {
+  var phase1 = $('#js-nominate-phase-1');
+  var phase2 = $('#js-nominate-phase-2');
+
+  var checkedCount = $('input[type=checkbox]:checked').length;
+  $('#js-nominate-brand-count').text(checkedCount);
+
+  if (phase2.attr('hidden')) {
+    phase2.removeAttr('hidden');
+    phase1.attr('hidden', 'hidden');
+  } else {
+    phase1.removeAttr('hidden');
+    phase2.attr('hidden', 'hidden');
+  }
+});
