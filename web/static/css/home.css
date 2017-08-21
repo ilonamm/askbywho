@@ -125,7 +125,10 @@ h1 {
   margin-top: -10px;
 }
 
-.wanna-know__submit {
+.wanna-know__submit,
+a.wanna-know__choose-brands,
+a.wanna-know__choose-brands:hover
+a.wanna-know__choose-brands:visited {
   font-family: 'Roboto', sans-serif;
   width: 100%;
   background: white;
@@ -135,6 +138,11 @@ h1 {
   border: none;
   font-size: 20px;
   font-weight: bold;
+}
+
+a.wanna-know__choose-brands {
+  display: inline-block;
+  margin: 20px auto 0;
 }
 
 @define-mixin quote {

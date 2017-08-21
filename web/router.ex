@@ -45,6 +45,7 @@ defmodule Askbywho.Router do
   scope "/", Askbywho do
     pipe_through :browser
     get "/", PageController, :index
+    get "/nominate", PageController, :mobile_brands
     get "/share/:id", PageController, :share
 
     resources "/pages", PageController, only: [:show, :create]
