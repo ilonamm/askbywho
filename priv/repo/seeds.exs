@@ -21,13 +21,17 @@ changeset = Askbywho.User.changeset(%Askbywho.User{}, %{
 Askbywho.Repo.insert! changeset
 
 %Email{}
-  |> Email.changeset(%{"email" => "test1@email.com", "name" => "Test1", "name_brands" => ["American Eagle", "Asos"]})
+  |> Email.changeset(%{"email" => "test1@email.com", "name" => "Test1",
+  "name_brands" => ["American Eagle", "Asos"]})
   |> Repo.insert
 
 %Email{}
-  |> Email.changeset(%{"email" => "test2@email.com", "name" => "Test2", "name_brands" => ["American Eagle", "Asos", "American Apparel"]})
+  |> Email.changeset(%{"email" => "test2@email.com", "name" => "Test2",
+  "name_brands" => ["American Eagle", "Asos", "American Apparel"]})
   |> Repo.insert
 
-  %Email{}
-    |> Email.changeset(%{"email" => "test3@email.com", "name" => "Test3", "name_brands" => ["Adidas", "Billabong", "Asics", "Boss", "Brooksfield", "Björn Borg", "Camper", "Change", "Aigle", "Puma", "Nike"]})
-    |> Repo.insert
+%Email{}
+  |> Email.changeset(%{"email" => "test3@email.com", "name" => "Test3",
+  "name_brands" => ["Adidas", "Billabong", "Asics", "Boss", "Brooksfield",
+  "Björn Borg", "Camper", "Change", "Aigle", "Puma", "Nike"]})
+  |> Repo.insert
