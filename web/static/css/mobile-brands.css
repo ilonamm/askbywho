@@ -1,0 +1,80 @@
+.mobile-brands__heading {
+  font-weight: 700;
+}
+
+.mobile-brands__option {
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.mobile-brands__option input {
+  margin-right: 10px;
+}
+
+.mobile-brands__field {
+  margin-bottom: 20px;
+}
+
+.mobile-brands__field input {
+ background: #f7f7f7;
+ border: none;
+ font-size: 20px;
+ height: 40px;
+ line-height: 40px;
+ font-weight: bold;
+ font-family: 'Roboto', sans-serif;
+ display: block;
+ width: 100%;
+ color: #222;
+ padding: 0 20px;
+}
+
+.mobile-brands__field input::placeholder {
+  color: rgba(0,0,0, 0.3);
+}
+
+.mobile-brands__button-row {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.mobile-brands__button-row button {
+  width: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 20px;
+}
+
+.mobile-brands__button-row a {
+  color: white;
+  border-color: white;
+}
+
+.mobile-brands__submit {
+  background: #4c4c4c;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  width: auto;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mobile-brands__small-text {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 0.8em;
+}

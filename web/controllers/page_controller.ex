@@ -6,12 +6,22 @@ defmodule Askbywho.PageController do
 
   use Askbywho.Web, :controller
   alias Askbywho.Email
+  alias Askbywho.Brand
 
   plug :put_layout, "site.html"
 
   def index(conn, _params) do
     changeset = Email.changeset(%Email{})
     render(conn, "index.html", changeset: changeset, action: page_path(conn, :create), name_brands: [])
+  end
+
+  def mobile_brands(conn, _params) do
+    query = from b in Brand, select: b.name, order_by: b.name
+    brands = query
+      |> Repo.all()
+
+    changeset = Email.changeset(%Email{})
+    render(conn, "mobile_brands.html", changeset: changeset, action: page_path(conn, :create), name_brands: brands)
   end
 
   def create(conn, %{"email" => email_params}) do
