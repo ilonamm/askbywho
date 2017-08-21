@@ -38,46 +38,54 @@
       </div>
 
       <div class="container">
-        <%= form_for @changeset, @action, fn f -> %>
-          <%= if @changeset.action do %>
-            <div class="alert alert-danger">
-              <p><%= gettext "Oops, something went wrong! Please check the errors below. "%></p>
+        <div class="visible-xs visible-sm visible-md">
+          <a href="/nominate" class="wanna-know__choose-brands">
+            <%= gettext "Choose brands" %>
+          </a>
+        </div>
+        <div class="hidden-xs hidden-sm hidden-md">
+          <%= form_for @changeset, @action, fn f -> %>
+            <%= if @changeset.action do %>
+              <div class="alert alert-danger">
+                <p><%= gettext "Oops, something went wrong! Please check the errors below. "%></p>
+              </div>
+            <% end %>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="wanna-know__field">
+                  <%= multiple_select(f, :name_brands, @name_brands) %>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="wanna-know__field">
+                  <%= text_input f, :name, placeholder: gettext "First name" %>
+                  <%= error_tag f, :name %>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="wanna-know__field">
+                  <%= text_input f, :email, placeholder: gettext "Email" %>
+                  <%= error_tag f, :email %>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-4">
+                <%= submit add_nominate(), class: "wanna-know__submit" %>
+              </div>
             </div>
           <% end %>
+        </div>
 
-          <div class="row">
-            <div class="col-md-4">
-              <div class="wanna-know__field">
-                <%= multiple_select(f, :name_brands, @name_brands) %>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="wanna-know__field">
-                <%= text_input f, :name, placeholder: gettext "First name" %>
-                <%= error_tag f, :name %>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="wanna-know__field">
-                <%= text_input f, :email, placeholder: gettext "Email" %>
-                <%= error_tag f, :email %>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-md-4">
-              <%= submit add_nominate(), class: "wanna-know__submit" %>
-            </div>
-          </div>
-        <% end %>
         <h2 class="wanna-know__ingress2"><%= gettext "Your voice counts:
         1. 1,000 people nominate a brand
         2. We tell the brand 1,000 of us want to know how our clothes are made
