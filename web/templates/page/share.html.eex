@@ -83,7 +83,7 @@
       <!-- This is ugly and always in English, needs fixing
       <div class="fb-send" data-href="https://beta.askbywho.com"></div> -->
 
-      <a href="whatsapp://send?text="<%= gettext "We all know a lot of clothes are made
+      <a href="whatsapp://send?text=<%= gettext "We all know a lot of clothes are made
       in inhumane conditions. Go to this site to say to your favorite clothing brands
       that you want clothes made in decent working conditions!" %>" data-href="https://beta.askbywho.com">
       <img src="/images/whatsapp.png" alt="Whatsapp"><%= gettext "Share via Whatsapp" %></a>
