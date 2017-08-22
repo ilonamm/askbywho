@@ -53,7 +53,7 @@ defmodule Askbywho.PageView do
   def to_go(brand_id) do
     result = 1000 - count_nominations(brand_id)
     case result do
-      x when (x > 0) -> "#{x} to go!"
+      x when (x > 0) -> "#{x} " <> gettext "to go!"
       _ -> ""
     end
   end

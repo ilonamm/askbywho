@@ -22,7 +22,7 @@
           <%= gettext "Your voice matters." %>
         </h1>
         <p>
-          <%= "You are one of us " %> <%= count_emails() %>
+          <%= gettext "You are one of us " %> <%= count_emails() %>
           <%= gettext "saying that the people making our clothes matter." %>
         </p>
       </div>
@@ -78,7 +78,7 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
 
-      <h3>This is a message worth sharing.</h3>
+      <h3><%= gettext "This is a message worth sharing." %></h3>
 
 
       <!-- This is ugly and always in English, needs fixing

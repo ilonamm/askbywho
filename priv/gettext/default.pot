@@ -111,10 +111,6 @@ msgstr ""
 msgid "When I buy 37 euro pants for my 1-year-old, I want to know they were not made by a 9-year-old in Bangladesh."
 msgstr ""
 
-#: web/templates/page/index.html.eex:192
-msgid "Yes."
-msgstr ""
-
 #: web/templates/page/index.html.eex:125
 msgid "children work"
 msgstr ""
@@ -245,38 +241,58 @@ msgstr ""
 msgid "Which brands are you wearing right now?"
 msgstr ""
 
-#: web/templates/page/share.html.eex:52
+#: web/templates/page/share.html.eex:53
 msgid "1. 1,000 people nominate a brand"
 msgstr ""
 
-#: web/templates/page/share.html.eex:53
+#: web/templates/page/share.html.eex:54
 msgid "2. We tell the brand 1,000 people want to know how their clothes are made"
 msgstr ""
 
-#: web/templates/page/share.html.eex:54
+#: web/templates/page/share.html.eex:55
 msgid "3. We tell you what they say"
 msgstr ""
 
-#: web/templates/page/share.html.eex:80
-msgid "Invite your friends!"
-msgstr ""
-
-#: web/templates/page/share.html.eex:89
+#: web/templates/page/share.html.eex:91
 msgid "Share via Whatsapp"
 msgstr ""
 
-#: web/templates/page/share.html.eex:86
+#: web/templates/page/share.html.eex:88
 msgid "We all know a lot of clothes are made in inhumane conditions. Go to this site to say to your favorite clothing brands that you want clothes made in decent working conditions! https://beta.askbywho.com"
 msgstr ""
 
-#: web/templates/page/share.html.eex:29
+#: web/templates/page/share.html.eex:30
 msgid "You nominated"
 msgstr ""
 
-#: web/templates/page/share.html.eex:21
+#: web/templates/page/share.html.eex:22
 msgid "Your voice matters."
 msgstr ""
 
-#: web/templates/page/share.html.eex:25
+#: web/templates/page/share.html.eex:26
 msgid "saying that the people making our clothes matter."
+msgstr ""
+
+#: web/templates/page/share.html.eex:94
+msgid "Tell your favorite brands that you want your clothes made in decent working conditions at https://beta.askbywho.com"
+msgstr ""
+
+#: web/templates/page/share.html.eex:98
+msgid "Tweet!"
+msgstr ""
+
+#: web/templates/page/index.html.eex:192
+msgid "Yes. I want to tell that to my favorite brands."
+msgstr ""
+
+#: web/templates/page/share.html.eex:25
+msgid "You are one of us "
+msgstr ""
+
+#: web/views/page_view.ex:56
+msgid "to go!"
+msgstr ""
+
+#: web/templates/page/share.html.eex:81
+msgid "This is a message worth sharing."
 msgstr ""

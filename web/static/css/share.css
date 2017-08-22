@@ -1,10 +1,10 @@
-.head {
+#share-wrapper .head {
   background: black url(/images/share-bg.jpg) bottom center no-repeat;
   background-size: 100%;
   margin: 0px;
 }
 
-.head__dark {
+#share-wrapper .head__dark {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   font-family: 'Poppins', sans-serif;
