@@ -79,25 +79,54 @@
       }(document, 'script', 'facebook-jssdk'));</script>
 
       <h3><%= gettext "This is a message worth sharing." %></h3>
+      <p><%= gettext "Click the button to share this with friends.
+      You can edit the message before sending." %></p>
 
 
       <!-- This is ugly and always in English, needs fixing
       <div class="fb-send" data-href="https://beta.askbywho.com"></div> -->
 
-      <div class="about-askbywho__share">
-        <a href="whatsapp://send?<%= URI.encode_query(%{ "text" => gettext "We all know a lot of clothes are made" <>
-        " in inhumane conditions. Go to this site to say to your favorite clothing brands" <>
-        " that you want clothes made in decent working conditions! https://beta.askbywho.com" }) %>">
-        <img src="/images/whatsapp.png" alt="Whatsapp"><%= gettext "Share via Whatsapp" %></a>
+      <div class="about-askbywho__share share-whatsapp">
+      <%= gettext "A lot of clothes are made in inhumane conditions.
+        This site makes it easy to say to your favorite clothing
+        brands that you want yours made in decent working conditions.
+        I just joined and thought
+        you'd be interested in this, too!" %>
+        <p>
+          <a href="whatsapp://send?<%= URI.encode_query(%{
+          "text" => gettext "A lot of clothes are made in inhumane conditions." <>
+          " This site makes it easy to say to your favorite clothing" <>
+          " brands that you want yours made in decent working conditions." <>
+          " I just joined " <>
+          " and thought you'd be interested in this, too! https://beta.askbywho.com" }) %>">
+          <img src="/images/whatsapp.png" alt="Whatsapp"><%= gettext "Share via Whatsapp" %></a>
+        </p>
 
+        <%= gettext "These people were told that people don't care about transparency and decent
+        working conditions when buying clothes. They set up a page so that we can say it does matter.
+        Thought you'd like to join, too." %>
+
+        <p>
+          <a href="whatsapp://send?<%= URI.encode_query(%{
+          "text" => gettext "These people were told that people don't care about transparency and decent" <>
+          " working conditions when buying clothes. They set up a page so that we can say it does matter." <>
+          " I just joined, thought you'd like to join, too. https://beta.askbywho.com" }) %>">
+          <img src="/images/whatsapp.png" alt="Whatsapp"><%= gettext "Share via Whatsapp" %></a>
+        </p>
+      </div>
+
+
+
+      </div>
+
+
+      <!-- Twitter button
       <a href="https://twitter.com/intent/tweet?<%= URI.encode_query(
       %{ "text" => gettext "Tell your favorite brands" <>
       " that you want your clothes made in decent working conditions" <>
       " at https://beta.askbywho.com" }) %>">
       <img src="/images/twitter.png" alt="Twitter">
-      <%= gettext "Tweet!" %></a>
-      </div>
-
+      <%= gettext "Tweet!" %></a> -->
 
     </div>
   </div>

@@ -263,12 +263,8 @@ msgstr ""
 msgid "3. We tell you what they say"
 msgstr ""
 
-#: web/templates/page/share.html.eex:91
+#: web/templates/page/share.html.eex:102 web/templates/page/share.html.eex:114
 msgid "Share via Whatsapp"
-msgstr ""
-
-#: web/templates/page/share.html.eex:88
-msgid "We all know a lot of clothes are made in inhumane conditions. Go to this site to say to your favorite clothing brands that you want clothes made in decent working conditions! https://beta.askbywho.com"
 msgstr ""
 
 #: web/templates/page/share.html.eex:30
@@ -283,11 +279,11 @@ msgstr ""
 msgid "saying that the people making our clothes matter."
 msgstr ""
 
-#: web/templates/page/share.html.eex:94
+#: web/templates/page/share.html.eex:125
 msgid "Tell your favorite brands that you want your clothes made in decent working conditions at https://beta.askbywho.com"
 msgstr ""
 
-#: web/templates/page/share.html.eex:98
+#: web/templates/page/share.html.eex:129
 msgid "Tweet!"
 msgstr ""
 
@@ -305,4 +301,25 @@ msgstr ""
 
 #: web/templates/page/share.html.eex:81
 msgid "This is a message worth sharing."
+msgstr ""
+
+#: web/templates/page/share.html.eex:90
+msgid "A lot of clothes are made in inhumane conditions.\n        This site makes it easy to say to your favorite clothing\n        brands that you want yours made in decent working conditions.\n        I just joined and thought\n        you'd be interested in this, too!"
+msgstr ""
+
+#: web/templates/page/share.html.eex:97
+msgid "A lot of clothes are made in inhumane conditions. This site makes it easy to say to your favorite clothing brands that you want yours made in decent working conditions. I just joined  and thought you'd be interested in this, too! https://beta.askbywho.com"
+msgstr ""
+
+#: web/templates/page/share.html.eex:82
+msgid "Click the button to share this with friends.\n      You can edit the message before sending."
+msgstr ""
+
+#: web/templates/page/share.html.eex:105
+msgid "These people were told that people don't care about transparency and decent\n        working conditions when buying clothes. They set up a page so that we can say it does matter.\n        Thought you'd like to join, too."
+msgstr ""
+
+#, fuzzy
+#: web/templates/page/share.html.eex:111
+msgid "These people were told that people don't care about transparency and decent working conditions when buying clothes. They set up a page so that we can say it does matter. I just joined, thought you'd like to join, too. https://beta.askbywho.com"
 msgstr ""
