@@ -1,27 +1,50 @@
 #share-wrapper .head {
+  background: black url(/images/share-bg.jpg) bottom center no-repeat;
+  background-size: 100%;
+  margin: 0px;
+}
+
+#share-wrapper .head__dark {
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   font-family: 'Poppins', sans-serif;
-  background: url(/images/share-bg.jpg) center -80px no-repeat;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
+
 }
 
 #share-wrapper h1 {
   font-size: 42px;
   font-weight: normal;
-  margin: 120px 0 40px;
+  padding: 120px 0 40px;
 }
 
+
 .share__happening {
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 400;
-  max-width: 460px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  max-width: 340px;
+  display: block;
+  padding-top: 20px;
+  clear: both;
+
 }
+
+.share-top h1 {
+  font-size: 18px;
+}
+
+.share-top p {
+  font-size: 12px;
+  line-height: normal;
+}
+
 
 #share-wrapper p {
   font-size: 22px;
   line-height: 40px;
   margin: 20px 0;
+
 }
 #share-wrapper .brand {
   width: 100%;
@@ -36,7 +59,7 @@
   line-height: 30px;
 }
 #share-wrapper .brand .progress {
-  width: 400px;
+  width: 360px;
   float: left;
   height: 30px;
   border: 2px solid white;
@@ -134,7 +157,12 @@
   float: right;
   margin-left: 10px;
 }
+.share-whatsapp {
+  line-height: normal;
+  max-width: 500px;
+  margin: auto;
 
+}
 
 /* Media query for mobile devices. */
 @media only screen and (max-width: 800px) {
@@ -144,7 +172,7 @@
   }
   #share-wrapper .head h1 {
     font-size: 33px;
-    margin-top: 40px;
+    padding: 40px 0 20px;
   }
   #share-wrapper .head p,
   #share-wrapper .brand {
@@ -158,17 +186,30 @@
   #share-wrapper .brand .name {
     text-align: left;
   }
+
   #share-wrapper .brand .progress {
+    width: 100%;
+    float: left;
+    height: 30px;
+    border: 2px solid white;
+    background: none;
     margin-bottom: 5px;
   }
   #share-wrapper .brand .to-go {
     padding-left: 0;
     margin-bottom: 10px;
   }
+  .share-whatsapp {
+    font-size: 14px;
+    line-height: normal;
+
+  }
   #share-wrapper .body p {
     color: black;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: normal;
   }
+
   #share-wrapper .sharing .social-network .cta {
     margin-top: 10px;
     font-size: 20px;
@@ -204,4 +245,5 @@
     font-size: 16px;
     text-decoration: underline;
   }
+
 }

@@ -4,7 +4,6 @@ $('#email_name_brands').select2({
   ajax: {
     url: '/api/v1/brands',
     dataType: 'json',
-    delay: 1000,
     data: function(params) {
       return {
         q: params.term,

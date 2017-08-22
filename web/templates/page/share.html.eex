@@ -14,18 +14,20 @@
 
 
 
-  <div class="head">
+  <section class="head">
+    <div class="head__dark">
     <div class="container">
-      <h2>
-        You selected <%= count_brands_message @brands %>!
-      </h2>
+      <div class="share-top">
+        <h1>
+          <%= gettext "Your voice matters." %>
+        </h1>
+        <p>
+          <%= gettext "You are one of us " %> <%= count_emails() %>
+          <%= gettext "saying that the people making our clothes matter." %>
+        </p>
+      </div>
 
-      <h2 class="share__happening">
-      1. 1,000 people nominate a brand<br>
-      2. We tell the brand 1,000 people want to know how their clothes are made<br>
-      3. We tell you what they say
-      </h2>
-      <h2>This is how many others have nominated your favorite brands:</h2>
+      <h2><%= gettext "You nominated" %> <%= count_brands_message @brands %></h2>
 
       <div class="brands">
         <%= for brand <- @brands do %>
@@ -46,35 +48,85 @@
           </div>
         <% end %>
       </div>
+
+      <h2 class="share__happening">
+      <%= gettext "1. 1,000 people nominate a brand" %><br>
+      <%= gettext "2. We tell the brand 1,000 people want to know how their clothes are made" %><br>
+      <%= gettext "3. We tell you what they say" %>
+      </h2>
+
     </div>
-  </div>
+    </div>
+  </section>
 
   <div class="body">
     <div class="container">
+    <!--
       <p>
         Overall,
         <%= count_emails() %> people have nominated
         <%= count_brands() %> brands
         <%= count_nominations() %> times.
-      </p>
+      </p> -->
 
       <div id="fb-root"></div>
       <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v2.10";
+        js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.10";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
 
-      <p>
-        Help us get to 1,000 people before the site launch - click the button below to ask a friend join via Facebook Message!
-      </p>
+      <h3><%= gettext "This is a message worth sharing." %></h3>
+      <p><%= gettext "Click the button to share this with friends.
+      You can edit the message before sending." %></p>
 
-      <div class="fb-send" data-href="https://beta.askbywho.com"></div>
-      <p></p>
-      <p></p>
+
+      <!-- This is ugly and always in English, needs fixing
+      <div class="fb-send" data-href="https://beta.askbywho.com"></div> -->
+
+      <div class="about-askbywho__share share-whatsapp">
+      <%= gettext "A lot of clothes are made in inhumane conditions.
+        This site makes it easy to say to your favorite clothing
+        brands that you want yours made in decent working conditions.
+        I just joined and thought
+        you'd be interested in this, too!" %>
+        <p>
+          <a href="whatsapp://send?<%= URI.encode_query(%{
+          "text" => gettext "A lot of clothes are made in inhumane conditions." <>
+          " This site makes it easy to say to your favorite clothing" <>
+          " brands that you want yours made in decent working conditions." <>
+          " I just joined " <>
+          " and thought you'd be interested in this, too! https://beta.askbywho.com" }) %>">
+          <img src="/images/whatsapp.png" alt="Whatsapp"><%= gettext "Share via Whatsapp" %></a>
+        </p>
+
+        <%= gettext "These people were told that people don't care about transparency and decent
+        working conditions when buying clothes. They set up a page so that we can say it does matter.
+        Thought you'd like to join, too." %>
+
+        <p>
+          <a href="whatsapp://send?<%= URI.encode_query(%{
+          "text" => gettext "These people were told that people don't care about transparency and decent" <>
+          " working conditions when buying clothes. They set up a page so that we can say it does matter." <>
+          " I just joined, thought you'd like to join, too. https://beta.askbywho.com" }) %>">
+          <img src="/images/whatsapp.png" alt="Whatsapp"><%= gettext "Share via Whatsapp" %></a>
+        </p>
       </div>
+
+
+
+      </div>
+
+
+      <!-- Twitter button
+      <a href="https://twitter.com/intent/tweet?<%= URI.encode_query(
+      %{ "text" => gettext "Tell your favorite brands" <>
+      " that you want your clothes made in decent working conditions" <>
+      " at https://beta.askbywho.com" }) %>">
+      <img src="/images/twitter.png" alt="Twitter">
+      <%= gettext "Tweet!" %></a> -->
 
     </div>
   </div>

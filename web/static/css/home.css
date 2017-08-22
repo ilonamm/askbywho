@@ -162,7 +162,7 @@ a.wanna-know__choose-brands {
 }
 
 .dont-want-clothes-by__start {
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .dont-want-clothes-by__end {
@@ -271,7 +271,7 @@ a.wanna-know__choose-brands {
 }
 
 .about-askbywho {
-  font-weight: 200;
+  font-weight: 300;
   display: flex;
   flex-direction: row;
 }
@@ -417,6 +417,7 @@ a.wanna-know__choose-brands {
 
   .dont-want-clothes-by__start {
     font-style: italic;
+    font-weight: 300;
   }
 
   .child-stats {

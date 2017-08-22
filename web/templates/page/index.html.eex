@@ -189,7 +189,7 @@
 
         <p>
           <strong>
-            <a href="#i-want-to-know"><%= gettext "Yes." %></a>
+            <a href="#i-want-to-know"><%= gettext "Yes. I want to tell that to my favorite brands." %></a>
           </strong>
         </p>
       </div>
