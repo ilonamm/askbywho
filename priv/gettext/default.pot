@@ -15,7 +15,7 @@ msgid "Welcome to our secret beta!"
 msgstr ""
 
 #: web/templates/page/index.html.eex:74
-#: web/templates/page/mobile_brands.html.eex:53
+#: web/templates/page/mobile_brands.html.eex:52
 msgid "Email"
 msgstr ""
 
@@ -24,7 +24,7 @@ msgid "Facebook group"
 msgstr ""
 
 #: web/templates/page/index.html.eex:65
-#: web/templates/page/mobile_brands.html.eex:46
+#: web/templates/page/mobile_brands.html.eex:45
 msgid "First name"
 msgstr ""
 
@@ -189,10 +189,6 @@ msgid_plural " brands"
 msgstr[0] ""
 msgstr[1] ""
 
-#: web/templates/page/share.html.eex:52
-msgid "\n      1. 1,000 people nominate a brand<br>\n      2. We tell the brand 1,000 people want to know how their clothes are made<br>\n      3. We tell you what they say"
-msgstr ""
-
 #: web/templates/page/footer.html.eex:6
 msgid "\n      We are a startup. We use modern technology to further transparency,\n      human rights and decent working conditions in supply chains.\n      But we've been told people don't care about transparency.\n      So we wanted to ask you. This ask by who campaign is built on open source,\n      by volunteers, companies, and you."
 msgstr ""
@@ -209,27 +205,15 @@ msgstr ""
 msgid "Choose your favorite brands"
 msgstr ""
 
-#: web/templates/page/mobile_brands.html.eex:27
+#: web/templates/page/mobile_brands.html.eex:26
 msgid "Go back"
-msgstr ""
-
-#: web/templates/page/mobile_brands.html.eex:15
-msgid "I want to wear clothes made in decent working conditions"
-msgstr ""
-
-#: web/templates/page/share.html.eex:81
-msgid "Invite your friends!"
 msgstr ""
 
 #: web/views/page_view.ex:78
 msgid "Send"
 msgstr ""
 
-#: web/templates/page/share.html.eex:90
-msgid "Share via Whatsapp"
-msgstr ""
-
-#: web/templates/page/mobile_brands.html.eex:36
+#: web/templates/page/mobile_brands.html.eex:35
 msgid "Thank you for adding "
 msgstr ""
 
@@ -237,24 +221,52 @@ msgstr ""
 msgid "Thank you for joining!"
 msgstr ""
 
-#: web/templates/page/mobile_brands.html.eex:14
-msgid "To say"
-msgstr ""
-
-#: web/templates/page/share.html.eex:87
-msgid "We all know a lot of clothes are made\n      in inhumane conditions. Go to this site to say to your favorite clothing brands\n      that you want clothes made in decent working conditions!"
-msgstr ""
-
-#: web/templates/page/mobile_brands.html.eex:60
+#: web/templates/page/mobile_brands.html.eex:59
 msgid "We will keep your email safe and never send any spam."
 msgstr ""
 
-#: web/templates/page/mobile_brands.html.eex:41
+#: web/templates/page/mobile_brands.html.eex:40
 msgid "We'd like to send you an email when we hear back from your favorite brands."
 msgstr ""
 
 #: web/templates/page/share.html.eex:8
 msgid "We'll send you an email when we're ready to launch!"
+msgstr ""
+
+#: web/templates/page/mobile_brands.html.eex:37
+msgid "brands"
+msgstr ""
+
+#: web/templates/page/share.html.eex:10
+msgid "facebook group"
+msgstr ""
+
+#: web/templates/page/mobile_brands.html.eex:14
+msgid "Which brands are you wearing right now?"
+msgstr ""
+
+#: web/templates/page/share.html.eex:52
+msgid "1. 1,000 people nominate a brand"
+msgstr ""
+
+#: web/templates/page/share.html.eex:53
+msgid "2. We tell the brand 1,000 people want to know how their clothes are made"
+msgstr ""
+
+#: web/templates/page/share.html.eex:54
+msgid "3. We tell you what they say"
+msgstr ""
+
+#: web/templates/page/share.html.eex:80
+msgid "Invite your friends!"
+msgstr ""
+
+#: web/templates/page/share.html.eex:89
+msgid "Share via Whatsapp"
+msgstr ""
+
+#: web/templates/page/share.html.eex:86
+msgid "We all know a lot of clothes are made in inhumane conditions. Go to this site to say to your favorite clothing brands that you want clothes made in decent working conditions! https://beta.askbywho.com"
 msgstr ""
 
 #: web/templates/page/share.html.eex:29
@@ -263,14 +275,6 @@ msgstr ""
 
 #: web/templates/page/share.html.eex:21
 msgid "Your voice matters."
-msgstr ""
-
-#: web/templates/page/mobile_brands.html.eex:38
-msgid "brands"
-msgstr ""
-
-#: web/templates/page/share.html.eex:10
-msgid "facebook group"
 msgstr ""
 
 #: web/templates/page/share.html.eex:25

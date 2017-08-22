@@ -11,8 +11,7 @@
           <%= gettext "Choose your favorite brands" %>
         </h2>
         <p class="mobile_brands__description">
-          <%= gettext "To say" %>
-          <em><%= gettext "I want to wear clothes made in decent working conditions" %></em>
+          <em><%= gettext "Which brands are you wearing right now?" %></em>
         </p>
         <%= for name <- @name_brands do %>
           <label class="mobile-brands__option">
