@@ -24,6 +24,10 @@
   line-height: 20px;
   font-weight: 500;
   max-width: 340px;
+  display: block;
+  padding-top: 20px;
+  clear: both;
+
 }
 
 .share-top h1 {
